@@ -9,6 +9,7 @@ class JNYTMultimedia(db.EmbeddedDocument):
 	_type = db.StringField()
 
 class JNYTDocument(db.Document):
+	__CollectionName__ = "nyt_times"
 
 	web_url = db.StringField(required=True)
 	snippet = db.StringField()
@@ -32,3 +33,8 @@ class JNYTDocument(db.Document):
 	word_count = db.IntField()
 
 	social_shares = db.DictField()
+
+	meta = {
+		'collection' : __CollectionName__,
+		'allow_inheritance': True
+	}
