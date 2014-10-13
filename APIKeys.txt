@@ -12,6 +12,7 @@ E-mail address: anand.sainath@gatech.edu
 --------------------------------------------------
 
 USA Today API
+http://developer.usatoday.com/
 
    * Articles Search API Key: 3h2rjm46uheekjrj5g8j4mqs
    * Snapshot API Key: 9zyrbjwcmpwrpu6gdf68h5qa
@@ -19,6 +20,7 @@ USA Today API
 --------------------------------------------------
 
 SharedCount
+http://www.sharedcount.com/
 
  Login: anand.sainath@gatech.edu 
  Your API key is: 115a154ac6fe21c051c0346cbebf42d9a5a00c8d 
