@@ -4,21 +4,21 @@ from urllib import urlopen
 
 import json
 from app.data.models import JNYTDocument
-import shares
+import shares, utils
 
 # Define the blueprint: 'data', set its url prefix: app.url/data
 mod_data = Blueprint('data', __name__, url_prefix='/data')
 
 @mod_data.route('/')
 def index():
-	print shares.get_social_counts()
-	return "Hello Data World!"
+	return utils.get_nyt_article_search_url("US+Presidential+Election&begin_date=20120101&end_date=20121231")
 
 @mod_data.route('/parse-nyt')
 def parse_nyt():
 	JNYTDocument.drop_collection()
-	url = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=US+Presidential+Election&begin_date=20120101&end_date=20121231&api-key=318a69b2af97848f66071cb4c1fdc831:15:69992102"
+	params = "US+Presidential+Election&begin_date=20120101&end_date=20121231"
 
+	url = utils.get_nyt_article_search_url(params)
 	response = urlopen(url).read()
 	response = json.loads(response)
 
@@ -52,6 +52,5 @@ def parse_nyt():
 
 		nytimesDoc.social_shares = shares.get_social_counts(nytimesDoc.web_url)
 		nytimesDoc.save()
-		break
 
 	return response["status"]
