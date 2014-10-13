@@ -9,12 +9,36 @@ E-mail address: anand.sainath@gatech.edu
    * Times Newswire API key: 9e584be41d0939c3994901a4ccf88ffc:4:69992102
    * TimesTags API key: 4d0ddc7ab60ccd4492f4c28ad2dcbc91:3:69992102
 
+E-mail address: krishnan.vinodh@gmail.com
+
+    * Article Search API key: 353424482f2911b68847901e257ce797:18:69992139
+	* Best Sellers API key: 339aa0405d502386e8569b0f8dc57ebc:10:69992139
+	* Campaign Finance API Key: 5f27a0670bfc51381871984e1c331f00:12:69992139
+	* Community API Key: 3e852aa45854378415dfbd7b6a67ce45:8:69992139
+	* Congress API Key: e8704c24ffd7c15482dbc84f0325937c:15:69992139
+	* Districts API Key: 7d21e717db068baa1eed247aebb0a962:17:69992139
+	* Event Listings API Key: 989152df59116acf785c7a9cd90fdd19:16:69992139
+	* Geo API Key: a4b68e21cb8eadbabd66caf0845e06f6:16:69992139
+	* Most Popular API Key: 9c6624f416aa042163da31918b6561ab:5:69992139
+	* Movie Reviews API Key: f7c91e5d7a3bfe668f3f185df4b957c4:17:69992139
+ 	* Real Estate API Key: e452afed16a985bd7a6667b5bb6fb585:11:69992139
+  	* Semantic API Key: 49b0a8f0576f20e791506af0f7b5e92f:1:69992139
+  	* TimesTags API Key: f1db888e10bb67ecdf3391f6eae1ee64:9:69992139
+  	* Times Newswire API key: dd6c53381c5109746c40c4b727e21f93:4:69992139
+
 --------------------------------------------------
 
 USA Today API
 
    * Articles Search API Key: 3h2rjm46uheekjrj5g8j4mqs
    * Snapshot API Key: 9zyrbjwcmpwrpu6gdf68h5qa
+
+E-mail address: krishnan.vinodh@gmail.com
+	
+	* Articles Search API Key: 9acjxqsb78rwx576s5w8k3gq
+	* Breaking News API Key: zgr97e8huyx6qzxuc35q4q4e
+	* Snapshot API Key: asfr3uzjd5d7sfa6zwnt6924
+	* Sports Salaries API Key: 7wyjzu6g2unc2msymxwt4b82
 
 --------------------------------------------------
 
