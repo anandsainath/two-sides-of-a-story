@@ -1,0 +1,29 @@
+NY Times API
+http://developer.nytimes.com/
+
+E-mail address: anand.sainath@gatech.edu
+
+   * Article Search API key: 318a69b2af97848f66071cb4c1fdc831:15:69992102
+   * Congress API key: 4e7417cbd192dee75dc7950b80c53764:7:69992102
+   * Most Popular API key: 2b1fe34d38381b8b9f88bc8fccf0abb7:11:69992102
+   * Times Newswire API key: 9e584be41d0939c3994901a4ccf88ffc:4:69992102
+   * TimesTags API key: 4d0ddc7ab60ccd4492f4c28ad2dcbc91:3:69992102
+
+--------------------------------------------------
+
+USA Today API
+
+   * Articles Search API Key: 3h2rjm46uheekjrj5g8j4mqs
+   * Snapshot API Key: 9zyrbjwcmpwrpu6gdf68h5qa
+
+--------------------------------------------------
+
+SharedCount
+
+ Login: anand.sainath@gatech.edu 
+ Your API key is: 115a154ac6fe21c051c0346cbebf42d9a5a00c8d 
+
+ Login: krishnan.vinodh@gmail.com
+ Your API key is: 8ca7bc67af37fe0affd10a53c818e431b8d8bfba
+
+--------------------------------------------------
