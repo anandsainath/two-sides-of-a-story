@@ -17,3 +17,7 @@ It is assumed that MongoDB has been installed and an instance has been started.
 source env/bin/activate
 python run.py server
 ```
+
+####API Sources
+
+The [project wiki](https://github.com/anandsainath/two-sides-of-a-story/wiki) has details of all the API keys that are being used for this project.
