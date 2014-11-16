@@ -19,7 +19,7 @@ def index():
 
 @mod_data.route('/conservative/parse-pjmedia')
 def parse_pj_media():
-	JNYTDocument.drop_collection()
+	#JNYTDocument.drop_collection()
 	#http://pjmedia.com/page/1/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date
 	base_url = "http://pjmedia.com/page/<<page_num>>/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date"
 	page_num = 1
@@ -73,7 +73,7 @@ def parse_pj_media():
 
 @mod_data.route('/conservative/parse-michelle-malkin')
 def parse_michelle_malkin():
-	JNYTDocument.drop_collection()
+	#JNYTDocument.drop_collection()
 	#http://michellemalkin.com/page/1/?s=presidential+elections+2012
 
 	base_url = "http://michellemalkin.com/page/<<page_num>>/?s=presidential+elections+2012"
@@ -131,7 +131,7 @@ def parse_michelle_malkin():
 
 @mod_data.route('/liberal/parse-dailykos')
 def parse_dailykos():
-	JNYTDocument.drop_collection()
+	#JNYTDocument.drop_collection()
 	
 	#URL for a search for the term US Presidential elections between 05/01/2011 and 05/31/2013
 	base_url = "http://www.dailykos.com/search?submit=Search&time_begin=05%2F01%2F2011&text_type=any&search_type=search_stories&order_by=-time&text_expand=contains&text=US%20Presidential%20Elections&time_type=time_published&usernames=%28usernames%29&tags=%28tags%29&time_end=05%2F31%2F2013&page="
