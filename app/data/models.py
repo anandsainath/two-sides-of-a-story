@@ -17,6 +17,10 @@ class JNYTDocument(db.Document):
 	abstract = db.StringField()
 	print_page = db.IntField()
 	source = db.StringField()
+
+	##main content fields
+	content = db.StringField()
+	political_leaning = db.StringField() # Liberal, Conservative, Unknown
 	
 	multimedia = db.ListField(db.DictField())
 	headline = db.DictField()

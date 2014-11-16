@@ -31,7 +31,6 @@ def getData(url):
 		request = urllib2.Request(url)
 		response = opener.open(request)
 		html = response.read()
-
 	return html
 
 def unpickle(filename):

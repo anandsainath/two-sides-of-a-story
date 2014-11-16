@@ -9,6 +9,7 @@ source env/bin/activate
 sudo pip install flask-script
 sudo pip install mongoengine
 sudo pip install flask-mongoengine
+pip install beautifulsoup4
 ```
 It is assumed that MongoDB has been installed and an instance has been started.
 
