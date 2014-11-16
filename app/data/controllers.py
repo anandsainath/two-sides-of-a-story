@@ -4,8 +4,9 @@ from urllib import urlopen
 
 import json
 from app.data.models import JNYTDocument
-import shares, utils
+import shares, utils, time
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 # Define the blueprint: 'data', set its url prefix: app.url/data
 mod_data = Blueprint('data', __name__, url_prefix='/data')
@@ -16,6 +17,7 @@ def index():
 
 @mod_data.route('/parse-dailykos')
 def parse_dailykos():
+	JNYTDocument.drop_collection()
 	#URL for a search for the term US Presidential elections between 05/01/2011 and 05/31/2013
 	base_url = "http://www.dailykos.com/search?submit=Search&time_begin=05%2F01%2F2011&text_type=any&search_type=search_stories&order_by=-time&text_expand=contains&text=US%20Presidential%20Elections&time_type=time_published&usernames=%28usernames%29&tags=%28tags%29&time_end=05%2F31%2F2013&page="
 
@@ -29,30 +31,50 @@ def parse_dailykos():
 	no_of_pages = no_of_items / 50
 	print `no_of_pages`
 
+	time.sleep(10)
+
 	for page_num in range(1, no_of_pages+1):
+		#time.sleep(10)
 		url = base_url + `page_num`
 		print url
 		soup = BeautifulSoup(utils.getData(url)).find("div",{"class":"ajax-form-results ajax-delay-load"})
-		print soup
+		#print soup
 
 		table_list = soup.find("table",{"class":"styled storiesAsGrid"})
 		print "Table list parsed"
 
 		if table_list != None:
-			print "Table list not None"
 			tbody = table_list.find("tbody")
 			if tbody != None:
-				print "TBody not none"
 				link_rows = tbody.findAll("tr")
 				for link_row in link_rows:
-					print link_row.get_text()
-		break
+					dailyKosDoc = JNYTDocument()
+					link = link_row.find("td",{"class":"first"}).find("a",{"class":"title"})
+					date = link_row.find("td",{"class":"sm date"})
+
+					dailyKosDoc.pub_date = datetime.strptime(date.get_text(),'%m/%d/%Y')
+					dailyKosDoc.source = "DailyKos"
+					dailyKosDoc.web_url = "http://www.dailykos.com" + link['href']
+					dailyKosDoc.headline = link.get_text()
+					dailyKosDoc.save()
+
+					dailyKosDoc.social_shares = shares.get_social_counts(dailyKosDoc.web_url)
+					dailyKosDoc.save()
+					#print link.get_text()
+					#print datetime.strptime(date.get_text(),'%m/%d/%Y')
+					#print link['href']
+		
+		if page_num == 2:
+			break
 	return "Anand"
 	#print soup.find("div",{"class":"ajax-form-results ajax-delay-load"}).find({"h4",{"class":"sub-head"}})
 	#return "Anand"
 
 @mod_data.route('/parse-nyt')
 def parse_nyt():
+	#TODO: Parse the date as a datetime field.
+	#TODO: Change headline from dict to text
+	
 	JNYTDocument.drop_collection()
 	params = "US+Presidential+Election&begin_date=20120101&end_date=20121231"
 

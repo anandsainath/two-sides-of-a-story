@@ -9,25 +9,25 @@ class JNYTMultimedia(db.EmbeddedDocument):
 	_type = db.StringField()
 
 class JNYTDocument(db.Document):
-	__CollectionName__ = "nyt_times"
+	__CollectionName__ = "document_corpus"
 
 	web_url = db.StringField(required=True)
 	snippet = db.StringField()
 	lead_paragraph = db.StringField()
 	abstract = db.StringField()
 	print_page = db.IntField()
-	source = db.StringField()
+	source = db.StringField() #The New York Times, DailyKos
 
 	##main content fields
 	content = db.StringField()
 	political_leaning = db.StringField() # Liberal, Conservative, Unknown
 	
 	multimedia = db.ListField(db.DictField())
-	headline = db.DictField()
+	headline = db.StringField()
 	keywords = db.ListField(db.DictField())
 	byline = db.DictField()
 	
-	pub_date = db.StringField()
+	pub_date = db.DateTimeField()
 	document_type = db.StringField()
 	news_desk = db.StringField()
 	section_name = db.StringField()

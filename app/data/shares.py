@@ -10,6 +10,5 @@ def get_social_counts(urlparam="http://www.google.com"):
 	domain = "http://free.sharedcount.com/"
 	params = { 'url' : urlparam, 'apikey' : random.choice(API_KEY)}
 
-	print params
 	url = domain + "?"+urllib.urlencode(params)
 	return utils.get_json_response(url)
