@@ -20,7 +20,7 @@ class JNYTDocument(db.Document):
 
 	##main content fields
 	content = db.StringField()
-	political_leaning = db.StringField() # Liberal, Conservative, Unknown
+	political_leaning = db.StringField(default="Unknown") # Liberal, Conservative, Unknown
 	
 	multimedia = db.ListField(db.DictField())
 	headline = db.StringField()

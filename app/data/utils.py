@@ -25,12 +25,13 @@ def getData(url):
 	try:
 		response = urllib2.urlopen(url)
 		html = response.read()
-	except:
-		cj = cookielib.CookieJar()
-		opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-		request = urllib2.Request(url)
-		response = opener.open(request)
-		html = response.read()
+	except Exception:
+		#cj = cookielib.CookieJar()
+		#opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+		#request = urllib2.Request(url)
+		#response = opener.open(request)
+		#html = response.read()
+		html = None
 	return html
 
 def unpickle(filename):

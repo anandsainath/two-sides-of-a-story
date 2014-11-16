@@ -15,9 +15,124 @@ mod_data = Blueprint('data', __name__, url_prefix='/data')
 def index():
 	return utils.get_nyt_article_search_url("US+Presidential+Election&begin_date=20120101&end_date=20121231")
 
-@mod_data.route('/parse-dailykos')
+##Conservative Blogs
+
+@mod_data.route('/conservative/parse-pjmedia')
+def parse_pj_media():
+	JNYTDocument.drop_collection()
+	#http://pjmedia.com/page/1/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date
+	base_url = "http://pjmedia.com/page/<<page_num>>/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date"
+	page_num = 1
+
+	while True:
+		url = base_url.replace("<<page_num>>",`page_num`)
+		html_content = utils.getData(url)
+
+		if html_content == None:
+			break
+		
+		soup = BeautifulSoup(html_content)
+		articles = soup.find("div",{"id":"archive-content"}).findAll("div",{"class":"category-story"})
+
+		for article in articles:
+			pjMediaDoc = JNYTDocument()
+			link = article.find("h2").find("a")
+			meta_data = [string.strip() for string in article.find("div",{"class":"category-author2"}).get_text().split('-')]
+
+			date_str = meta_data[0]
+			date_str = date_str.replace("th,",",")
+			date_str = date_str.replace("st,",",")
+			date_str = date_str.replace("nd,",",")
+			date_str = date_str.replace("rd,",",")
+
+			pjMediaDoc.web_url = link['href']
+			pjMediaDoc.political_leaning = "Conservative"
+			pjMediaDoc.source = "PJ Media"
+			pjMediaDoc.headline = link.get_text().strip()
+			pjMediaDoc.pub_date = datetime.strptime(date_str,"%A, %B %d, %Y")
+			pjMediaDoc.save()
+
+			#Getting the social shares for the URL
+			pjMediaDoc.social_shares = shares.get_social_counts(pjMediaDoc.web_url)
+			pjMediaDoc.save()
+
+			#Getting the content of the document
+			content_soup = BeautifulSoup(utils.getData(pjMediaDoc.web_url+"?singlepage=true")).find("div",{"class":"post"}).find("div",{"class":"clearingfix"}).findAll("p")
+			article_content = ""
+
+			for paragraph in content_soup:
+				text = paragraph.get_text()
+				article_content += " "+ text
+
+			pjMediaDoc.content = article_content.strip()
+			pjMediaDoc.save()
+
+		page_num += 1
+
+	return `page_num`
+
+@mod_data.route('/conservative/parse-michelle-malkin')
+def parse_michelle_malkin():
+	JNYTDocument.drop_collection()
+	#http://michellemalkin.com/page/1/?s=presidential+elections+2012
+
+	base_url = "http://michellemalkin.com/page/<<page_num>>/?s=presidential+elections+2012"
+	page_num = 1
+
+	while True:
+		url = base_url.replace("<<page_num>>", `page_num`)
+		soup = BeautifulSoup(utils.getData(url)).find("div",{"id":"content"})
+
+		title = soup.find("h1",{"class":"leadStoryAlt"})
+
+		if title == "Not Found":
+			break
+
+		article = soup.find("div",{"class":"article"})
+
+		headings = article.findAll("h2")
+		author = article.findAll("div",{"class":"author"})
+
+		for index, h2 in enumerate(headings):
+			link = h2.find("a")
+			meta_data = [string.strip() for string in author[index].get_text().encode('utf-8').split('\xc2\xa0\xc2\xa0')]
+			
+			michelleMalkinDoc = JNYTDocument()
+
+			michelleMalkinDoc.web_url = link['href']
+			michelleMalkinDoc.political_leaning = "Conservative"
+			michelleMalkinDoc.source = "Michelle Malkin"
+			michelleMalkinDoc.headline = link.get_text()
+			michelleMalkinDoc.pub_date = datetime.strptime(meta_data[2],"%B %d, %Y %I:%M %p")
+			michelleMalkinDoc.save()
+
+			#Getting the social shares for the URL
+			michelleMalkinDoc.social_shares = shares.get_social_counts(michelleMalkinDoc.web_url)
+			michelleMalkinDoc.save()
+
+			#Getting the document content.
+			content_soup = BeautifulSoup(utils.getData(michelleMalkinDoc.web_url)).find("div",{"class":"blog"}).findAll("p")
+			article_content = ""
+
+			for paragraph in content_soup:
+				text = paragraph.get_text()
+				if text.startswith("**Written by ") or text.startswith("Twitter @"):
+					continue
+				article_content += " "+ text
+			
+			michelleMalkinDoc.content = article_content.strip()
+			michelleMalkinDoc.save()
+
+		page_num += 1
+	return `index`
+
+
+##Liberal blogs
+
+@mod_data.route('/liberal/parse-dailykos')
 def parse_dailykos():
 	JNYTDocument.drop_collection()
+	
 	#URL for a search for the term US Presidential elections between 05/01/2011 and 05/31/2013
 	base_url = "http://www.dailykos.com/search?submit=Search&time_begin=05%2F01%2F2011&text_type=any&search_type=search_stories&order_by=-time&text_expand=contains&text=US%20Presidential%20Elections&time_type=time_published&usernames=%28usernames%29&tags=%28tags%29&time_end=05%2F31%2F2013&page="
 
@@ -29,19 +144,16 @@ def parse_dailykos():
 	no_of_items = int(no_of_items)
 
 	no_of_pages = no_of_items / 50
-	print `no_of_pages`
 
+	#They rate limit the requests coming in from an bot. So an initial wait period before the loop begins..
+	#Inside the loop, parsing the other contents would introduce the sufficient wait time. 
 	time.sleep(10)
 
 	for page_num in range(1, no_of_pages+1):
-		#time.sleep(10)
 		url = base_url + `page_num`
-		print url
 		soup = BeautifulSoup(utils.getData(url)).find("div",{"class":"ajax-form-results ajax-delay-load"})
-		#print soup
 
 		table_list = soup.find("table",{"class":"styled storiesAsGrid"})
-		print "Table list parsed"
 
 		if table_list != None:
 			tbody = table_list.find("tbody")
@@ -56,33 +168,30 @@ def parse_dailykos():
 					dailyKosDoc.source = "DailyKos"
 					dailyKosDoc.web_url = "http://www.dailykos.com" + link['href']
 					dailyKosDoc.headline = link.get_text()
+					dailyKosDoc.political_leaning = "Liberal"
 					dailyKosDoc.save()
 
+					#Getting the social shares for the URL
 					dailyKosDoc.social_shares = shares.get_social_counts(dailyKosDoc.web_url)
 					dailyKosDoc.save()
-					#print link.get_text()
-					#print datetime.strptime(date.get_text(),'%m/%d/%Y')
-					#print link['href']
-		
-		if page_num == 2:
-			break
-	return "Anand"
-	#print soup.find("div",{"class":"ajax-form-results ajax-delay-load"}).find({"h4",{"class":"sub-head"}})
-	#return "Anand"
+					
+					#Getting the content of the URL
+					content_soup = BeautifulSoup(utils.getData(dailyKosDoc.web_url)).find("div",{"id":"storyWrapper"}).find("div",{"class":"article-body"})
+					dailyKosDoc.content = content_soup.get_text()
+					dailyKosDoc.save()
+					#break
+		#if page_num == 2:
+		#	break
+	return `page_num`
 
 @mod_data.route('/parse-nyt')
 def parse_nyt():
-	#TODO: Parse the date as a datetime field.
-	#TODO: Change headline from dict to text
-	
 	JNYTDocument.drop_collection()
 	params = "US+Presidential+Election&begin_date=20120101&end_date=20121231"
 
 	url = utils.get_nyt_article_search_url(params)
 	response = urlopen(url).read()
 	response = json.loads(response)
-
-	print "Got response from nytimes"
 
 	for article in response["response"]["docs"]:
 		nytimesDoc = JNYTDocument()
@@ -92,7 +201,7 @@ def parse_nyt():
 		nytimesDoc.abstract = article["abstract"]
 		nytimesDoc.print_page = article["print_page"]
 		nytimesDoc.source = article["source"]
-		nytimesDoc.pub_date = article["pub_date"]
+		nytimesDoc.pub_date = datetime.strptime(article["pub_date"],'%Y-%m-%dT%H:%M:%SZ')
 		nytimesDoc.document_type = article["document_type"]
 		nytimesDoc.news_desk = article["news_desk"]
 		nytimesDoc.section_name = article["section_name"]
@@ -102,7 +211,7 @@ def parse_nyt():
 		nytimesDoc.word_count = article["word_count"]
 
 		nytimesDoc.byline = article["byline"]
-		nytimesDoc.headline = article["headline"]
+		nytimesDoc.headline = article["headline"]['main']
 		nytimesDoc.multimedia = article["multimedia"]
 		nytimesDoc.keywords = article["keywords"]
 		nytimesDoc.save()
