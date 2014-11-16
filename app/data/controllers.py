@@ -19,7 +19,7 @@ def index():
 
 @mod_data.route('/conservative/parse-pjmedia')
 def parse_pj_media():
-	#JNYTDocument.drop_collection()
+	JNYTDocument.drop_collection()
 	#http://pjmedia.com/page/1/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date
 	base_url = "http://pjmedia.com/page/<<page_num>>/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date"
 	page_num = 1
@@ -53,8 +53,8 @@ def parse_pj_media():
 			pjMediaDoc.save()
 
 			#Getting the social shares for the URL
-			pjMediaDoc.social_shares = shares.get_social_counts(pjMediaDoc.web_url)
-			pjMediaDoc.save()
+			#pjMediaDoc.social_shares = shares.get_social_counts(pjMediaDoc.web_url)
+			#pjMediaDoc.save()
 
 			#Getting the content of the document
 			content_soup = BeautifulSoup(utils.getData(pjMediaDoc.web_url+"?singlepage=true")).find("div",{"class":"post"}).find("div",{"class":"clearingfix"}).findAll("p")
@@ -107,8 +107,8 @@ def parse_michelle_malkin():
 			michelleMalkinDoc.save()
 
 			#Getting the social shares for the URL
-			michelleMalkinDoc.social_shares = shares.get_social_counts(michelleMalkinDoc.web_url)
-			michelleMalkinDoc.save()
+			#michelleMalkinDoc.social_shares = shares.get_social_counts(michelleMalkinDoc.web_url)
+			#michelleMalkinDoc.save()
 
 			#Getting the document content.
 			content_soup = BeautifulSoup(utils.getData(michelleMalkinDoc.web_url)).find("div",{"class":"blog"}).findAll("p")
@@ -172,13 +172,16 @@ def parse_dailykos():
 					dailyKosDoc.save()
 
 					#Getting the social shares for the URL
-					dailyKosDoc.social_shares = shares.get_social_counts(dailyKosDoc.web_url)
-					dailyKosDoc.save()
+					#dailyKosDoc.social_shares = shares.get_social_counts(dailyKosDoc.web_url)
+					#dailyKosDoc.save()
 					
 					#Getting the content of the URL
-					content_soup = BeautifulSoup(utils.getData(dailyKosDoc.web_url)).find("div",{"id":"storyWrapper"}).find("div",{"class":"article-body"})
-					dailyKosDoc.content = content_soup.get_text()
-					dailyKosDoc.save()
+					try:
+						content_soup = BeautifulSoup(utils.getData(dailyKosDoc.web_url)).find("div",{"id":"storyWrapper"}).find("div",{"class":"article-body"})
+						dailyKosDoc.content = content_soup.get_text()
+						dailyKosDoc.save()
+					except:
+						pass
 					#break
 		#if page_num == 2:
 		#	break
