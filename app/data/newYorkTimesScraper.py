@@ -5,9 +5,7 @@ import json
 from bs4 import BeautifulSoup
 from collections import defaultdict
 import random
-import test
 import pickle
-import stripper
 # helpful function for processing keywords, mostly    
 def getMultiples(items, key):
     values_list = ""
@@ -39,7 +37,7 @@ def parse_nyt():
 			for article in response["response"]["docs"]:
 				if random.randint(0,3) == 3: 								#1/3 probability
 					print article["web_url"]
-					soup1 = BeautifulSoup(test.getData(article["web_url"]))
+					soup1 = BeautifulSoup(utils.getData(article["web_url"]))
 					soup = soup1.findAll("p",{"itemprop": "articleBody"})
 					if soup == None or len(soup) == 0:
 						soup = soup1.find("div", {"id": "articleBody"})
@@ -71,7 +69,7 @@ def parse_nyt():
 								sent = " ".join([str(word) for word in soup])
 							else:
 								sent = soup
-							articleContent[i]["text"] = stripper.strip(sent)
+							articleContent[i]["text"] = utils.strip(sent)
 							print articleContent[i]["headline"],article["keywords"],article["lead_paragraph"]
 							i+=1
 							print 'Extracted',i,article["pub_date"]

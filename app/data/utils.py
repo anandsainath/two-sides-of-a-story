@@ -1,6 +1,11 @@
 import json
 import urllib2
 import random
+import cookielib
+from bs4 import BeautifulSoup
+import pickle
+import re
+from HTMLParser import HTMLParser
 
 def get_json_response (url):
     response = urllib2.urlopen (url)
@@ -14,3 +19,38 @@ def get_nyt_article_search_url(params):
 	url += random.choice(ARTICLE_SEARCH_API_KEY)
 	url += "&q="+params
 	return url
+
+def getData(url):
+	html = ""
+	try:
+		response = urllib2.urlopen(url)
+		html = response.read()
+	except:
+		cj = cookielib.CookieJar()
+		opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+		request = urllib2.Request(url)
+		response = opener.open(request)
+		html = response.read()
+
+	return html
+
+def unpickle(filename):
+	f = open(filename,"rb") 
+	heroes = pickle.load(f)
+	return heroes
+
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
+
+def strip(html):
+    s = MLStripper()
+    s.feed(html)
+    t = s.get_data()
+    t = re.sub('[^a-zA-Z ]+', '', t.lower())
+    return t
