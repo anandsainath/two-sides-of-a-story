@@ -19,7 +19,7 @@ def index():
 
 @mod_data.route('/conservative/parse-pjmedia')
 def parse_pj_media():
-	JNYTDocument.drop_collection()
+	# JNYTDocument.drop_collection()
 	#http://pjmedia.com/page/1/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date
 	base_url = "http://pjmedia.com/page/<<page_num>>/?s=presidential+elections+2012&submit_x=0&submit_y=0&search_sortby=date"
 	page_num = 1
@@ -129,6 +129,167 @@ def parse_michelle_malkin():
 
 ##Liberal blogs
 
+@mod_data.route('/liberal/parse-crooksnliars')
+def parse_crooksnliars():
+	#JNYTDocument.drop_collection()
+	base_url = "http://crooksandliars.com/solr/presidential%20elections%202012?page=<<page_num>>&filters=im_cl_section%3A1"
+	page_num = 0
+
+	while page_num < 313:
+		url = base_url.replace("<<page_num>>", `page_num`)
+		url_content = utils.getData(url)
+		soup = BeautifulSoup(url_content).find("div",{"class":"search-results"})
+
+		content_nodes = soup.findAll("div",{"class":"buildmode-teaser"})
+
+		for index, div in enumerate(content_nodes):
+			crooksNLiarsDoc = JNYTDocument()
+			title = div.find("div",{"class","field-title"}).find("a")
+
+			field_submitted = div.find("div",{"class":"field field-submitted submitted"})
+			author_link = field_submitted.find("a")
+
+			temp_string = field_submitted.get_text()
+			temp_string = temp_string.replace("By","")
+			
+
+			temp_string = temp_string.replace(author_link.get_text(),"").strip()
+			date_string = temp_string.split("-")[0].strip().rsplit(" ",2)[0]
+			date_string = date_string.replace("Anonymous","")
+			
+			crooksNLiarsDoc.web_url = "http://crooksandliars.com" + title["href"]
+			crooksNLiarsDoc.headline = title.get_text().strip()
+			crooksNLiarsDoc.political_leaning = "Liberal"
+			crooksNLiarsDoc.source = "Crooks N Liars"
+			crooksNLiarsDoc.pub_date = datetime.strptime(date_string.strip(),"%B %d, %Y")
+			crooksNLiarsDoc.save()
+
+			#Getting the social shares for the URL
+			#crooksNLiarsDoc.social_shares = shares.get_social_counts(crooksNLiarsDoc.web_url)
+			#crooksNLiarsDoc.save()
+
+			try:
+				content_soup = BeautifulSoup(utils.getData(crooksNLiarsDoc.web_url)).find("div",{"class":"nd-region-middle-wrapper"})
+				crooksNLiarsDoc.content = content_soup.get_text()
+				crooksNLiarsDoc.save()
+			except:
+				pass
+			# break
+		# break
+		page_num = page_num + 1
+	return `page_num`
+			
+
+
+@mod_data.route('/liberal/parse-talkingpointsmemo')
+def parse_talkingpointsmemo():
+	#JNYTDocument.drop_collection()
+	base_url = "https://www.googleapis.com/customsearch/v1element?key=AIzaSyCVAXiUzRYsML1Pv6RwSG1gunmMikTzQqY&rsz=filtered_cse&num=10&hl=en&prettyPrint=false&source=gcsc&gss=.com&sig=23952f7483f1bca4119a89c020d13def&start=<<start_num>>&cx=partner-pub-7451232131633930:5915231553&q=presidential%20elections%202012&safe=active&googlehost=www.google.com&callback=google.search.Search.apiary272&nocache=1416895033146"
+	start_num = 10
+	
+	while start_num < 100:
+		# if start_num == 30:
+		# 	break
+
+		url = base_url.replace("<<start_num>>", `start_num`)
+		url_content = utils.getData(url)
+
+		url_content = url_content.replace("// API callback","")
+		url_content = url_content.replace("google.search.Search.apiary272(","").strip()
+		url_content = url_content[:-2]
+
+		data = json.loads(url_content)
+		for result in data["results"]:
+			# print result["titleNoFormatting"], result["url"]
+
+			talkingPointsMemoDoc = JNYTDocument()
+			talkingPointsMemoDoc.web_url = result["url"]
+			talkingPointsMemoDoc.headline = result["titleNoFormatting"]
+			talkingPointsMemoDoc.political_leaning = "Liberal"
+			talkingPointsMemoDoc.source = "Talking Points Memo"
+			talkingPointsMemoDoc.save()
+
+			#Getting the social shares for the URL
+			talkingPointsMemoDoc.social_shares = shares.get_social_counts(talkingPointsMemoDoc.web_url)
+			talkingPointsMemoDoc.save()
+
+			try:
+				content_soup = BeautifulSoup(utils.getData(talkingPointsMemoDoc.web_url))
+				by_line = content_soup.find("section",{"class":"byline"}).find("time")
+
+				date_string = by_line.get_text().strip().rsplit(",",1)[0]
+				
+				talkingPointsMemoDoc.pub_date = datetime.strptime(date_string.strip(),"%B %d, %Y")
+				content = content_soup.find("div",{"class":"story-teaser"})
+				body_content = content_soup.find("div",{"class":"story-body"})
+
+				main_content = content.get_text() + " " + body_content.get_text()
+				talkingPointsMemoDoc.content = main_content.strip()
+				talkingPointsMemoDoc.save()
+			except:
+				print "Exception occured"
+				pass
+
+		start_num += 10
+		# break
+	return 'Anand'
+
+
+@mod_data.route('/liberal/parse-fivethirtyeight')
+def parse_fivethirtyeight():
+	#JNYTDocument.drop_collection()
+
+	base_url = "http://fivethirtyeight.com/page/<<page_num>>/?s=presidential+elections+2012"
+	page_num = 1
+
+	while True:
+		url = base_url.replace("<<page_num>>", `page_num`)
+		url_content = utils.getData(url)
+
+		if url_content is None:
+			break
+
+		# if page_num == 3:
+		# 	break
+		
+		# soup = BeautifulSoup(utils.getData(url))
+		# print soup
+		soup = BeautifulSoup(url_content).find("div",{"id":"main"})
+		posts = soup.findAll("div")
+
+		for index, div in enumerate(posts):
+			if index == 0:
+				continue
+			#do something with the individual posts here..
+			date_string = div.find("span",{"class":"datetime updated"}).get_text()
+			link = div.find("h2",{"class":"article-title entry-title"}).find("a")
+
+			fivethirtyeightDoc = JNYTDocument()
+
+			fivethirtyeightDoc.web_url = link['href'].strip()
+			fivethirtyeightDoc.political_leaning = "Liberal"
+			fivethirtyeightDoc.source = "FiveThirtyEight"
+			fivethirtyeightDoc.headline = link.get_text().strip()
+			fivethirtyeightDoc.pub_date = datetime.strptime(date_string.strip(),"%b %d, %Y")
+			fivethirtyeightDoc.save()
+
+			#Getting the social shares for the URL
+			#fivethirtyeightDoc.social_shares = shares.get_social_counts(fivethirtyeightDoc.web_url)
+			#fivethirtyeightDoc.save()
+
+			try:
+				content_soup = BeautifulSoup(utils.getData(fivethirtyeightDoc.web_url)).find("div",{"class":"entry-content"})
+				fivethirtyeightDoc.content = content_soup.get_text()
+				fivethirtyeightDoc.save()
+			except:
+				pass
+			#print date_string.strip(), title_link.get_text().strip(), title_link['href'].strip()
+			# break
+		# break
+		page_num = page_num + 1
+	return `index`
+	
+
 @mod_data.route('/liberal/parse-dailykos')
 def parse_dailykos():
 	#JNYTDocument.drop_collection()
@@ -149,7 +310,7 @@ def parse_dailykos():
 	#Inside the loop, parsing the other contents would introduce the sufficient wait time. 
 	time.sleep(10)
 
-	for page_num in range(1, no_of_pages+1):
+	for page_num in range(1, 30):
 		url = base_url + `page_num`
 		soup = BeautifulSoup(utils.getData(url)).find("div",{"class":"ajax-form-results ajax-delay-load"})
 
