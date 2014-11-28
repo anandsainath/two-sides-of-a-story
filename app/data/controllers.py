@@ -17,6 +17,116 @@ def index():
 
 ##Conservative Blogs
 
+#http://wizbangblog.com/category/2012-presidential-race/
+@mod_data.route('/conservative/parse-wizbang')
+def parse_wizbang():
+	base_url_2012 = "http://wizbangblog.com/category/2012-presidential-race/" #upto 23
+	base_url_2008 = "http://wizbangblog.com/category/2008-presidential-race/" #upto 51
+
+	for page_num in range(1, 24):
+		if page_num > 1:
+			url = base_url_2012 + 'page/' + `page_num`
+		else:
+			url = base_url_2012
+
+		parseWizBangUrl(url)
+		#break
+
+	for page_num in range(1, 52):
+		if page_num > 1:
+			url = base_url_2008 + 'page/' + `page_num`
+		else:
+			url = base_url_2008
+
+		parseWizBangUrl(url)
+		#break
+
+	return `page_num`
+
+def parseWizBangUrl(url):
+	browser_data = utils.getDataAsABrowserRequest(url)
+	if browser_data.status_code == 200:
+		soup = BeautifulSoup(browser_data.text).find("div",{"id":"content_box"})
+
+		articles = soup.findAll("article")
+
+		for article in articles:
+			title_link = article.find("header").find("a")
+			date_string = article.find("header").find("span",{"class":"thetime updated"}).get_text()
+
+			wizbangblogDoc = JNYTDocument()
+			wizbangblogDoc.web_url = title_link['href']
+			wizbangblogDoc.political_leaning = "Conservative"
+			wizbangblogDoc.source = "WizBang Blog"
+			wizbangblogDoc.headline = title_link.get_text().strip()
+			wizbangblogDoc.pub_date = datetime.strptime(date_string.strip(),"%B %d, %Y")
+			wizbangblogDoc.save()
+
+			#Getting the social shares for the URL
+			#wizbangblogDoc.social_shares = shares.get_social_counts(wizbangblogDoc.web_url)
+			#wizbangblogDoc.save()
+
+			browser_request = utils.getDataAsABrowserRequest(wizbangblogDoc.web_url)
+			if browser_request.status_code == 200:
+				content_soup = BeautifulSoup(browser_request.text).find("div",{"class":"thecontent"}).findAll("p")
+				article_content = ""
+				text = ""
+
+				for paragraph in content_soup:
+					text = paragraph.get_text()
+					article_content += " "+ text
+
+				wizbangblogDoc.content = article_content.strip()
+				wizbangblogDoc.save()
+
+@mod_data.route('/conservative/parse-redstate')
+def parse_redstate():
+	base_url = "http://www.redstate.com/search/presidential+elections+2012/page/"
+	
+	for page_num in range(1,63):
+		url = base_url + `page_num`
+		soup = BeautifulSoup(utils.getData(url))
+
+		articles = soup.find("ul",{"class":"story-loop"}).findAll("ul",{"class","post"})
+
+		for index, article in enumerate(articles):
+			title_link = article.find("a")
+			date_string = article.find("span",{"class":"byline-italic"})
+			date_string = date_string.get_text().split(" at ")[0]
+			date_string = date_string.replace("th,",",")
+			date_string = date_string.replace("st,",",")
+			date_string = date_string.replace("nd,",",")
+			date_string = date_string.replace("rd,",",")
+
+			redStateDoc = JNYTDocument()
+			redStateDoc.web_url = title_link['href']
+			redStateDoc.political_leaning = "Conservative"
+			redStateDoc.source = "RedState"
+			redStateDoc.headline = title_link.get_text().strip()
+			redStateDoc.pub_date = datetime.strptime(date_string.strip(),"%B %d, %Y")
+			redStateDoc.save()
+
+			#Getting the social shares for the URL
+			#redStateDoc.social_shares = shares.get_social_counts(redStateDoc.web_url)
+			#redStateDoc.save()
+
+			content_soup = BeautifulSoup(utils.getData(redStateDoc.web_url)).find("div",{"class":"the-content"}).findAll("p")
+			article_content = ""
+			text = ""
+
+			for paragraph in content_soup:
+				text = paragraph.get_text()
+				article_content += " "+ text
+
+			article_content = article_content.replace(text,"")
+
+			redStateDoc.content = article_content.strip()
+			redStateDoc.save()
+
+		# break
+
+	return `page_num`
+
 @mod_data.route('/conservative/parse-pjmedia')
 def parse_pj_media():
 	# JNYTDocument.drop_collection()
@@ -348,9 +458,52 @@ def parse_dailykos():
 		#	break
 	return `page_num`
 
+
+@mod_data.route('/parse-time')
+def parse_time():
+	current_page_url = "http://search.time.com/results.html?Ntt=us+presidential+elections&Nf=p_date_range%7cBTWN+20110101+20130531"
+
+	while current_page_url != None:
+		soup = BeautifulSoup(utils.getData(current_page_url)).find("div",{"class":"resultsCol"})
+
+		pagination = soup.find("div",{"class":"pagi"}).find("a",{"title":"Next"})
+		if pagination != None:
+			current_page_url = pagination["href"]
+		else:
+			current_page_url = None
+		
+		articles = soup.findAll("div",{"class":"tout"})
+
+		for article in articles:
+			image_div = article.find("div",{"class":"img"})
+			if image_div != None:
+				title_link = article.find("h3").find("a")
+				date_string = article.find("span",{"class":"date"}).get_text().strip()
+				
+				content_soup = BeautifulSoup(utils.getData(title_link['href'])).find("div",{"class":"entry-content"}).findAll("p")
+
+				article_content = ""
+				for p in content_soup:
+					article_content += p.get_text().strip()
+				print title_link['href'], title_link.get_text(), date_string
+
+				timeDoc = JNYTDocument()
+				timeDoc.pub_date = datetime.strptime(date_string,'%b %d, %Y')
+				timeDoc.source = "Time"
+				timeDoc.web_url = title_link['href']
+				timeDoc.headline = title_link.get_text()
+				timeDoc.content = article_content
+				timeDoc.save()
+
+				#Getting the social shares for the URL
+				#timeDoc.social_shares = shares.get_social_counts(timeDoc.web_url)
+				#timeDoc.save()
+		current_page_url = None
+	return current_page_url
+
 @mod_data.route('/parse-nyt')
 def parse_nyt():
-	JNYTDocument.drop_collection()
+	#JNYTDocument.drop_collection()
 	params = "US+Presidential+Election&begin_date=20120101&end_date=20121231"
 
 	url = utils.get_nyt_article_search_url(params)

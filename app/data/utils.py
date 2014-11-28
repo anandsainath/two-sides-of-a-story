@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import pickle
 import re
 from HTMLParser import HTMLParser
+import requests
 
 def get_json_response (url):
     response = urllib2.urlopen (url)
@@ -33,6 +34,15 @@ def getData(url):
 		#html = response.read()
 		html = None
 	return html
+
+def getDataAsABrowserRequest(url):
+	data = None
+	header = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:32.0) Gecko/20100101 Firefox/32.0',}
+	try:
+		data = requests.get(url, headers=header)
+	except Exception:
+		pass
+	return data
 
 def unpickle(filename):
 	f = open(filename,"rb") 
