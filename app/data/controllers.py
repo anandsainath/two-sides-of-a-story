@@ -480,63 +480,95 @@ def parse_time():
 				title_link = article.find("h3").find("a")
 				date_string = article.find("span",{"class":"date"}).get_text().strip()
 				
-				content_soup = BeautifulSoup(utils.getData(title_link['href'])).find("div",{"class":"entry-content"}).findAll("p")
+				content_soup = BeautifulSoup(utils.getData(title_link['href'])).find("div",{"class":"entry-content"})
 
-				article_content = ""
-				for p in content_soup:
-					article_content += p.get_text().strip()
-				print title_link['href'], title_link.get_text(), date_string
+				if content_soup != None:
+					content_soup = content_soup.findAll("p")
 
-				timeDoc = JNYTDocument()
-				timeDoc.pub_date = datetime.strptime(date_string,'%b %d, %Y')
-				timeDoc.source = "Time"
-				timeDoc.web_url = title_link['href']
-				timeDoc.headline = title_link.get_text()
-				timeDoc.content = article_content
-				timeDoc.save()
+					article_content = ""
+					for p in content_soup:
+						article_content += p.get_text().strip()
+					print title_link['href'], title_link.get_text(), date_string
+
+					timeDoc = JNYTDocument()
+					timeDoc.pub_date = datetime.strptime(date_string,'%b %d, %Y')
+					timeDoc.source = "Time"
+					timeDoc.web_url = title_link['href']
+					timeDoc.headline = title_link.get_text()
+					timeDoc.content = article_content
+					timeDoc.save()
 
 				#Getting the social shares for the URL
 				#timeDoc.social_shares = shares.get_social_counts(timeDoc.web_url)
 				#timeDoc.save()
-		current_page_url = None
+		#current_page_url = None
 	return current_page_url
+
+def get_nyt_data(url):
+	browser_request = utils.getDataAsABrowserRequest(url)
+	sent = ""
+	if browser_request.status_code == 200:
+		soup1 = BeautifulSoup(browser_request.text)
+
+		soup = soup1.findAll("p",{"itemprop": "articleBody"})
+		if soup == None or len(soup) == 0:
+			soup = soup1.find("div", {"id": "articleBody"})
+			if soup!=None:
+				soup = soup.findAll("p")
+		if soup == None or len(soup)==0:
+			soup = soup1.find("div", {"class": "articleBody"}) 
+			if soup!=None:
+				soup = soup.findAll("p")
+		if soup!=None and len(soup)>0:
+			if type(soup) is not str:
+				sent = " ".join([str(word) for word in soup])
+			else:
+				sent = soup
+	return utils.strip(sent)
 
 @mod_data.route('/parse-nyt')
 def parse_nyt():
 	#JNYTDocument.drop_collection()
 	params = "US+Presidential+Election&begin_date=20120101&end_date=20121231"
+	base_url = utils.get_nyt_article_search_url(params)
 
-	url = utils.get_nyt_article_search_url(params)
-	response = urlopen(url).read()
-	response = json.loads(response)
+	for page_num in range(70, 101):
+		url = base_url + "&page=" + `page_num`
+		response = urlopen(url).read()
+		response = json.loads(response)
 
-	for article in response["response"]["docs"]:
-		nytimesDoc = JNYTDocument()
-		nytimesDoc.web_url = article["web_url"]
-		nytimesDoc.snippet = article["snippet"]
-		nytimesDoc.lead_paragraph = article["lead_paragraph"]
-		nytimesDoc.abstract = article["abstract"]
-		nytimesDoc.print_page = article["print_page"]
-		nytimesDoc.source = article["source"]
-		nytimesDoc.pub_date = datetime.strptime(article["pub_date"],'%Y-%m-%dT%H:%M:%SZ')
-		nytimesDoc.document_type = article["document_type"]
-		nytimesDoc.news_desk = article["news_desk"]
-		nytimesDoc.section_name = article["section_name"]
-		nytimesDoc.subsection_name = article["subsection_name"]
-		nytimesDoc.type_of_material = article["type_of_material"]
-		nytimesDoc.article_id = article["_id"]
-		nytimesDoc.word_count = article["word_count"]
+		print "Parsing: " + `page_num`
 
-		nytimesDoc.byline = article["byline"]
-		nytimesDoc.headline = article["headline"]['main']
-		nytimesDoc.multimedia = article["multimedia"]
-		nytimesDoc.keywords = article["keywords"]
-		nytimesDoc.save()
+		for article in response["response"]["docs"]:
+			nytimesDoc = JNYTDocument()
+			nytimesDoc.web_url = article["web_url"]
+			nytimesDoc.source = article["source"]
+			nytimesDoc.pub_date = datetime.strptime(article["pub_date"],'%Y-%m-%dT%H:%M:%SZ')
+			nytimesDoc.headline = article["headline"]['main']
+			# nytimesDoc.snippet = article["snippet"]
+			# nytimesDoc.lead_paragraph = article["lead_paragraph"]
+			# nytimesDoc.abstract = article["abstract"]
+			#nytimesDoc.print_page = article["print_page"]
+			# nytimesDoc.document_type = article["document_type"]
+			# nytimesDoc.news_desk = article["news_desk"]
+			# nytimesDoc.section_name = article["section_name"]
+			# nytimesDoc.subsection_name = article["subsection_name"]
+			# nytimesDoc.type_of_material = article["type_of_material"]
+			# nytimesDoc.article_id = article["_id"]
+			# nytimesDoc.word_count = article["word_count"]
 
-		print "Saved intermediate instance"
-		print "getting_social_shares for :"+ nytimesDoc.web_url
+			# nytimesDoc.byline = article["byline"]
+			# nytimesDoc.multimedia = article["multimedia"]
+			# nytimesDoc.keywords = article["keywords"]
 
-		nytimesDoc.social_shares = shares.get_social_counts(nytimesDoc.web_url)
-		nytimesDoc.save()
+			print "Saved intermediate instance"
+			print "getting_social_shares for :"+ nytimesDoc.web_url
 
-	return response["status"]
+			# nytimesDoc.social_shares = shares.get_social_counts(nytimesDoc.web_url)
+
+			nytimesDoc.content = get_nyt_data(nytimesDoc.web_url)
+			nytimesDoc.save()
+			# break
+		# break
+
+	return `page_num`
