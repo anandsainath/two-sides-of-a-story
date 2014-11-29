@@ -15,6 +15,8 @@ def not_found(error):
     return render_template('404.html'), 404
 
 from app.data.controllers import mod_data as mod_data
+from app.site.controllers import mod_site as mod_site
 
 # Register blueprint(s)
 app.register_blueprint(mod_data)
+app.register_blueprint(mod_site)

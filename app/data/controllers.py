@@ -572,3 +572,15 @@ def parse_nyt():
 		# break
 
 	return `page_num`
+
+@mod_data.route('/parse-social-shares')
+def parse_social_shares():
+	articles = JNYTDocument.objects
+	for article in articles:
+		if not article.social_shares:
+			article.social_shares = shares.get_social_counts(article.web_url)
+			article.save()
+		# break
+	return "Done"
+
+
