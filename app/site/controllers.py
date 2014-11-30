@@ -3,6 +3,8 @@ from flask import Blueprint, request, render_template
 from datetime import timedelta, date
 from time import strftime
 import csv
+import re
+import json
 from random import randint
 
 from app.data.models import JNYTDocument
@@ -23,6 +25,17 @@ def daterange(start_date, end_date):
 def index():
 	return render_template('/site/index.html')
 
+@mod_site.route('/get-article-content/<post_id>')
+def get_article_content(post_id):
+	article = JNYTDocument.objects(id=post_id)
+
+	if len(article) != 0:
+		return json.dumps({
+			'content' : article[0].content,
+			'source': article[0].source,
+			'link': article[0].web_url
+		})
+
 @mod_site.route('/get-data')
 def get_data():
 	start_date = date( year = 2011, month = 1, day = 1 )
@@ -34,18 +47,50 @@ def get_data():
 	count = 0
 
 	for article in articles:
-		if article.political_leaning == "Unknown":
+		if article.content == None or len(article.content.strip()) == 0:
 			continue
+
+		political_leaning = article.political_leaning
+		if political_leaning == "Unknown":
+			political_leaning = article.computed_political_leaning
+			if political_leaning == "Unknown":
+				continue
+
 		if article.pub_date != None and article.pub_date.date() >= start_date and article.pub_date.date() <= end_date:
 			date_string = strftime("%Y-%m-%d", article.pub_date.date().timetuple())
 
 			if date_string in dict_liberal:
 				date_summary = dict_liberal[date_string]
 			else:
-				date_summary = {"count": 0, "Liberal": 0, "Conservative": 0}
+				date_summary = {
+				"count": 0, 
+				"Liberal": 0, 
+				"Conservative": 0, 
+				"Liberal_strength": 0,
+				"Liberal_strength_Max": 0,
+				"Liberal_Max":0, 
+				"Conservative_Max":0, 
+				"Conservative_strength": 0,
+				"Conservative_strength_Max": 0,
+				"Liberal_id":"", 
+				"Conservative_id":"",
+				"Liberal_title":"",
+				"Conservative_title":""
+			}
+
+			article_agg_share_count = get_agg_share_count(article)
+
+			if article_agg_share_count > date_summary[political_leaning+"_Max"]:
+				date_summary[political_leaning+"_Max"] = article_agg_share_count
+				date_summary[political_leaning+"_id"] = article.id
+				date_summary[political_leaning+"_title"] = article.headline
+
+			if article.political_leaning_strength != None and abs(article.political_leaning_strength) > date_summary[political_leaning+"_strength_Max"]:
+				date_summary[political_leaning+"_strength_Max"] = abs(article.political_leaning_strength)
+				date_summary[political_leaning+"_strength"] += article.political_leaning_strength
 
 			date_summary["count"] = date_summary["count"] + 1
-			date_summary[article.political_leaning] = date_summary[article.political_leaning] + get_agg_share_count(article)
+			date_summary[political_leaning] = date_summary[political_leaning] + article_agg_share_count
 			dict_liberal[date_string] = date_summary
 			print article.pub_date, start_date, end_date
 
@@ -60,10 +105,22 @@ def get_data():
 
 		if key in dict_liberal:
 			output_item.append(dict_liberal[key]["Liberal"])
+			output_item.append(abs(dict_liberal[key]["Liberal_strength"]))
+			output_item.append(dict_liberal[key]["Liberal_id"])
+			output_item.append(re.sub(r'[^\x00-\x7f]',r' ',dict_liberal[key]["Liberal_title"]))
 			output_item.append(dict_liberal[key]["Conservative"])
+			output_item.append(dict_liberal[key]["Conservative_strength"])
+			output_item.append(dict_liberal[key]["Conservative_id"])
+			output_item.append(re.sub(r'[^\x00-\x7f]',r' ',dict_liberal[key]["Conservative_title"]))
 		else:
 			output_item.append(0)
 			output_item.append(0)
+			output_item.append('')
+			output_item.append('')
+			output_item.append(0)
+			output_item.append(0)
+			output_item.append('')
+			output_item.append('')
 
 		output_result.append(output_item)
 
@@ -77,8 +134,9 @@ def get_agg_share_count(article):
 
 	for key, value in article.social_shares.iteritems():
 		if key == "Facebook":
-			for key_fb, value_fb in value.iteritems():
-				total_count += int(value_fb)
+			total_count += int(value["total_count"])
+			# for key_fb, value_fb in value.iteritems():
+				# total_count += int(value_fb)
 		else:
 			total_count += int(value)
 	return total_count

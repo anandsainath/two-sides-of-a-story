@@ -13,11 +13,12 @@ import jsonrpc
 from simplejson import loads
 
 server = jsonrpc.ServerProxy(jsonrpc.JsonRpc20(),
-                             jsonrpc.TransportTcpIp(addr=("127.0.0.1", 8080)))
+                             jsonrpc.TransportTcpIp(addr=("127.0.0.1", 3456)))
 class Bias():
 	def __init__(self):
-		self.classifier = util.unpickle("cl.txt")
-		self.featurenum = util.unpickle("featurenum.txt")
+		self.classifier = util.unpickle(os.path.dirname(os.path.realpath(__file__)) + "/cl.txt")
+		self.featurenum = util.unpickle(os.path.dirname(os.path.realpath(__file__)) + "/featurenum.txt")
+		
 
 	def getFeatures(self,doc):
 		stop = stopwords.words('english')
