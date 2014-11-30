@@ -5,8 +5,8 @@ from collections import defaultdict
 import re
 import sets
 import nltk.classify
-from sklearn.svm import LinearSVC
-from sklearn import cross_validation
+# from sklearn.svm import LinearSVC
+#from sklearn import cross_validation
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import nltk.metrics
@@ -19,7 +19,7 @@ import util
 from nltk import word_tokenize,sent_tokenize
 import os,sys
 from getData import Data
-from sklearn.linear_model import LogisticRegression
+#from sklearn.linear_model import LogisticRegression
 from sets import Set
 from scipy.sparse import csr_matrix
 from scipy.sparse import lil_matrix
@@ -27,8 +27,9 @@ import numpy as np
 
 class Bias():
 	def __init__(self):
-		self.classifier = util.unpickle("cl.txt")
-		self.featurenum = util.unpickle("featurenum.txt")
+		self.classifier = util.unpickle(os.path.dirname(os.path.realpath(__file__)) + "/cl.txt")
+		self.featurenum = util.unpickle(os.path.dirname(os.path.realpath(__file__)) + "/featurenum.txt")
+		
 
 	def getFeatures(self,doc):
 		stop = stopwords.words('english')
@@ -52,7 +53,8 @@ class Bias():
 				x2 = lmtzr.stem(s[i+1].lower().strip())
 				features[('hbi',(x1,x2))] = 1
 			x += len(s)
-		features['hlen'] = x/len(sent_tokenize(headline))
+		if len(sent_tokenize(headline)) != 0:
+			features['hlen'] = x/len(sent_tokenize(headline))
 		content = doc[1]
 		x = 0
 		for line in sent_tokenize(content):
@@ -78,7 +80,8 @@ class Bias():
 			for i in xrange(len(trigrams)):
 				features[('dtri',trigrams[i])]=1
 			x+=len(unigrams)
-		features['dlen'] = x/len(sent_tokenize(content))
+		if len(sent_tokenize(content)) != 0:
+			features['dlen'] = x/len(sent_tokenize(content))
 
 		return features
 

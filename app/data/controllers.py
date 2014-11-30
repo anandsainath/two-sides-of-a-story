@@ -8,6 +8,8 @@ import shares, utils, time
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+from app.data.PoliticalBias import politicalLeaning
+
 # Define the blueprint: 'data', set its url prefix: app.url/data
 mod_data = Blueprint('data', __name__, url_prefix='/data')
 
@@ -582,5 +584,22 @@ def parse_social_shares():
 			article.save()
 		# break
 	return "Done"
+
+@mod_data.route('/compute-leniency')
+def compute_liniency():
+	bo = politicalLeaning.Bias()
+	index = 0
+	for article in JNYTDocument.objects:
+		print index
+		if article.content != None and len(article.content.strip()) != 0:
+			label = bo.getPoliticalLeaning([article.headline, article.content])
+			article.computed_political_leaning = label[0]
+			article.political_leaning_strength = label[1]
+			article.save()
+		index += 1
+	return "Anand"
+
+
+
 
 
