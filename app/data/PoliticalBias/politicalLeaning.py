@@ -1,30 +1,19 @@
 from __future__ import division
-import nltk
 from nltk import word_tokenize,sent_tokenize
 from collections import defaultdict
 import re
-import sets
-import nltk.classify
-from sklearn.svm import LinearSVC
-from sklearn import cross_validation
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
-import nltk.metrics
-import nltk
-from random import randint
-import collections
 import numpy
-import cPickle as pickle
 import util
 from nltk import word_tokenize,sent_tokenize
-import os,sys
-from getData import Data
-from sklearn.linear_model import LogisticRegression
 from sets import Set
-from scipy.sparse import csr_matrix
-from scipy.sparse import lil_matrix
 import numpy as np
+import jsonrpc
+from simplejson import loads
 
+server = jsonrpc.ServerProxy(jsonrpc.JsonRpc20(),
+                             jsonrpc.TransportTcpIp(addr=("127.0.0.1", 8080)))
 class Bias():
 	def __init__(self):
 		self.classifier = util.unpickle("cl.txt")
@@ -36,8 +25,30 @@ class Bias():
 		punctpattern = re.compile("[?!.-;,:]+")
 		numberPattern = re.compile("[0-9]+")
 		headline = doc[0]
+		#headline features
 		features = defaultdict(int)
-		x = 0
+		result = {}
+		try:
+			result = loads(server.parse(headline))
+		except:
+			pass
+		namedEntities = util.runNER(headline)
+		n1 = []
+		for word in namedEntities:
+			if len(word.split())>2:
+				continue
+			for word1 in word.split():
+				n1.append(word1.lower())
+		try:
+			if 'sentences' in result:
+				for i in xrange(len(result['sentences'][0]['dependencies'])):
+					for word in result['sentences'][0]['dependencies'][i]:
+						if word.lower() in n1: 
+							features[(word.lower(),result['sentences'][0]['dependencies'][i][0])]  = 1
+		except:
+			pass
+
+		hlen = 0
 		for line in sent_tokenize(headline):
 			s = word_tokenize(line)
 			for word in s:
@@ -45,40 +56,37 @@ class Bias():
 					features['hpunct']+=1
 				if word.istitle():
 					features['hTitlecase']+= 1
-				if word.lower().strip() not in stop:
-					features[('huni',lmtzr.stem(word.lower().strip()))] = 1
+				features[('huni',lmtzr.stem(word.lower().strip()))] = 1
 			for i in xrange(len(s)-1):
-				x1 = lmtzr.stem(s[i].lower().strip())
-				x2 = lmtzr.stem(s[i+1].lower().strip())
+				x1 = s[i].lower().strip()
+				x2 = s[i+1].lower().strip()
 				features[('hbi',(x1,x2))] = 1
-			x += len(s)
-		features['hlen'] = x/len(sent_tokenize(headline))
+
+			hlen += len(s)
+		if len(sent_tokenize(headline))!=0:
+			features['hlen'] = hlen/len(sent_tokenize(headline))
 		content = doc[1]
-		x = 0
+		dlen = 0
+		namedEntities = util.runNER(content)
+		features['ner'] = len(namedEntities)
 		for line in sent_tokenize(content):
 			unigrams = word_tokenize(line)
 			for i in xrange(len(unigrams)):
-
-				if unigrams[i].istitle():
-					features['dTitle']+=1
-				if numberPattern.match(unigrams[i])!=None:
-					features['dnumb']+=1
 				if punctpattern.match(unigrams[i])!=None:
 					features['dpunct']+=1
-				if unigrams[i].lower().strip() not in stop:
-					unigrams[i] = lmtzr.stem(unigrams[i].lower().strip())
-					features[('duni',unigrams[i])] = 1
-				else:
-					unigrams[i] = lmtzr.stem(unigrams[i].lower().strip())
-			
-			bigrams= [(unigrams[i],unigrams[i+1]) for i in range(len(unigrams)-1)]
-			for i in xrange(len(bigrams)):
-				features[('dbi',bigrams[i])] = 1
-			trigrams = [(unigrams[i],unigrams[i+1],unigrams[i+2]) for i in range(len(unigrams)-2)]
-			for i in xrange(len(trigrams)):
-				features[('dtri',trigrams[i])]=1
-			x+=len(unigrams)
-		features['dlen'] = x/len(sent_tokenize(content))
+				if unigrams[i] not in namedEntities and unigrams[i] not in stop:
+					unigram = lmtzr.stem(unigrams[i].lower().strip())
+					features[('duni',unigram)] = 1
+				if i != len(unigrams)-1:
+					if unigrams[i]+" "+unigrams[i+1] not in namedEntities:
+						bigram= (unigrams[i].lower().strip(),unigrams[i+1].lower().strip())
+						features[('dbi',bigram)] = 1
+	#		trigrams = [(unigrams[i],unigrams[i+1],unigrams[i+2]) for i in range(len(unigrams)-2)]
+	#		for i in xrange(len(trigrams)):
+	#			features[('dtri',trigrams[i])]=1
+			dlen+=len(unigrams)
+		if len(sent_tokenize(content))!=0:
+			features['dlen'] = dlen/len(sent_tokenize(content))
 
 		return features
 

@@ -1,6 +1,5 @@
 import nltk
 import urllib2
-import simplejson
 import zlib
 import time
 import re
