@@ -6,6 +6,7 @@ This is a project for CS 8803 Social Computing. Here we analyze two aspects of t
 ####Dependencies
 ```
 source env/bin/activate
+pip install https://github.com/mitsuhiko/flask/tarball/master
 sudo pip install flask-script
 sudo pip install mongoengine
 sudo pip install flask-mongoengine
