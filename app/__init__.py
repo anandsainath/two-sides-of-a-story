@@ -9,6 +9,11 @@ app.config["SECRET_KEY"] = "KeepThisS3cr3t@sK3Y"
 
 db = MongoEngine(app)
 
+@app.cli.command()
+def initdb():
+	""" Initializes the DB """
+	print "DB initialized!"
+
 # Sample HTTP error handling
 @app.errorhandler(404)
 def not_found(error):

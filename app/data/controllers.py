@@ -7,6 +7,7 @@ from app.data.models import JNYTDocument
 import shares, utils, time
 from bs4 import BeautifulSoup
 from datetime import datetime
+from mongoengine import NotUniqueError
 
 from app.data.PoliticalBias import politicalLeaning
 
@@ -523,18 +524,22 @@ def get_nyt_data(url):
 				soup = soup.findAll("p")
 		if soup!=None and len(soup)>0:
 			if type(soup) is not str:
-				sent = " ".join([str(word) for word in soup])
+				sent = " ".join([word.get_text() for word in soup])
+				sent = sent.replace("\n","")
+				sent = sent.strip()
 			else:
 				sent = soup
-	return utils.strip(sent)
+	return sent
 
 @mod_data.route('/parse-nyt')
 def parse_nyt():
 	#JNYTDocument.drop_collection()
-	params = "US+Presidential+Election&begin_date=20120101&end_date=20121231"
+	params = 'US+Presidential+Election&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
 	base_url = utils.get_nyt_article_search_url(params)
 
-	for page_num in range(70, 101):
+	# 0 - 16
+	# for page_num in range(39, 101):
+	for page_num in range(1, 16):
 		url = base_url + "&page=" + `page_num`
 		response = urlopen(url).read()
 		response = json.loads(response)
@@ -542,46 +547,54 @@ def parse_nyt():
 		print "Parsing: " + `page_num`
 
 		for article in response["response"]["docs"]:
-			nytimesDoc = JNYTDocument()
-			nytimesDoc.web_url = article["web_url"]
-			nytimesDoc.source = article["source"]
-			nytimesDoc.pub_date = datetime.strptime(article["pub_date"],'%Y-%m-%dT%H:%M:%SZ')
-			nytimesDoc.headline = article["headline"]['main']
-			# nytimesDoc.snippet = article["snippet"]
-			# nytimesDoc.lead_paragraph = article["lead_paragraph"]
-			# nytimesDoc.abstract = article["abstract"]
-			#nytimesDoc.print_page = article["print_page"]
-			# nytimesDoc.document_type = article["document_type"]
-			# nytimesDoc.news_desk = article["news_desk"]
-			# nytimesDoc.section_name = article["section_name"]
-			# nytimesDoc.subsection_name = article["subsection_name"]
-			# nytimesDoc.type_of_material = article["type_of_material"]
-			# nytimesDoc.article_id = article["_id"]
-			# nytimesDoc.word_count = article["word_count"]
+			try:
+				nytimesDoc = JNYTDocument()
+				nytimesDoc.web_url = article["web_url"]
+				nytimesDoc.save()
+				nytimesDoc.source = article["source"]
+				nytimesDoc.pub_date = datetime.strptime(article["pub_date"],'%Y-%m-%dT%H:%M:%SZ')
+				nytimesDoc.headline = article["headline"]['main']
+				# nytimesDoc.snippet = article["snippet"]
+				# nytimesDoc.lead_paragraph = article["lead_paragraph"]
+				# nytimesDoc.abstract = article["abstract"]
+				#nytimesDoc.print_page = article["print_page"]
+				# nytimesDoc.document_type = article["document_type"]
+				# nytimesDoc.news_desk = article["news_desk"]
+				# nytimesDoc.section_name = article["section_name"]
+				# nytimesDoc.subsection_name = article["subsection_name"]
+				# nytimesDoc.type_of_material = article["type_of_material"]
+				# nytimesDoc.article_id = article["_id"]
+				# nytimesDoc.word_count = article["word_count"]
 
-			# nytimesDoc.byline = article["byline"]
-			# nytimesDoc.multimedia = article["multimedia"]
-			# nytimesDoc.keywords = article["keywords"]
+				# nytimesDoc.byline = article["byline"]
+				# nytimesDoc.multimedia = article["multimedia"]
+				# nytimesDoc.keywords = article["keywords"]
 
-			print "Saved intermediate instance"
-			print "getting_social_shares for :"+ nytimesDoc.web_url
+				# nytimesDoc.social_shares = shares.get_social_counts(nytimesDoc.web_url)
 
-			# nytimesDoc.social_shares = shares.get_social_counts(nytimesDoc.web_url)
-
-			nytimesDoc.content = get_nyt_data(nytimesDoc.web_url)
-			nytimesDoc.save()
+				nytimesDoc.content = get_nyt_data(nytimesDoc.web_url)
+				nytimesDoc.save()
+				print nytimesDoc.id
+			except NotUniqueError:
+				print nytimesDoc.web_url +" already exists.."
 			# break
+
+		# if page_num == 10:
+		# 	break
 		# break
 
 	return `page_num`
 
 @mod_data.route('/parse-social-shares')
 def parse_social_shares():
-	articles = JNYTDocument.objects
+	articles = JNYTDocument.objects(source="The New York Times")
+	index = 0
 	for article in articles:
 		if not article.social_shares:
+			print index
 			article.social_shares = shares.get_social_counts(article.web_url)
 			article.save()
+			index += 1
 		# break
 	return "Done"
 
@@ -589,14 +602,40 @@ def parse_social_shares():
 def compute_liniency():
 	bo = politicalLeaning.Bias()
 	index = 0
-	for article in JNYTDocument.objects:
-		print index
+
+	# for article in JNYTDocument.objects(source="DailyKos"):
+	# 	print article.web_url
+	# 	article.computed_political_leaning = "Unknown"
+	# 	article.political_leaning_strength = 0
+	# 	break
+		# if article.computed_political_leaning != "Unknown":
+			# print article.headline, "|", article.computed_political_leaning, "|", article.political_leaning_strength, "|"
+			# label = bo.getPoliticalLeaning([article.headline, article.content])
+			# print "Computed", label
+			# break
+
+	#Preprocessing step..
+	# for article in JNYTDocument.objects:
+	# 	print index
+	# 	article.computed_political_leaning = "Unknown"
+	# 	article.political_leaning_strength = 0
+	# 	article.save()
+	# 	print article.computed_political_leaning
+	# 	index += 1
+
+	for article in JNYTDocument.objects(source="RedState"):
+		if article.computed_political_leaning != "Unknown":
+			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+			continue
+
 		if article.content != None and len(article.content.strip()) != 0:
 			label = bo.getPoliticalLeaning([article.headline, article.content])
 			article.computed_political_leaning = label[0]
 			article.political_leaning_strength = label[1]
 			article.save()
+			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 		index += 1
+		# break
 	return "Anand"
 
 

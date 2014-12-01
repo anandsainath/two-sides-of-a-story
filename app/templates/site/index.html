@@ -63,8 +63,8 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-8">
 				<div class="btn-group" role="group" aria-label="...">
-					<button type="button" class="btn btn-default active">Social Activity</button>
-					<button type="button" class="btn btn-default">Content Relation</button>
+					<button type="button" data-mode="social-shares" class="js-btn-mode btn btn-default active">Social Activity</button>
+					<button type="button" data-mode="strength" class="js-btn-mode btn btn-default">Content Relation</button>
 				</div>
 			</div>
 		</div>
@@ -91,8 +91,8 @@
 {% block content_script %}
 <script type="text/javascript">
 
-	var margin = {top: 10, right: 10, bottom: 100, left: 40},
-		margin2 = {top: 330, right: 10, bottom: 20, left: 40},
+	var margin = {top: 10, right: 10, bottom: 100, left: 60},
+		margin2 = {top: 330, right: 10, bottom: 20, left: 60},
 		width = 780 - margin.left - margin.right,
 		height = 400 - margin.top - margin.bottom,
 		height2 = 400 - margin2.top - margin2.bottom;
@@ -136,9 +136,24 @@
 
 	var date1, date2;
 
+	var current_mode = $('.js-btn-mode').filter('.active').data('mode');
+
+	var max_share_value, max_strength_value;
+
 	d3.csv("/static/data/output.csv", type, function(error, data) {
+
+		max_share_value = d3.max([
+			d3.max(data.map(function(d) { return d.liberal; })), 
+			d3.max(data.map(function(d) { return d.conservative; }))
+		]);
+
+		max_strength_value = d3.max([
+			d3.max(data.map(function(d) { return d.liberal_strength; })), 
+			d3.max(data.map(function(d) { return d.conservative_strength; }))
+		]);
+
 		x.domain(d3.extent(data.map(function(d) { return d.date; }))).nice(d3.time.month);
-		y.domain([0.1, d3.max([d3.max(data.map(function(d) { return d.liberal; })), d3.max(data.map(function(d) { return d.conservative; }))])]).nice().clamp(true);
+		y.domain([0.1, max_share_value]).nice().clamp(true);
 		by.domain(y.domain()).nice().clamp(true);
 		x2.domain(x.domain()).nice(d3.time.month);
 		y2.domain(y.domain()).nice().clamp(true);
@@ -285,6 +300,71 @@
 				}
 			}
 		});
+	}
+
+	$(function(){
+		$(".js-btn-mode").click(function(){
+			var required_mode = $(this).data('mode');
+			if(current_mode !== required_mode){
+				current_mode = required_mode;
+				switch(required_mode){
+					case 'social-shares':
+						y.domain([0.1, max_share_value]).nice().clamp(true);
+						by.domain(y.domain()).nice().clamp(true);
+						y2.domain(y.domain()).nice().clamp(true);
+						by2.domain(y.domain()).nice().clamp(true);
+					break;
+					case 'strength':
+						y.domain([0.1, max_strength_value]).nice().clamp(true);
+						by.domain(y.domain()).nice().clamp(true);
+						y2.domain(y.domain()).nice().clamp(true);
+						by2.domain(y.domain()).nice().clamp(true);
+					break;
+				}
+
+				focus.select(".y.axis").call(yAxis);
+				focus.select(".by.axis").call(byAxis);
+
+				switch(required_mode){
+					case 'social-shares':
+						// focus.selectAll(".bar").transition().duration(300)
+						// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal) + ")"; });
+						// focus.selectAll('.brect').transition().duration(300)
+						// 	.attr("height", function(d) { return (height/2) - y(d.liberal); })
+						// focus.selectAll('.bbrect').transition().duration(300)
+						// 	.attr("height", function(d) { return by(d.conservative) - (height/2);  })
+
+						animateBars(focus, height, x, y, by, "date", "liberal", "conservative");
+						animateBars(context, height2, x2, y2, by2, "date", "liberal", "conservative");
+					break;
+					case 'strength':
+						// focus.selectAll(".bar").transition().duration(300)
+						// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal_strength) + ")"; });
+						// focus.selectAll('.brect').transition().duration(300)
+						// 	.attr("height", function(d) { return (height/2) - y(d.liberal_strength); })
+
+						// focus.selectAll('.bbrect').transition().duration(300)
+						// 	.attr("height", function(d) { return by(d.conservative_strength) - (height/2);  })
+						animateBars(focus, height, x, y, by, "date", "liberal_strength", "conservative_strength");
+						animateBars(context, height2, x2, y2, by2, "date", "liberal_strength", "conservative_strength");
+					break;
+				}
+				
+
+				$('.js-btn-mode').removeClass('active');
+				$(this).addClass('active');
+				console.log("Button clicked..");
+			}
+		});
+	});
+
+	function animateBars(element, height, x, y, y2, xAttr, yAttr, y2Attr){
+		element.selectAll(".bar").transition().duration(300)
+			.attr("transform", function(d) { return "translate(" + x(d[xAttr]) + "," + y(d[yAttr]) + ")"; });
+		element.selectAll('.brect').transition().duration(300)
+			.attr("height", function(d) { return (height/2) - y(d[yAttr]); })
+		element.selectAll('.bbrect').transition().duration(300)
+			.attr("height", function(d) { return y2(d[y2Attr]) - (height/2);  })
 	}
 
 	function brushed() {
