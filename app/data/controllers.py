@@ -623,7 +623,7 @@ def compute_liniency():
 	# 	print article.computed_political_leaning
 	# 	index += 1
 
-	for article in JNYTDocument.objects(source="RedState"):
+	for article in JNYTDocument.objects(source="WizBang Blog"):
 		if article.computed_political_leaning != "Unknown":
 			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 			continue
@@ -638,6 +638,18 @@ def compute_liniency():
 		# break
 	return "Anand"
 
+@mod_data.route("/clean-data")
+def clean_data():
+	for article in JNYTDocument.objects:
+		content = article.content
+		if content != None:
+			content = content.replace("\n","")
+			content = content.strip()
+			article.content = content
+			article.save()
+
+		print content
+		# print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 
 
 
