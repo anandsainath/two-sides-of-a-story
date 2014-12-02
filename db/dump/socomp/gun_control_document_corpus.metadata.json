@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "socomp.gun_control_document_corpus" }, { "v" : 1, "key" : { "_cls" : 1 }, "name" : "_cls_1", "ns" : "socomp.gun_control_document_corpus", "background" : false } ] }
