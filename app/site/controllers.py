@@ -43,7 +43,14 @@ def get_data():
 
 	dict_liberal = {}
 
-	articles = JNYTDocument.objects
+	source = None
+	output_file_name = "output.csv"
+
+	if source != None:
+		articles = JNYTDocument.objects(source=source)
+	else:
+		articles = JNYTDocument.objects
+
 	count = 0
 
 	for article in articles:
@@ -55,6 +62,8 @@ def get_data():
 			political_leaning = article.computed_political_leaning
 			if political_leaning == "Unknown":
 				continue
+
+		print article.source
 
 		if article.pub_date != None and article.pub_date.date() >= start_date and article.pub_date.date() <= end_date:
 			date_string = strftime("%Y-%m-%d", article.pub_date.date().timetuple())
@@ -124,7 +133,7 @@ def get_data():
 
 		output_result.append(output_item)
 
-	with open("output.csv", "wb") as f:
+	with open(output_file_name, "wb") as f:
 		writer = csv.writer(f, dialect='excel')
 		writer.writerows(output_result)
 
