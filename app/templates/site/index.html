@@ -4,7 +4,7 @@
 
 {% block header_script %}
 <script src="http://d3js.org/d3.v3.min.js"></script>
-
+<script type="text/javascript" src="{{ url_for('static', filename='bower_components/queue-async/queue.min.js') }}"></script>
 <style>
 	text {
 		font-size: 10px;
@@ -140,8 +140,24 @@
 
 	var max_share_value, max_strength_value;
 
-	d3.csv("/static/data/output.csv", type, function(error, data) {
+	var main_data, new_york_times, time, usa_today;
 
+	queue()
+		.defer(d3.csv, "/static/data/output.csv", type)
+		.defer(d3.csv, "/static/data/new_york_times.csv", type)
+		.defer(d3.csv, "/static/data/time.csv", type)
+		.defer(d3.csv, "/static/data/usa_today.csv", type)
+		.await(dataLoaded);
+
+	function dataLoaded(error, _main_data, _new_york_times, _time, _usa_today){
+		main_data = _main_data;
+		new_york_times = _new_york_times;
+		time = _time;
+		usa_today = _usa_today;
+		loadMainViz(main_data);
+	}
+
+	function loadMainViz(data){
 		max_share_value = d3.max([
 			d3.max(data.map(function(d) { return d.liberal; })), 
 			d3.max(data.map(function(d) { return d.conservative; }))
@@ -273,8 +289,12 @@
 			.attr("y", -6)
 			.attr("height", height2 + 7);
 
-		$('[data-toggle="tooltip"]').tooltip()
-	});
+		$('[data-toggle="tooltip"]').tooltip();
+	}
+
+	// d3.csv("/static/data/output.csv", type, function(error, data) {
+	// 	console.log(data);
+	// });
 
 	function loadData(datum, isLiberal){
 		var parseDate = d3.time.format("%Y-%m-%d");
@@ -370,8 +390,10 @@
 	function brushed() {
 		x.domain(brush.empty() ? x2.domain() : brush.extent());
 
+		var yAttr = (current_mode === 'social-shares')? "liberal" : "liberal_strength";
+
 		focus.selectAll(".bar").attr("transform", function(datum){
-			return "translate("+ x(datum.date) + "," + y(datum.liberal) + ")"; 
+			return "translate("+ x(datum.date) + "," + y(datum[yAttr]) + ")"; 
 		});
 		focus.selectAll(".brect")
 			.attr("width", x(date2) - x(date1))
@@ -386,7 +408,10 @@
 
 	function type(d) {
 		d.date = parseDate(d.date);
-		d.liberal = +d.liberal;
+		d.liberal = parseInt(d.liberal);
+		d.conservative = parseInt(d.conservative);
+		d.liberal_strength = parseFloat(d.liberal_strength);
+		d.conservative_strength = parseFloat(d.conservative_strength);
 		return d;
 	}
 </script>
