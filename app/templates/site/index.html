@@ -60,11 +60,22 @@
 <div class="row">
 	<div class="col-md-8">
 		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-8">
+			<div class="col-md-2"></div>
+			<div class="col-md-5">
 				<div class="btn-group" role="group" aria-label="...">
 					<button type="button" data-mode="social-shares" class="js-btn-mode btn btn-default active">Social Activity</button>
 					<button type="button" data-mode="strength" class="js-btn-mode btn btn-default">Content Relation</button>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="row">
+					<select id="source-selector" class="form-control">
+						<option value="All Sources">All Sources</option>
+					  	<option value="The New York Times">The New York Times</option>
+					  	<option value="USA Today">USA Today</option>
+					  	<option value="Time Magazine">Time Magazine</option>
+					  	<option value="Wall Street Journal">Wall Street Journal</option>
+					</select>
 				</div>
 			</div>
 		</div>
@@ -141,6 +152,9 @@
 	var max_share_value, max_strength_value;
 
 	var main_data, new_york_times, time, usa_today;
+	var wall_street_journal = undefined;
+	var restrictedFocus;
+	var x_axis_svg, y_axis_svg, by_axis_svg, cx_axis_svg, cbrush;
 
 	queue()
 		.defer(d3.csv, "/static/data/output.csv", type)
@@ -154,10 +168,33 @@
 		new_york_times = _new_york_times;
 		time = _time;
 		usa_today = _usa_today;
-		loadMainViz(main_data);
+		loadMainViz(main_data, true);
 	}
 
-	function loadMainViz(data){
+	// function onDataChange(data){
+	// 	console.log(d3.max(data.map(function(d){ return d.liberal })));
+	// 	max_liberal_share = d3.max(data.map(function(d){ return d.liberal }));
+	// 	console.log(d3.max(data.map(function(d){ return d.liberal })));
+	// 	max_conservative_share = d3.max(data.map(function(d){ return d.conservative }));
+	// 	max_share_value = d3.max([ max_liberal_share, max_conservative_share ]);
+
+	// 	max_strength_value = d3.max([
+	// 		d3.max(data.map(function(d) { return d.liberal_strength; })), 
+	// 		d3.max(data.map(function(d) { return d.conservative_strength; }))
+	// 	]);
+
+	// 	x.domain(d3.extent(data.map(function(d) { return d.date; }))).nice(d3.time.month);
+	// 	// loadCurrentMode(current_mode);
+
+	// 	y.domain([0.1, max_share_value]).nice().clamp(true);
+	// 	by.domain(y.domain()).nice().clamp(true);
+	// 	x2.domain(x.domain()).nice(d3.time.month);
+	// 	y2.domain(y.domain()).nice().clamp(true);
+	// 	by2.domain(y.domain()).nice().clamp(true);
+
+	// }
+
+	function loadMainViz(data, isFirstLoad){
 		max_share_value = d3.max([
 			d3.max(data.map(function(d) { return d.liberal; })), 
 			d3.max(data.map(function(d) { return d.conservative; }))
@@ -168,36 +205,65 @@
 			d3.max(data.map(function(d) { return d.conservative_strength; }))
 		]);
 
+		var liberal_attr, conservative_attr, max_y_value;
+		if(current_mode === "social-shares"){
+			liberal_attr = "liberal";
+			conservative_attr = "conservative";
+			max_y_value = max_share_value;
+		}else{
+			liberal_attr = "liberal_strength";
+			conservative_attr = "conservative_strength";
+			max_y_value = max_strength_value;
+		}
+
 		x.domain(d3.extent(data.map(function(d) { return d.date; }))).nice(d3.time.month);
-		y.domain([0.1, max_share_value]).nice().clamp(true);
+		y.domain([0.1, max_y_value]).nice().clamp(true);
 		by.domain(y.domain()).nice().clamp(true);
 		x2.domain(x.domain()).nice(d3.time.month);
 		y2.domain(y.domain()).nice().clamp(true);
 		by2.domain(y.domain()).nice().clamp(true);
 
-		var restrictedFocus = focus.append("g")
-			.attr("class","area");
+		if(isFirstLoad){
+			restrictedFocus = focus.append("g")
+				.attr("class","area");	
+		}
+		
+		var bar_data = restrictedFocus.selectAll(".bar").data(data);
+		var bottom_bar_data = restrictedFocus.selectAll(".bbar").data(data);
 
-		var bar = restrictedFocus.selectAll(".bar")
-	    	.data(data)
-		  	.enter().append("g")
-		    .attr("class", "bar")
-		    .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal) + ")"; });
+		var bar =
+			bar_data.enter().append("g")
+	    		.attr("class", "bar")
+	    		.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d[liberal_attr]) + ")"; });
+		bar_data.exit().remove();
 
-		var bottomBar = restrictedFocus.selectAll(".bbar")
-			.data(data).enter()
-			.append("g")
-			.attr("class","bbar")
-			.attr("transform", function(d) { return "translate(" + x(d.date) + ",0)"; });
+		var bottomBar = 
+			bottom_bar_data.enter()
+				.append("g")
+				.attr("class","bbar")
+				.attr("transform", function(d) { return "translate(" + x(d.date) + ",0)"; });
+		
+		bottom_bar_data.exit().remove();
 
 		date1 = data[0].date;
 		date2 = data[1].date;
 
-		bar.append("rect")
-			.attr("class","brect")
+		var brect, bbrect;
+		if(bar.select("rect")[0][0] != null){
+			brect = d3.select(bar.select("rect")[0]);
+		}else{
+			brect = bar.append("rect");
+		}
+
+		if(bottomBar.select("rect")[0][0] != null){
+			bbrect = d3.select(bar.select("rect")[0]);
+		}else{
+			bbrect = bottomBar.append("rect");
+		}
+
+		brect.attr("class","brect")
 		    .attr("x", 0)
 		    .attr("width", x(date2) - x(date1))
-		    .attr("height", function(d) { return (height/2) - y(d.liberal); })
 		    .attr("data-toggle", "tooltip")
 			.attr("data-placement", "top")
 			.attr("data-container", "body")
@@ -212,10 +278,10 @@
 		    })
 		    .on("mouseout", function(){
 		    	d3.select(this).style("fill", "#00A4E4");
-		    });
+		    })
+		    .attr("height", function(d) { return (height/2) - y(d[liberal_attr]); });
 
-		bottomBar.append("rect")
-			.attr("class","bbrect")
+		bbrect.attr("class","bbrect")
 			.attr("x", 0)
 			.attr("y", height/2)
 			.attr("width", x(date2) - x(date1))
@@ -225,9 +291,6 @@
 			.attr("title", function(d){
 				return d.conservative_title;
 			})
-		    .attr("height", function(d) { 
-		    	return by(d.conservative) - (height/2); 
-		    })
 		    .on("click", function(datum){
 				loadData(datum, false);
 			})
@@ -236,65 +299,82 @@
 		    })
 		    .on("mouseout", function(){
 		    	d3.select(this).style("fill", "#B30000");
+		    })
+			.attr("height", function(d) { 
+		    	return by(d[conservative_attr]) - (height/2); 
 		    });
 
-		focus.append("g")
-			.attr("class", "x axis")
-			.attr("transform", "translate(0," + height + ")")
-			.call(xAxis);
+		if(isFirstLoad){
+			x_axis_svg = focus.append("g")
+							.attr("class", "x axis")
+							.attr("transform", "translate(0," + height + ")");
+			y_axis_svg = focus.append("g")
+							.attr("class", "y axis");
+			by_axis_svg = focus.append("g")
+							.attr("class", "by axis");
+		}
 
-		focus.append("g")
-			.attr("class", "y axis")
-			.call(yAxis);
+		x_axis_svg.call(xAxis);
+		y_axis_svg.call(yAxis);
+		by_axis_svg.call(byAxis);
 
-		focus.append("g")
-			.attr("class", "by axis")
-			.call(byAxis);
+		var cbar_data = context.selectAll(".bar").data(data);
+		var cbottombar_data = context.selectAll(".bbar").data(data);
 
-		var cbar = context.selectAll(".bar")
-	    	.data(data)
-		  	.enter().append("g")
+		var cbar = cbar_data.enter().append("g")
 		    .attr("class", "bar")
-		    .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y2(d.liberal) + ")"; });
+		    .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y2(d[liberal_attr]) + ")"; });
 
+		cbar_data.exit().remove();
 
-		var cbottomBar = context.selectAll(".bbar")
-			.data(data).enter()
+		var cbottomBar = cbottombar_data.enter()
 			.append("g")
 			.attr("class","bbar")
 			.attr("transform", function(d) { return "translate(" + x(d.date) + ",0)"; });
 
-		cbar.append("rect")
+		cbottombar_data.exit().remove();
+
+		var cbrect, cbbrect;
+		if(cbar.select("rect")[0][0] != null){
+			cbrect = d3.select(cbar.select("rect")[0]);
+		} else {
+			cbrect = cbar.append("rect");
+		}
+
+		if(cbottomBar.select("rect")[0][0] != null){
+			cbbrect = d3.select(cbottomBar.select("rect")[0]);
+		}else{
+			cbbrect = cbottomBar.append("rect");
+		}
+
+		cbrect
 			.attr("class","brect")
 		    .attr("x", 0)
 		    .attr("width", x(date2) - x(date1))
-		    .attr("height", function(d) { return (height2/2) - y2(d.liberal); });
+		    .attr("height", function(d) { return (height2/2) - y2(d[liberal_attr]); });
 
-		cbottomBar.append("rect")
+		cbbrect
 			.attr("class","bbrect")
 			.attr("x", 0)
 			.attr("y", height2/2)
 			.attr("width", x(date2) - x(date1))
-		    .attr("height", function(d) { return by2(d.conservative) - height2/2; });
+		    .attr("height", function(d) { return by2(d[conservative_attr]) - height2/2; });
 
-		context.append("g")
-			.attr("class", "x axis")
-			.attr("transform", "translate(0," + height2 + ")")
-			.call(xAxis2);
-
-		context.append("g")
-			.attr("class", "x brush")
-			.call(brush)
-			.selectAll("rect")
-			.attr("y", -6)
-			.attr("height", height2 + 7);
-
+		if(isFirstLoad){
+			cx_axis_svg = context.append("g")
+							.attr("class", "x axis")
+							.attr("transform", "translate(0," + height2 + ")");
+			cbrush = context.append("g")
+						.attr("class", "x brush")
+						.call(brush)
+						.selectAll("rect")
+						.attr("y", -6)
+						.attr("height", height2 + 7);
+		}
+		
+		cx_axis_svg.call(xAxis2);
 		$('[data-toggle="tooltip"]').tooltip();
 	}
-
-	// d3.csv("/static/data/output.csv", type, function(error, data) {
-	// 	console.log(data);
-	// });
 
 	function loadData(datum, isLiberal){
 		var parseDate = d3.time.format("%Y-%m-%d");
@@ -323,60 +403,91 @@
 	}
 
 	$(function(){
+		$('#source-selector').change(function(){
+			var current_data = undefined;
+			switch($(this).val()){
+				case "All Sources":
+					current_data = main_data;
+				break;
+				case "The New York Times":
+					current_data = new_york_times;
+				break;
+				case "USA Today":
+					current_data = usa_today;
+				break;
+				case "Time Magazine":
+					current_data = time;
+				break;
+				case "Wall Street Journal":
+					//TODO: To be implemented...
+					current_data = wall_street_journal;
+				break;
+			}
+
+			if(current_data){
+				//onDataChange(current_data);
+				focus.selectAll('*').remove();
+				context.selectAll('*').remove();
+				loadMainViz(current_data, true);
+			}
+		});
+
 		$(".js-btn-mode").click(function(){
 			var required_mode = $(this).data('mode');
 			if(current_mode !== required_mode){
 				current_mode = required_mode;
-				switch(required_mode){
-					case 'social-shares':
-						y.domain([0.1, max_share_value]).nice().clamp(true);
-						by.domain(y.domain()).nice().clamp(true);
-						y2.domain(y.domain()).nice().clamp(true);
-						by2.domain(y.domain()).nice().clamp(true);
-					break;
-					case 'strength':
-						y.domain([0.1, max_strength_value]).nice().clamp(true);
-						by.domain(y.domain()).nice().clamp(true);
-						y2.domain(y.domain()).nice().clamp(true);
-						by2.domain(y.domain()).nice().clamp(true);
-					break;
-				}
-
-				focus.select(".y.axis").call(yAxis);
-				focus.select(".by.axis").call(byAxis);
-
-				switch(required_mode){
-					case 'social-shares':
-						// focus.selectAll(".bar").transition().duration(300)
-						// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal) + ")"; });
-						// focus.selectAll('.brect').transition().duration(300)
-						// 	.attr("height", function(d) { return (height/2) - y(d.liberal); })
-						// focus.selectAll('.bbrect').transition().duration(300)
-						// 	.attr("height", function(d) { return by(d.conservative) - (height/2);  })
-
-						animateBars(focus, height, x, y, by, "date", "liberal", "conservative");
-						animateBars(context, height2, x2, y2, by2, "date", "liberal", "conservative");
-					break;
-					case 'strength':
-						// focus.selectAll(".bar").transition().duration(300)
-						// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal_strength) + ")"; });
-						// focus.selectAll('.brect').transition().duration(300)
-						// 	.attr("height", function(d) { return (height/2) - y(d.liberal_strength); })
-
-						// focus.selectAll('.bbrect').transition().duration(300)
-						// 	.attr("height", function(d) { return by(d.conservative_strength) - (height/2);  })
-						animateBars(focus, height, x, y, by, "date", "liberal_strength", "conservative_strength");
-						animateBars(context, height2, x2, y2, by2, "date", "liberal_strength", "conservative_strength");
-					break;
-				}
-				
+				loadCurrentMode(required_mode);
 
 				$('.js-btn-mode').removeClass('active');
 				$(this).addClass('active');
-				console.log("Button clicked..");
 			}
 		});
 	});
+
+	function loadCurrentMode(required_mode){
+		switch(required_mode){
+			case 'social-shares':
+				y.domain([0.1, max_share_value]).nice().clamp(true);
+				by.domain(y.domain()).nice().clamp(true);
+				y2.domain(y.domain()).nice().clamp(true);
+				by2.domain(y.domain()).nice().clamp(true);
+			break;
+			case 'strength':
+				y.domain([0.1, max_strength_value]).nice().clamp(true);
+				by.domain(y.domain()).nice().clamp(true);
+				y2.domain(y.domain()).nice().clamp(true);
+				by2.domain(y.domain()).nice().clamp(true);
+			break;
+		}
+
+		focus.select(".y.axis").call(yAxis);
+		focus.select(".by.axis").call(byAxis);
+
+		switch(required_mode){
+			case 'social-shares':
+				// focus.selectAll(".bar").transition().duration(300)
+				// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal) + ")"; });
+				// focus.selectAll('.brect').transition().duration(300)
+				// 	.attr("height", function(d) { return (height/2) - y(d.liberal); })
+				// focus.selectAll('.bbrect').transition().duration(300)
+				// 	.attr("height", function(d) { return by(d.conservative) - (height/2);  })
+
+				animateBars(focus, height, x, y, by, "date", "liberal", "conservative");
+				animateBars(context, height2, x2, y2, by2, "date", "liberal", "conservative");
+			break;
+			case 'strength':
+				// focus.selectAll(".bar").transition().duration(300)
+				// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal_strength) + ")"; });
+				// focus.selectAll('.brect').transition().duration(300)
+				// 	.attr("height", function(d) { return (height/2) - y(d.liberal_strength); })
+
+				// focus.selectAll('.bbrect').transition().duration(300)
+				// 	.attr("height", function(d) { return by(d.conservative_strength) - (height/2);  })
+				animateBars(focus, height, x, y, by, "date", "liberal_strength", "conservative_strength");
+				animateBars(context, height2, x2, y2, by2, "date", "liberal_strength", "conservative_strength");
+			break;
+		}
+	}
 
 	function animateBars(element, height, x, y, y2, xAttr, yAttr, y2Attr){
 		element.selectAll(".bar").transition().duration(300)
