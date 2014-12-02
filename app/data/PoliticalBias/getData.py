@@ -5,7 +5,8 @@ class Data:
 	def __init__(self):
 		client = pymongo.MongoClient("localhost",27017)
 		db = client.socomp
-		self.collection = db.presidential_elections_document_corpus
+		# self.collection = db.presidential_elections_document_corpus
+		self.collection = db.gun_control_document_corpus
 
 	def getData(self,source):
 		l = {}

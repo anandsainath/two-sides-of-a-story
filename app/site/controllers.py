@@ -36,6 +36,37 @@ def get_article_content(post_id):
 			'link': article[0].web_url
 		})
 
+@mod_site.route('/get-treemap-data')
+def get_treemap_data():
+	start_date = date( year = 2011, month = 1, day = 1 )
+	end_date = date( year = 2013, month = 5, day = 31 )
+
+	dict_main_data = {"name":"Presidential Elections"}
+	dict_children = {}
+
+	source = None
+	output_file_name = "presidential_temp.json"
+
+	if source != None:
+		articles = JNYTDocument.objects(source=source)
+	else:
+		articles = JNYTDocument.objects
+
+	count = 0
+
+	for article in articles:
+		if article.source not in dict_children:
+			dict_children[article.source] = {}
+			dict_children[article.source]["Liberal"] = {"count":0, "shares":0}
+			dict_children[article.source]["Conservative"] = {"count":0, "shares":0}
+			dict_children[article.source]["Unknown"] = {"count":0, "shares":0}
+
+		dict_children[article.source][article.computed_political_leaning]["count"] += 1
+		dict_children[article.source][article.computed_political_leaning]["shares"] += get_agg_share_count(article)
+
+	print json.dumps(dict_children)
+
+
 @mod_site.route('/get-data')
 def get_data():
 	start_date = date( year = 2011, month = 1, day = 1 )
@@ -44,13 +75,16 @@ def get_data():
 	dict_liberal = {}
 
 	source = None
-	output_file_name = "output.csv"
+	political_leaning = "Conservative"
+	output_file_name = "conservative.csv"
 
 	if source != None:
 		articles = JNYTDocument.objects(source=source)
+	elif political_leaning != None:
+		articles = JNYTDocument.objects(political_leaning=political_leaning)
 	else:
 		articles = JNYTDocument.objects
-
+	
 	count = 0
 
 	for article in articles:
@@ -63,7 +97,7 @@ def get_data():
 			if political_leaning == "Unknown":
 				continue
 
-		print article.source
+		# print article.source
 
 		if article.pub_date != None and article.pub_date.date() >= start_date and article.pub_date.date() <= end_date:
 			date_string = strftime("%Y-%m-%d", article.pub_date.date().timetuple())
@@ -86,6 +120,8 @@ def get_data():
 				"Liberal_title":"",
 				"Conservative_title":""
 			}
+
+			print article.social_shares, article.id
 
 			article_agg_share_count = get_agg_share_count(article)
 

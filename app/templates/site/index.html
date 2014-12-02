@@ -71,10 +71,11 @@
 				<div class="row">
 					<select id="source-selector" class="form-control">
 						<option value="All Sources">All Sources</option>
+						<option value="Liberals">All Liberal Blogs</option>
+						<option value="Conservatives">All Conservative Blogs</option>
 					  	<option value="The New York Times">The New York Times</option>
 					  	<option value="USA Today">USA Today</option>
 					  	<option value="Time Magazine">Time Magazine</option>
-					  	<option value="Wall Street Journal">Wall Street Journal</option>
 					</select>
 				</div>
 			</div>
@@ -151,23 +152,27 @@
 
 	var max_share_value, max_strength_value;
 
-	var main_data, new_york_times, time, usa_today;
+	var main_data, new_york_times, time, usa_today, conservative, liberal;
 	var wall_street_journal = undefined;
 	var restrictedFocus;
 	var x_axis_svg, y_axis_svg, by_axis_svg, cx_axis_svg, cbrush;
 
 	queue()
-		.defer(d3.csv, "/static/data/output.csv", type)
-		.defer(d3.csv, "/static/data/new_york_times.csv", type)
-		.defer(d3.csv, "/static/data/time.csv", type)
-		.defer(d3.csv, "/static/data/usa_today.csv", type)
+		.defer(d3.csv, "/static/data/presidential_elections/output.csv", type)
+		.defer(d3.csv, "/static/data/presidential_elections/new_york_times.csv", type)
+		.defer(d3.csv, "/static/data/presidential_elections/time.csv", type)
+		.defer(d3.csv, "/static/data/presidential_elections/usa_today.csv", type)
+		.defer(d3.csv, "/static/data/presidential_elections/conservative.csv", type)
+		.defer(d3.csv, "/static/data/presidential_elections/liberal.csv", type)
 		.await(dataLoaded);
 
-	function dataLoaded(error, _main_data, _new_york_times, _time, _usa_today){
+	function dataLoaded(error, _main_data, _new_york_times, _time, _usa_today, _conservative, _liberal){
 		main_data = _main_data;
 		new_york_times = _new_york_times;
 		time = _time;
 		usa_today = _usa_today;
+		conservative = _conservative;
+		liberal = _liberal;
 		loadMainViz(main_data, true);
 	}
 
@@ -418,9 +423,11 @@
 				case "Time Magazine":
 					current_data = time;
 				break;
-				case "Wall Street Journal":
-					//TODO: To be implemented...
-					current_data = wall_street_journal;
+				case "Liberals":
+					current_data = liberal;
+				break;
+				case "Conservatives":
+					current_data = conservative;
 				break;
 			}
 
