@@ -464,8 +464,8 @@ def parse_dailykos():
 
 @mod_data.route('/parse-time')
 def parse_time():
-	# current_page_url = "http://search.time.com/results.html?Ntt=us+presidential+elections&Nf=p_date_range%7cBTWN+20110101+20130531"
-	current_page_url = "http://search.time.com/results.html?D=gun+control&sid=14A0B9B3C2EF&Ntt=gun+control&internalid=endeca_dimension&N=107&Nty=1"
+
+	current_page_url = "http://search.time.com/results.html?Ntt=immigration+reform&Nf=p_date_range%7cBTWN+20110101+20130531"
 
 	while current_page_url != None:
 		soup = BeautifulSoup(utils.getData(current_page_url)).find("div",{"class":"resultsCol"})
@@ -535,9 +535,8 @@ def get_nyt_data(url):
 @mod_data.route('/parse-nyt')
 def parse_nyt():
 	#JNYTDocument.drop_collection()
-	# http://api.nytimes.com/svc/search/v2/articlesearch.json?q=gun+control&fq=The+New+York+Times&api-key=sample-key
-	# params = 'US+Presidential+Election&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
-	params = 'gun+control&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
+
+	params = 'immigration+reform&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
 	base_url = utils.get_nyt_article_search_url(params)
 
 	# 0 - 16
@@ -590,20 +589,16 @@ def parse_nyt():
 
 @mod_data.route('/parse-social-shares')
 def parse_social_shares():
-	articles = JNYTDocument.objects(source="Wall Street Journal")
+	articles = JNYTDocument.objects()
 	index = 0
 	temp = ""
 	for article in articles:
-		temp = json.dumps(shares.get_social_counts(article.web_url))
 		if not article.social_shares:
 			print index
-			# article.social_shares = shares.get_social_counts(article.web_url)
-			# article.save()
-			temp = json.dumps(shares.get_social_counts(article.web_url))
-			print temp
+			article.social_shares = shares.get_social_counts(article.web_url)
+			article.save()
 			index += 1
-		break
-	return temp
+	return "Over"
 
 @mod_data.route('/compute-leniency')
 def compute_liniency():
@@ -630,7 +625,47 @@ def compute_liniency():
 	# 	print article.computed_political_leaning
 	# 	index += 1
 
-	for article in JNYTDocument.objects(source="Wall Street Journal"):
+	for article in JNYTDocument.objects(political_leaning='Liberal'):
+		if article.computed_political_leaning != "Unknown":
+			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+			continue
+
+		if article.content != None and len(article.content.strip()) != 0:
+			label = bo.getPoliticalLeaning([article.headline, article.content])
+			article.computed_political_leaning = label[0]
+			article.political_leaning_strength = label[1]
+			article.save()
+			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+		index += 1
+		# break
+	return "Anand"
+
+@mod_data.route('/compute-leniency2')
+def compute_liniency2():
+	bo = politicalLeaning.Bias()
+	index = 0
+
+	# for article in JNYTDocument.objects(source="DailyKos"):
+	# 	print article.web_url
+	# 	article.computed_political_leaning = "Unknown"
+	# 	article.political_leaning_strength = 0
+	# 	break
+		# if article.computed_political_leaning != "Unknown":
+			# print article.headline, "|", article.computed_political_leaning, "|", article.political_leaning_strength, "|"
+			# label = bo.getPoliticalLeaning([article.headline, article.content])
+			# print "Computed", label
+			# break
+
+	#Preprocessing step..
+	# for article in JNYTDocument.objects:
+	# 	print index
+	# 	article.computed_political_leaning = "Unknown"
+	# 	article.political_leaning_strength = 0
+	# 	article.save()
+	# 	print article.computed_political_leaning
+	# 	index += 1
+
+	for article in JNYTDocument.objects(political_leaning='Unknown'):
 		if article.computed_political_leaning != "Unknown":
 			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 			continue
