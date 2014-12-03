@@ -464,8 +464,8 @@ def parse_dailykos():
 
 @mod_data.route('/parse-time')
 def parse_time():
-	# current_page_url = "http://search.time.com/results.html?Ntt=us+presidential+elections&Nf=p_date_range%7cBTWN+20110101+20130531"
-	current_page_url = "http://search.time.com/results.html?D=gun+control&sid=14A0B9B3C2EF&Ntt=gun+control&internalid=endeca_dimension&N=107&Nty=1"
+
+	current_page_url = "http://search.time.com/results.html?Ntt=immigration+reform&Nf=p_date_range%7cBTWN+20110101+20130531"
 
 	while current_page_url != None:
 		soup = BeautifulSoup(utils.getData(current_page_url)).find("div",{"class":"resultsCol"})
@@ -535,9 +535,8 @@ def get_nyt_data(url):
 @mod_data.route('/parse-nyt')
 def parse_nyt():
 	#JNYTDocument.drop_collection()
-	# http://api.nytimes.com/svc/search/v2/articlesearch.json?q=gun+control&fq=The+New+York+Times&api-key=sample-key
-	# params = 'US+Presidential+Election&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
-	params = 'gun+control&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
+
+	params = 'immigration+reform&begin_date=20120101&end_date=20121231&fq=source:("The New York Times")'
 	base_url = utils.get_nyt_article_search_url(params)
 
 	# 0 - 16
@@ -627,9 +626,9 @@ def compute_liniency():
 	# 	index += 1
 
 	# for article in JNYTDocument.objects(source="Wall Street Journal"):
-	for article in JNYTDocument.objects(political_leaning="Liberal"):
+	for article in JNYTDocument.objects(political_leaning='Liberal'):
 		if article.computed_political_leaning != "Unknown":
-			print index,article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 			continue
 
 		if article.content != None and len(article.content.strip()) != 0:
@@ -637,7 +636,7 @@ def compute_liniency():
 			article.computed_political_leaning = label[0]
 			article.political_leaning_strength = label[1]
 			article.save()
-			print index, article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 		index += 1
 		# break
 	return "Anand"

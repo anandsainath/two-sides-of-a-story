@@ -10,9 +10,9 @@ client = MongoClient()
 
 db = client.socomp
 
-collection = db.presidential_elections_document_corpus
+collection = db.gun_control_document_corpus
 
-to_date = date(2011,5,2)
+to_date = date(2014,12,1)
 
 api_attempt = 0
 article_count = 0
@@ -23,8 +23,8 @@ while i < 365:
         to_date_string = to_date.strftime('%Y-%m-%d')
         from_date_string = (to_date - timedelta(days=1)).strftime('%Y-%m-%d')
         print 'parsing for dates between '+from_date_string+' and '+to_date_string
-        api_call = 'http://api.usatoday.com/open/articles?section=politics&keyword=US%20Presidential%20Elections&fromdate='+from_date_string+'&todate='+to_date_string+'&count=100&api_key=9acjxqsb78rwx576s5w8k3gq&encoding=json'
-        to_date = to_date + timedelta(days=2)
+        api_call = 'http://api.usatoday.com/open/articles?section=politics&keyword=Gun%20Control&fromdate='+from_date_string+'&todate='+to_date_string+'&count=100&api_key=9acjxqsb78rwx576s5w8k3gq&encoding=json'
+        to_date = to_date - timedelta(days=2)
         response = urllib2.urlopen(api_call)
         results = json.load(response)
         articles = results['stories']
@@ -85,7 +85,7 @@ while i < 365:
             print 'Will retry. Attempt',api_attempt
             print 'For URL',api_call
             time.sleep(3)
-            to_date = to_date - timedelta(days=2)
+            to_date = to_date + timedelta(days=2)
         else:
             print '5 attempts done. Will skip day'
             api_attempt = 0
