@@ -9,8 +9,8 @@ class JNYTMultimedia(db.EmbeddedDocument):
 	_type = db.StringField()
 
 class JNYTDocument(db.Document):
-	# __CollectionName__ = "immigration_reform_document_corpus"
-	__CollectionName__ = "gun_control_document_corpus"
+	__CollectionName__ = "immigration_reform_document_corpus"
+	# __CollectionName__ = "gun_control_document_corpus"
 	# __CollectionName__ = "presidential_elections_document_corpus"
 
 	web_url = db.StringField(required=True)

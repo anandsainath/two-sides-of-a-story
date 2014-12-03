@@ -93,9 +93,9 @@ def get_data():
 
 	dict_liberal = {}
 
-	source = None
-	political_leaning = "Conservative"
-	output_file_name = "conservative.csv"
+	source = "USA Today"
+	political_leaning = None
+	output_file_name = "usa_today.csv"
 
 	if source != None:
 		articles = JNYTDocument.objects(source=source)

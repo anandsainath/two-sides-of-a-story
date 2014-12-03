@@ -1,0 +1,882 @@
+date,liberal,liberal_strength,liberal_file,liberal_title,conservative,conservative_strength,conservative_file,conservative_title
+2011-01-01,0,0,,,0,0,,
+2011-01-02,0,0,,,0,0,,
+2011-01-03,0,0,,,0,0,,
+2011-01-04,0,0,,,0,0,,
+2011-01-05,0,0,,,0,0,,
+2011-01-06,0,0,,,0,0,,
+2011-01-07,0,0,,,0,0,,
+2011-01-08,0,0,,,0,0,,
+2011-01-09,0,0,,,0,0,,
+2011-01-10,0,0,,,0,0,,
+2011-01-11,0,0,,,0,0,,
+2011-01-12,0,0,,,0,0,,
+2011-01-13,0,0,,,0,0,,
+2011-01-14,0,0,,,0,0,,
+2011-01-15,0,0,,,0,0,,
+2011-01-16,0,0,,,0,0,,
+2011-01-17,0,0,,,0,0,,
+2011-01-18,0,0,,,0,0,,
+2011-01-19,0,0,,,0,0,,
+2011-01-20,0,0,,,0,0,,
+2011-01-21,0,0,,,0,0,,
+2011-01-22,0,0,,,0,0,,
+2011-01-23,0,0,,,0,0,,
+2011-01-24,0,0,,,0,0,,
+2011-01-25,0,0,,,0,0,,
+2011-01-26,0,0,,,0,0,,
+2011-01-27,0,0,,,0,0,,
+2011-01-28,0,0,,,0,0,,
+2011-01-29,0,0,,,0,0,,
+2011-01-30,0,0,,,0,0,,
+2011-01-31,0,0,,,0,0,,
+2011-02-01,0,0,,,0,0,,
+2011-02-02,0,0,,,0,0,,
+2011-02-03,0,0,,,0,0,,
+2011-02-04,0,0,,,0,0,,
+2011-02-05,0,0,,,0,0,,
+2011-02-06,0,0,,,0,0,,
+2011-02-07,0,0,,,0,0,,
+2011-02-08,0,0,,,0,0,,
+2011-02-09,0,0,,,0,0,,
+2011-02-10,0,0,,,0,0,,
+2011-02-11,0,0,,,0,0,,
+2011-02-12,0,0,,,0,0,,
+2011-02-13,0,0,,,0,0,,
+2011-02-14,0,0,,,0,0,,
+2011-02-15,0,0,,,0,0,,
+2011-02-16,0,0,,,0,0,,
+2011-02-17,0,0,,,0,0,,
+2011-02-18,0,0,,,0,0,,
+2011-02-19,0,0,,,0,0,,
+2011-02-20,0,0,,,0,0,,
+2011-02-21,0,0,,,0,0,,
+2011-02-22,0,0,,,0,0,,
+2011-02-23,0,0,,,0,0,,
+2011-02-24,0,0,,,0,0,,
+2011-02-25,0,0,,,0,0,,
+2011-02-26,0,0,,,0,0,,
+2011-02-27,0,0,,,0,0,,
+2011-02-28,0,0,,,0,0,,
+2011-03-01,0,0,,,0,0,,
+2011-03-02,0,0,,,0,0,,
+2011-03-03,0,0,,,0,0,,
+2011-03-04,0,0,,,0,0,,
+2011-03-05,0,0,,,0,0,,
+2011-03-06,0,0,,,0,0,,
+2011-03-07,0,0,,,0,0,,
+2011-03-08,0,0,,,0,0,,
+2011-03-09,0,0,,,0,0,,
+2011-03-10,0,0,,,0,0,,
+2011-03-11,0,0,,,0,0,,
+2011-03-12,0,0,,,0,0,,
+2011-03-13,0,0,,,0,0,,
+2011-03-14,0,0,,,0,0,,
+2011-03-15,0,0,,,0,0,,
+2011-03-16,0,0,,,0,0,,
+2011-03-17,0,0,,,0,0,,
+2011-03-18,0,0,,,0,0,,
+2011-03-19,0,0,,,0,0,,
+2011-03-20,0,0,,,0,0,,
+2011-03-21,0,0,,,0,0,,
+2011-03-22,0,0,,,0,0,,
+2011-03-23,0,0,,,0,0,,
+2011-03-24,0,0,,,0,0,,
+2011-03-25,0,0,,,0,0,,
+2011-03-26,0,0,,,0,0,,
+2011-03-27,0,0,,,0,0,,
+2011-03-28,0,0,,,0,0,,
+2011-03-29,0,0,,,0,0,,
+2011-03-30,0,0,,,0,0,,
+2011-03-31,0,0,,,0,0,,
+2011-04-01,0,0,,,0,0,,
+2011-04-02,0,0,,,0,0,,
+2011-04-03,0,0,,,0,0,,
+2011-04-04,0,0,,,0,0,,
+2011-04-05,0,0,,,0,0,,
+2011-04-06,0,0,,,0,0,,
+2011-04-07,0,0,,,0,0,,
+2011-04-08,0,0,,,0,0,,
+2011-04-09,0,0,,,0,0,,
+2011-04-10,0,0,,,0,0,,
+2011-04-11,0,0,,,0,0,,
+2011-04-12,0,0,,,0,0,,
+2011-04-13,0,0,,,0,0,,
+2011-04-14,0,0,,,0,0,,
+2011-04-15,0,0,,,0,0,,
+2011-04-16,0,0,,,0,0,,
+2011-04-17,0,0,,,0,0,,
+2011-04-18,0,0,,,0,0,,
+2011-04-19,0,0,,,0,0,,
+2011-04-20,0,0,,,0,0,,
+2011-04-21,0,0,,,0,0,,
+2011-04-22,0,0,,,0,0,,
+2011-04-23,0,0,,,0,0,,
+2011-04-24,0,0,,,0,0,,
+2011-04-25,0,0,,,0,0,,
+2011-04-26,0,0,,,0,0,,
+2011-04-27,0,0,,,0,0,,
+2011-04-28,0,0,,,0,0,,
+2011-04-29,0,0,,,0,0,,
+2011-04-30,0,0,,,0,0,,
+2011-05-01,0,0,,,0,0,,
+2011-05-02,0,0,,,0,0,,
+2011-05-03,0,0,,,0,0,,
+2011-05-04,0,0,,,0,0,,
+2011-05-05,0,0,,,0,0,,
+2011-05-06,0,0,,,0,0,,
+2011-05-07,0,0,,,0,0,,
+2011-05-08,0,0,,,0,0,,
+2011-05-09,0,0,,,0,0,,
+2011-05-10,0,0,,,0,0,,
+2011-05-11,0,0,,,0,0,,
+2011-05-12,0,0,,,0,0,,
+2011-05-13,0,0,,,0,0,,
+2011-05-14,0,0,,,0,0,,
+2011-05-15,0,0,,,0,0,,
+2011-05-16,0,0,,,0,0,,
+2011-05-17,0,0,,,0,0,,
+2011-05-18,0,0,,,0,0,,
+2011-05-19,0,0,,,0,0,,
+2011-05-20,0,0,,,0,0,,
+2011-05-21,0,0,,,0,0,,
+2011-05-22,0,0,,,0,0,,
+2011-05-23,0,0,,,0,0,,
+2011-05-24,0,0,,,0,0,,
+2011-05-25,0,0,,,0,0,,
+2011-05-26,0,0,,,0,0,,
+2011-05-27,0,0,,,0,0,,
+2011-05-28,0,0,,,0,0,,
+2011-05-29,0,0,,,0,0,,
+2011-05-30,0,0,,,0,0,,
+2011-05-31,0,0,,,0,0,,
+2011-06-01,0,0,,,0,0,,
+2011-06-02,0,0,,,0,0,,
+2011-06-03,0,0,,,0,0,,
+2011-06-04,0,0,,,0,0,,
+2011-06-05,0,0,,,0,0,,
+2011-06-06,0,0,,,0,0,,
+2011-06-07,0,0,,,0,0,,
+2011-06-08,0,0,,,0,0,,
+2011-06-09,0,0,,,0,0,,
+2011-06-10,0,0,,,0,0,,
+2011-06-11,0,0,,,0,0,,
+2011-06-12,0,0,,,0,0,,
+2011-06-13,0,0,,,0,0,,
+2011-06-14,0,0,,,0,0,,
+2011-06-15,0,0,,,0,0,,
+2011-06-16,0,0,,,0,0,,
+2011-06-17,0,0,,,0,0,,
+2011-06-18,0,0,,,0,0,,
+2011-06-19,0,0,,,0,0,,
+2011-06-20,0,0,,,0,0,,
+2011-06-21,0,0,,,0,0,,
+2011-06-22,0,0,,,0,0,,
+2011-06-23,0,0,,,0,0,,
+2011-06-24,0,0,,,0,0,,
+2011-06-25,0,0,,,0,0,,
+2011-06-26,0,0,,,0,0,,
+2011-06-27,0,0,,,0,0,,
+2011-06-28,0,0,,,0,0,,
+2011-06-29,0,0,,,0,0,,
+2011-06-30,0,0,,,0,0,,
+2011-07-01,0,0,,,0,0,,
+2011-07-02,0,0,,,0,0,,
+2011-07-03,0,0,,,0,0,,
+2011-07-04,0,0,,,0,0,,
+2011-07-05,0,0,,,0,0,,
+2011-07-06,0,0,,,0,0,,
+2011-07-07,0,0,,,0,0,,
+2011-07-08,0,0,,,0,0,,
+2011-07-09,0,0,,,0,0,,
+2011-07-10,0,0,,,0,0,,
+2011-07-11,0,0,,,0,0,,
+2011-07-12,0,0,,,0,0,,
+2011-07-13,0,0,,,0,0,,
+2011-07-14,0,0,,,0,0,,
+2011-07-15,0,0,,,0,0,,
+2011-07-16,0,0,,,0,0,,
+2011-07-17,0,0,,,0,0,,
+2011-07-18,0,0,,,0,0,,
+2011-07-19,0,0,,,0,0,,
+2011-07-20,0,0,,,0,0,,
+2011-07-21,0,0,,,0,0,,
+2011-07-22,0,0,,,0,0,,
+2011-07-23,0,0,,,0,0,,
+2011-07-24,0,0,,,0,0,,
+2011-07-25,0,0,,,0,0,,
+2011-07-26,0,0,,,0,0,,
+2011-07-27,0,0,,,0,0,,
+2011-07-28,0,0,,,0,0,,
+2011-07-29,0,0,,,0,0,,
+2011-07-30,0,0,,,0,0,,
+2011-07-31,0,0,,,0,0,,
+2011-08-01,0,0,,,0,0,,
+2011-08-02,0,0,,,0,0,,
+2011-08-03,0,0,,,0,0,,
+2011-08-04,0,0,,,0,0,,
+2011-08-05,0,0,,,0,0,,
+2011-08-06,0,0,,,0,0,,
+2011-08-07,0,0,,,0,0,,
+2011-08-08,0,0,,,0,0,,
+2011-08-09,0,0,,,0,0,,
+2011-08-10,0,0,,,0,0,,
+2011-08-11,0,0,,,0,0,,
+2011-08-12,0,0,,,0,0,,
+2011-08-13,0,0,,,0,0,,
+2011-08-14,0,0,,,0,0,,
+2011-08-15,0,0,,,0,0,,
+2011-08-16,0,0,,,0,0,,
+2011-08-17,0,0,,,0,0,,
+2011-08-18,0,0,,,0,0,,
+2011-08-19,0,0,,,0,0,,
+2011-08-20,0,0,,,0,0,,
+2011-08-21,0,0,,,0,0,,
+2011-08-22,0,0,,,0,0,,
+2011-08-23,0,0,,,0,0,,
+2011-08-24,0,0,,,0,0,,
+2011-08-25,0,0,,,0,0,,
+2011-08-26,0,0,,,0,0,,
+2011-08-27,0,0,,,0,0,,
+2011-08-28,0,0,,,0,0,,
+2011-08-29,0,0,,,0,0,,
+2011-08-30,0,0,,,0,0,,
+2011-08-31,0,0,,,0,0,,
+2011-09-01,0,0,,,0,0,,
+2011-09-02,0,0,,,0,0,,
+2011-09-03,0,0,,,0,0,,
+2011-09-04,0,0,,,0,0,,
+2011-09-05,0,0,,,0,0,,
+2011-09-06,0,0,,,0,0,,
+2011-09-07,0,0,,,0,0,,
+2011-09-08,0,0,,,0,0,,
+2011-09-09,0,0,,,0,0,,
+2011-09-10,0,0,,,0,0,,
+2011-09-11,0,0,,,0,0,,
+2011-09-12,0,0,,,0,0,,
+2011-09-13,0,0,,,0,0,,
+2011-09-14,0,0,,,0,0,,
+2011-09-15,0,0,,,0,0,,
+2011-09-16,0,0,,,0,0,,
+2011-09-17,0,0,,,0,0,,
+2011-09-18,0,0,,,0,0,,
+2011-09-19,0,0,,,0,0,,
+2011-09-20,0,0,,,0,0,,
+2011-09-21,0,0,,,0,0,,
+2011-09-22,0,0,,,0,0,,
+2011-09-23,0,0,,,0,0,,
+2011-09-24,0,0,,,0,0,,
+2011-09-25,0,0,,,0,0,,
+2011-09-26,0,0,,,0,0,,
+2011-09-27,0,0,,,0,0,,
+2011-09-28,0,0,,,0,0,,
+2011-09-29,0,0,,,0,0,,
+2011-09-30,0,0,,,0,0,,
+2011-10-01,0,0,,,0,0,,
+2011-10-02,0,0,,,0,0,,
+2011-10-03,0,0,,,0,0,,
+2011-10-04,0,0,,,0,0,,
+2011-10-05,0,0,,,0,0,,
+2011-10-06,0,0,,,0,0,,
+2011-10-07,0,0,,,0,0,,
+2011-10-08,0,0,,,0,0,,
+2011-10-09,0,0,,,0,0,,
+2011-10-10,0,0,,,0,0,,
+2011-10-11,0,0,,,0,0,,
+2011-10-12,0,0,,,0,0,,
+2011-10-13,0,0,,,0,0,,
+2011-10-14,0,0,,,0,0,,
+2011-10-15,0,0,,,0,0,,
+2011-10-16,0,0,,,0,0,,
+2011-10-17,0,0,,,0,0,,
+2011-10-18,0,0,,,0,0,,
+2011-10-19,0,0,,,0,0,,
+2011-10-20,0,0,,,0,0,,
+2011-10-21,0,0,,,0,0,,
+2011-10-22,0,0,,,0,0,,
+2011-10-23,0,0,,,0,0,,
+2011-10-24,0,0,,,0,0,,
+2011-10-25,0,0,,,0,0,,
+2011-10-26,0,0,,,0,0,,
+2011-10-27,0,0,,,0,0,,
+2011-10-28,0,0,,,0,0,,
+2011-10-29,0,0,,,0,0,,
+2011-10-30,0,0,,,0,0,,
+2011-10-31,0,0,,,0,0,,
+2011-11-01,0,0,,,0,0,,
+2011-11-02,0,0,,,0,0,,
+2011-11-03,0,0,,,0,0,,
+2011-11-04,0,0,,,0,0,,
+2011-11-05,0,0,,,0,0,,
+2011-11-06,0,0,,,0,0,,
+2011-11-07,0,0,,,0,0,,
+2011-11-08,0,0,,,0,0,,
+2011-11-09,0,0,,,0,0,,
+2011-11-10,0,0,,,0,0,,
+2011-11-11,0,0,,,0,0,,
+2011-11-12,0,0,,,0,0,,
+2011-11-13,0,0,,,0,0,,
+2011-11-14,0,0,,,0,0,,
+2011-11-15,0,0,,,0,0,,
+2011-11-16,0,0,,,0,0,,
+2011-11-17,0,0,,,0,0,,
+2011-11-18,0,0,,,0,0,,
+2011-11-19,0,0,,,0,0,,
+2011-11-20,0,0,,,0,0,,
+2011-11-21,0,0,,,0,0,,
+2011-11-22,0,0,,,0,0,,
+2011-11-23,0,0,,,0,0,,
+2011-11-24,0,0,,,0,0,,
+2011-11-25,0,0,,,0,0,,
+2011-11-26,0,0,,,0,0,,
+2011-11-27,0,0,,,0,0,,
+2011-11-28,0,0,,,0,0,,
+2011-11-29,0,0,,,0,0,,
+2011-11-30,0,0,,,0,0,,
+2011-12-01,0,0,,,0,0,,
+2011-12-02,0,0,,,0,0,,
+2011-12-03,0,0,,,0,0,,
+2011-12-04,0,0,,,0,0,,
+2011-12-05,0,0,,,0,0,,
+2011-12-06,0,0,,,0,0,,
+2011-12-07,0,0,,,0,0,,
+2011-12-08,0,0,,,0,0,,
+2011-12-09,0,0,,,0,0,,
+2011-12-10,0,0,,,0,0,,
+2011-12-11,0,0,,,0,0,,
+2011-12-12,0,0,,,0,0,,
+2011-12-13,0,0,,,0,0,,
+2011-12-14,0,0,,,0,0,,
+2011-12-15,0,0,,,0,0,,
+2011-12-16,0,0,,,0,0,,
+2011-12-17,0,0,,,0,0,,
+2011-12-18,0,0,,,0,0,,
+2011-12-19,0,0,,,0,0,,
+2011-12-20,0,0,,,0,0,,
+2011-12-21,0,0,,,0,0,,
+2011-12-22,0,0,,,0,0,,
+2011-12-23,0,0,,,0,0,,
+2011-12-24,0,0,,,0,0,,
+2011-12-25,0,0,,,0,0,,
+2011-12-26,0,0,,,0,0,,
+2011-12-27,0,0,,,0,0,,
+2011-12-28,0,0,,,0,0,,
+2011-12-29,0,0,,,0,0,,
+2011-12-30,0,0,,,0,0,,
+2011-12-31,0,0,,,0,0,,
+2012-01-01,0,0,,,28,0.6451869614918564,547ebb13af21a29e0ba26803,"If 2011 Was Any Indication, Hold On to Your Hats in 2012"
+2012-01-02,0,0,,,23,0.7527338512631967,547ec182af21a29ba2ebd3b0,A Relentless On-Screen Bid to Sell Candidates in Iowa
+2012-01-03,0,0,,,0,0.4040351635280705,,
+2012-01-04,0,0,,,76,1.0190748246498478,547ec32caf21a29ba2ebd40d,In Praise of Iowa
+2012-01-05,28,0.42965434635039057,547ebf01af21a29e0ba26908,Does McCain's Endorsement Really Help Romney?,0,0,,
+2012-01-06,0,0,,,37,0.1810167010123761,547ebd01af21a29e0ba26889,"Race and Politics, Revisited"
+2012-01-07,0,0,,,52,1.4646161447778854,547ec129af21a29ba2ebd393,Adelson Gives $5 Million to Super PAC Supporting Gingrich
+2012-01-08,18,0.3846899123898748,547ebd96af21a29e0ba268ae,"Mitt s Young Republican, Up From the Streets",93,0.8251869951679616,547ec2d8af21a29ba2ebd3fd,Gingrich Says Bain Capital Looted Companies
+2012-01-09,0,0,,,0,0,,
+2012-01-10,0,0,,,42,0.6528582226883761,547ebc0baf21a29e0ba26847,Hispanic Adviser Is Promoted at White House
+2012-01-11,487566,0.6429793340091199,547ebbecaf21a29e0ba26846,Obama Names Domestic Policy Director,0,0,,
+2012-01-12,375,0.4246822258165166,547ebac7af21a29e0ba267f2,Year of the Immigrant,209,0.3699807030899519,547eb785af21a29def82541e,Romney s Hard Line
+2012-01-13,0,0,,,0,0,,
+2012-01-14,0,0,,,0,0,,
+2012-01-15,0,0,,,0,0,,
+2012-01-16,0,0,,,1,0.017028758591910886,547ebeb8af21a29e0ba268f6,The Romney Advantage: Unequally Matched G.O.P. Rivals
+2012-01-17,0,0,,,119,0.9426489446051909,547eb804af21a29def825443,Thwarted Travelers
+2012-01-18,0,0,,,137,1.7573170053135767,547ebe09af21a29e0ba268cd,"Before a Debate, Sharpening the Script in Pursuit of Memorable Moments"
+2012-01-19,0,0,,,51,1.6396656936808574,547ec17caf21a29ba2ebd3a7,Busy Day Both Tests and Rewards Gingrich
+2012-01-20,0,0,,,55,0.9851479065023138,547ec12faf21a29ba2ebd398,"Perry Exits, and So Does His Depleted War Chest"
+2012-01-21,0,0,,,0,0,,
+2012-01-22,0,0,,,1189,0.5572192526266433,547eb78baf21a29def825424,American Voters: Still Up for Grabs
+2012-01-23,0,0,,,122,0.8822582629759843,547ec360af21a29ba2ebd41b,Romney Adds a Top Debate Coach
+2012-01-24,0,0,,,129,0.6505490957229484,547eb707af21a29def825402,Romney's Plan for 'Self-Deportation' Has Conservative Support
+2012-01-25,0,0,,,162,0.6640086927515234,547ebf54af21a29e0ba2691f,President Obama s State of the Union Address
+2012-01-26,0,0,,,65,2.0032564363831806,547ebd96af21a29e0ba268af,Jacksonville Debate Fact Check
+2012-01-27,487666,0.7151930904512673,547ebdbdaf21a29e0ba268b9,Check Point: Charge of Profiting From Floridians' Woes,169,0.31622186756997656,547ebcd9af21a29e0ba2687c,Apple in China: Has iOrwell Arrived?
+2012-01-28,0,0,,,0,0,,
+2012-01-29,0,0,,,170,0.8711197044751776,547eb829af21a29def82544c,A Divide on the Payoff of Legalizing Immigrants
+2012-01-30,0,0,,,0,0,,
+2012-01-31,0,0,,,151,0.9944836847935825,547ebcd9af21a29e0ba2687d,Police Chief to Retire After Bias Charges for 4 Officers
+2012-02-01,0,0,,,0,0,,
+2012-02-02,2391,0.37437605815094877,547ebb15af21a29e0ba26809,Do-It-Yourself Deportation,0,0,,
+2012-02-03,0,0,,,805,1.2318740225544516,547eb75caf21a29def825414,Romney s Tough Immigration View Is at Odds With His Church
+2012-02-04,0,0,,,0,0,,
+2012-02-05,0,0,,,1227,0.7419524069833093,547ec152af21a29ba2ebd39f,"The 2016 Election, Already Upon Us"
+2012-02-06,123,0.6212451203238358,547ebe67af21a29e0ba268dd,This Week in Small Business: Jobs!,0,0,,
+2012-02-07,0,0,,,0,0,,
+2012-02-08,0,0,,,0,0,,
+2012-02-09,0,0,,,13,0.9740786680259623,547ebc60af21a29e0ba2685e,Rubio Receives Warm Reception at CPAC
+2012-02-10,208,0.48837862353138317,547ebe91af21a29e0ba268eb,Why Manufacturing Still Matters,0,0,,
+2012-02-11,0,0,,,0,0,,
+2012-02-12,0,0,,,6829,0.7434591688696498,547ebcdaaf21a29e0ba2687e,We Need a Second Party
+2012-02-13,0,0,,,0,0,,
+2012-02-14,0,0,,,1,0.11204526020249284,547ebd03af21a29e0ba2688c,The Santorum Surge: Goodbye Ron Paul Territory
+2012-02-15,0,0,,,61,0.6755375192622922,547ec301af21a29ba2ebd403,Pro-Gingrich 'Super PAC' Ads Coming to Talk Radio
+2012-02-16,0,0,,,12,1.160038093212897,547ebe6eaf21a29e0ba268e5,Sarkozy Will Run for Second Term as French President
+2012-02-17,0,0,,,0,0,,
+2012-02-18,0,0,,,0,0,,
+2012-02-19,0,0,,,1128,0.3229409124216866,547ebe6eaf21a29e0ba268e4,Spring Awakening
+2012-02-20,0,0,,,0,0,,
+2012-02-21,0,0,,,539,0.39854643606398643,547eb6e0af21a29def8253f6,Immigration and the Campaign
+2012-02-22,0,0,,,148,2.9304725935904203,547ebf2aaf21a29e0ba26911,Arizona Republican Debate Fact Check
+2012-02-23,298,1.1145715020541636,547ebf2aaf21a29e0ba26910,Check Point: Santorum on Financing for Family Planning Programs,0,0,,
+2012-02-24,0,0,,,0,0,,
+2012-02-25,0,0,,,0,0,,
+2012-02-26,0,0,,,40,1.1996351692161873,547ec2aeaf21a29ba2ebd3f3,Romney Works the Crowd at the Daytona 500
+2012-02-27,0,0,,,27,1.5490799266609336,547ec25aaf21a29ba2ebd3dd,Santorum Whips Up a Crowd in Kalamazoo
+2012-02-28,0,0,,,8,0.6775133775982356,547ec30aaf21a29ba2ebd40a,Memo to Mitt Romney: We Get It. You're Rich.
+2012-02-29,0,0,,,0,0,,
+2012-03-01,0,0,,,10,0.7208298541595068,547ec38daf21a29ba2ebd428,Is Bipartisanship Back? Don't Count on It.
+2012-03-02,0,0,,,0,0,,
+2012-03-03,0,0,,,120,0.8229179584971398,547ec38caf21a29ba2ebd427,"Pressed for Anecdote, Romney Recounts Tale of Missing Girl"
+2012-03-04,0,0,,,131,0.5788693760774085,547ebd00af21a29e0ba26888,George P. Bush Works to Nurture Hispanic Roots
+2012-03-05,0,0,,,437,1.317430277457298,547ec1ffaf21a29ba2ebd3ca,"2012  Presidential Race Is 'the Worst I've Ever Seen,' Barbara Bush Says"
+2012-03-06,0,0,,,32,0.3434894216393989,547ebd71af21a29e0ba268a5,Live Blog: President Obama's News Conference
+2012-03-07,0,0,,,0,0,,
+2012-03-08,0,0,,,622,0.08922191611540153,547ebe90af21a29e0ba268ea,What Do I Know About Poverty?
+2012-03-09,0,0,,,64,0.6856490431984039,547ebaedaf21a29e0ba267fb,The Uncertain Cost of Helping Illegal Immigrants Go to College
+2012-03-10,0,0,,,2,0.85845766717615,547ec233af21a29ba2ebd3d6,A Candidate&#8217;s Character
+2012-03-11,0,0,,,0,0,,
+2012-03-12,0,0,,,0,0,,
+2012-03-13,0,0,,,24,0.38277437799925107,547ebcd4af21a29e0ba26879,"Race, Republicans and Realignment"
+2012-03-14,297,0.5354421662717761,547ebe0aaf21a29e0ba268ce,Inside The Times,18394,1.6587925186316608,547ec17daf21a29ba2ebd3a8,Don t Tread on Us
+2012-03-15,0,0,,,1445,1.401634921702196,547eb800af21a29def82543e,Mr. Sarkozy on the Low Road
+2012-03-16,0,0,,,141,0.9633302282422466,547ec331af21a29ba2ebd411,Early Glimpse of Missouri Caucuses Shows Support for Santorum
+2012-03-17,0,0,,,9,0.3304900112440271,547ebc11af21a29e0ba2684f,"Sunday Breakfast Menu, March 18"
+2012-03-18,0,0,,,0,0,,
+2012-03-19,0,0,,,0,0,,
+2012-03-20,0,0,,,1275,1.7658656157382229,547ec30aaf21a29ba2ebd409,"In Santorum Writings, a Consistently Conservative Voice"
+2012-03-21,0,0,,,0,0,,
+2012-03-22,0,0,,,160,0.8146509316841036,547ec32baf21a29ba2ebd40c,"For Romney s Trusted Adviser,  Etch A Sketch  Comment Is a Rare Misstep"
+2012-03-23,0,0,,,0,0,,
+2012-03-24,0,0,,,0,0,,
+2012-03-25,0,0,,,78,0.6901355795930411,547ebdbaaf21a29e0ba268b5,Experience in Israel Fuels an N.B.A. Dream
+2012-03-26,0,0,,,0,0,,
+2012-03-27,0,0,,,0,0,,
+2012-03-28,759,0.07185280736414035,547ebb15af21a29e0ba26808,A Dream Act Without the Dream,66,0.4672198707604286,547ec357af21a29ba2ebd415,Elder George Bush to Endorse Romney
+2012-03-29,0,0,,,0,0,,
+2012-03-30,0,0,,,3284,1.782951904665794,547ebcb3af21a29e0ba26874,A Moderate Conservative Dilemma
+2012-03-31,0,0,,,0,0,,
+2012-04-01,0,0,,,0,0,,
+2012-04-02,0,0,,,421,0.8531453420975519,547eb7fdaf21a29def82543b,"A Die-Hard Conservative, but Not on Immigrants"
+2012-04-03,0,0,,,0,0,,
+2012-04-04,172,0.21248579460447892,547ebf51af21a29e0ba2691c,A Conversation With: Nikki Haley,0,0,,
+2012-04-05,0,0,,,332,0.349026159707873,547ebd00af21a29e0ba26887,Haunted by the Primaries
+2012-04-06,0,0,,,0,0,,
+2012-04-07,0,0,,,38,0.467410264920039,547ebb5baf21a29e0ba2681e,Alabama May Revise New Policies on Migrants
+2012-04-08,289,0.18382636664577467,547ebde1af21a29e0ba268c2,A Vision of a Grim Past and a Hopeful Future,320,0.9175559793041858,547ebcb0af21a29e0ba26870,Romney the Centrist Peeks Out
+2012-04-09,0,0,,,0,0,,
+2012-04-10,0,0,,,0,0,,
+2012-04-11,0,0,,,38,0.4541901642582141,547ec12caf21a29ba2ebd395,Announcing Fech 1.0
+2012-04-12,0,0,,,0,0,,
+2012-04-13,0,0,,,1292,0.7540886601444714,547ebc37af21a29e0ba26856,Catholic Bishops Urge Campaign for Religious Freedom
+2012-04-14,0,0,,,0,0,,
+2012-04-15,0,0,,,0,0,,
+2012-04-16,0,0,,,106,0.7925559910650921,547eb730af21a29def82540b,Making Visas-for-Dollars Work
+2012-04-17,0,0,,,0,0,,
+2012-04-18,0,0,,,0,0,,
+2012-04-19,0,0,,,4132,0.6910473006333487,547ec231af21a29ba2ebd3d5,"Focus, People!"
+2012-04-20,0,0,,,784,0.903795321138169,547ebe44af21a29e0ba268d8,"With Vote Days Away, Outlook for Sarkozy Dims"
+2012-04-21,0,0,,,50,1.0387581703606739,547ec388af21a29ba2ebd424,"In Strategy Shift, Obama Team Attacks Romney From the Left"
+2012-04-22,0,0,,,2041,1.2732863502735792,547ebaebaf21a29e0ba267f8,The Dream of Leaving Cuba
+2012-04-23,0,0,,,1694,1.1609282887519141,547eb70baf21a29def825406,Justices to Rule on Role of the States in Immigration
+2012-04-24,0,0,,,187,2.009695869059542,547ebde4af21a29e0ba268c8,French Far Right a Challenge for Europe and Sarkozy
+2012-04-25,0,0,,,0,0,,
+2012-04-26,0,0,,,0,0,,
+2012-04-27,139,0.11891234407021967,547ebac9af21a29e0ba267f3,A Year in the Life of Social Security,0,0,,
+2012-04-28,0,0,,,62,0.08196612996007169,547eb6dfaf21a29def8253f5,The Decision to Deport
+2012-04-29,0,0,,,0,0,,
+2012-04-30,0,0,,,0,0,,
+2012-05-01,0,0,,,0,0,,
+2012-05-02,0,0,,,337,1.0748007823830878,547ebd4daf21a29e0ba2689b,A Change in Police Policy Has Immigrants Hoping for More
+2012-05-03,0,0,,,0,0,,
+2012-05-04,0,0,,,15,0.6445381154267578,547ebc39af21a29e0ba2685a,"Two Invitations, One Official, One Political, With the Same Guest List"
+2012-05-05,1638,0.37400197242604283,547ebe6caf21a29e0ba268e3,Muslim Woman Bridges Faiths to Advance Progressive Goals,298,0.20311886344564734,547ebaf0af21a29e0ba267ff,"For China, a Dissident in Exile Is One Less Headache Back Home"
+2012-05-06,0,0,,,800,0.5425514456533133,547ebf78af21a29e0ba26925,Obama s Not-So-Hot Date With Wall Street
+2012-05-07,0,0,,,15,0.7167178302610058,547ec130af21a29ba2ebd39a,Congress Returns to Full Agenda Awash in Election Year Politics
+2012-05-08,0,0,,,0,0,,
+2012-05-09,0,0,,,158,0.12841344472225197,547ebcb2af21a29e0ba26871,Prepared Statement of Senator Richard G. Lugar on the Concluded Indiana Senate Primary
+2012-05-10,0,0,,,0,0,,
+2012-05-11,0,0,,,0,0,,
+2012-05-12,0,0,,,0,0,,
+2012-05-13,2372,0.30516230391385113,547ebb7caf21a29e0ba26822,Honduras Takes a Mulligan,0,0,,
+2012-05-14,0,0,,,0,0,,
+2012-05-15,0,0,,,322,0.09047445667427967,547ebe3eaf21a29e0ba268d3,The Third Party Fantasy
+2012-05-16,0,0,,,13,0.3454630574423209,547ec259af21a29ba2ebd3dc,Kerry's 2004 Campaign Manager Joins Obama 'Super PAC'
+2012-05-17,0,0,,,810,2.106279901839826,547ec387af21a29ba2ebd423,Romney Rejects Using the Rev. Jeremiah Wright Against Obama
+2012-05-18,0,0,,,19,1.1197476958635175,547ebc65af21a29e0ba26862,Romney Unveils First Ad of General Election
+2012-05-19,0,0,,,0,0,,
+2012-05-20,0,0,,,1289,0.5364510162357188,547ebb59af21a29e0ba26817,Waiting for Health Care
+2012-05-21,0,0,,,0,0,,
+2012-05-22,0,0,,,0,0,,
+2012-05-23,487666,0.7083115935347886,547ec2a9af21a29ba2ebd3ee,"Attack on Bain Goes On, But Doubts Linger",0,0,,
+2012-05-24,0,0,,,57,0.5029113260718598,547ec235af21a29ba2ebd3d7,Muslim Brotherhood Candidate Has Early Lead in Egypt Presidential Election
+2012-05-25,0,0,,,6,0.3568989062467868,547ebf75af21a29e0ba26923,Movie Listings for May 25-31
+2012-05-26,0,0,,,0,0,,
+2012-05-27,0,0,,,146,0.5537830481576196,547ec152af21a29ba2ebd39e,Nasty Like Us
+2012-05-28,0,0,,,0,0,,
+2012-05-29,0,0,,,416,0.9447025056909221,547ebe93af21a29e0ba268ed,"Nomination His, Romney Steps Up Attack on Obama"
+2012-05-30,0,0,,,76,0.13001544835031464,547ec1a7af21a29ba2ebd3ba,The Presidential Cage Match
+2012-05-31,0,0,,,0,0,,
+2012-06-01,0,0,,,632,0.9504760651769893,547eb7b1af21a29def825429,Do-It-Yourself Immigration Reform
+2012-06-02,171,0.1083643463994387,547eb7dbaf21a29def825436,The Wars of Carl Schurz,285,0.43813433025949794,547eb78baf21a29def825423,"New Rules for Money Transfers, but Few Limits"
+2012-06-03,0,0,,,0,0,,
+2012-06-04,2461,0.37358859341035355,547ebb37af21a29e0ba2680f,A Start on the Dream,252,0.2758926272377068,547ebe16af21a29e0ba268d1,The Untold Future of American Politics
+2012-06-05,0,0,,,347,0.6460142725525171,547ec1a3af21a29ba2ebd3b4,Governors' Races Can Be a Contrary Indicator for Presidential Elections
+2012-06-06,0,0,,,0,0,,
+2012-06-07,0,0,,,0,0,,
+2012-06-08,0,0,,,315,0.8821970458370837,547ec261af21a29ba2ebd3e2,Democrats Hit Romney on 'Message of Wisconsin' Comments 
+2012-06-09,0,0,,,0,0,,
+2012-06-10,297,0.8301947138031205,547ec1ccaf21a29ba2ebd3bf,"Political Memo: Not the '08 Campaign, but More May Be at Stake",441,0.3226770795988747,547eb70baf21a29def825407,Conflicts Endanger Reform in Myanmar
+2012-06-11,0,0,,,0,0,,
+2012-06-12,0,0,,,0,0,,
+2012-06-13,0,0,,,1164,1.277081288622795,547eb825af21a29def825447,Evangelical Groups Call for New Stance on Illegal Immigration
+2012-06-14,0,0,,,0,0,,
+2012-06-15,0,0,,,169,1.1955192978178864,547eb6e4af21a29def8253fd,A Breakthrough on Immigration Policy
+2012-06-16,0,0,,,823,0.39466470020574584,547eb706af21a29def825401,Transcript of Obama s Speech on Immigration Policy
+2012-06-17,3593,0.32468870161428,547ebf7eaf21a29e0ba26929,"As Escapees Stream Out, a Penal Business Thrives",2708,0.9820269971700442,547ebe8faf21a29e0ba268e9,Greek Voters Choose Party Supporting Bailout
+2012-06-18,487567,0.3797847600647877,547ebbeaaf21a29e0ba26844,Campaigns Turning Focus to Borders,1760,0.6146054625455268,547ebb36af21a29e0ba2680c,"After Chorus of Protest, New Tune on Deportations"
+2012-06-19,131,0.4400207536287126,547ebe6baf21a29e0ba268e2,"Running for the House on Pride in His Roots, and Pure Energy",4671,0.3128272338329806,547eb7d8af21a29def825434,"In a Shift, Biggest Wave of Migrants Is Now Asian"
+2012-06-20,2818,0.4502171148992069,547eb803af21a29def825441,Don t Shut the Golden Door,390,1.0867896869636078,547ebf2daf21a29e0ba26913,"Samaras Takes Office as Greece's Prime Minister, Facing Major Challenges"
+2012-06-21,0,0,,,786,1.6113004922271088,547eb735af21a29def82540f,"In Speech, Romney Takes Softer Tone on Immigration"
+2012-06-22,0,0,,,58,1.103505571979877,547eb709af21a29def825404,Rubio Denounces Partisanship on Immigration
+2012-06-23,66,0.0017444786074645169,547ebb7daf21a29e0ba26826,The Court's Moment,2000,0.9162092118796301,547ebbc8af21a29e0ba2683a,"Putting On a Brave Face, but Preparing for Heartbreak on Health Care"
+2012-06-24,0,0,,,1927,0.440195810694722,547ebe6aaf21a29e0ba268e1,Mexican Democracy s Lost Years
+2012-06-25,0,0,,,78,1.017321355060696,547eb733af21a29def82540e,Obama and Romney React to Court's Immigration Decision
+2012-06-26,0,0,,,3133,2.091513728203373,547ebacaaf21a29e0ba267f5,"Immigrants Are Crucial to Innovation, Study Says"
+2012-06-27,0,0,,,161,0.5250764629657552,547ebd6faf21a29e0ba268a2,Senseless or Sensible?
+2012-06-28,0,0,,,419,0.37532257910809286,547ebc38af21a29e0ba26859,Roberts Hits the Reset Button
+2012-06-29,0,0,,,249,0.7877941321856763,547ebd70af21a29e0ba268a3,"For Obama, a Signature Issue That the Public Never Embraced Looms Large"
+2012-06-30,0,0,,,528,0.7892180336802685,547ebba1af21a29e0ba2682f,No Respite for Liberals
+2012-07-01,487566,0.6970513084354328,547ebcb5af21a29e0ba26878,State Lawmakers Warily Watch Mexico's Election,1432,0.9074707974448044,547ebe08af21a29e0ba268cc,Taking One for the Country
+2012-07-02,1188,0.31779823902416937,547ebb58af21a29e0ba26815,Mexico's Next Chapter,702,0.6779701588024623,547eb7ddaf21a29def825439,Show Me Your Papers
+2012-07-03,0,0,,,96,0.5271749372896776,547ec158af21a29ba2ebd3a3,Presidential Vacation Reading
+2012-07-04,0,0,,,0,0,,
+2012-07-05,413,0.15285045983698065,547ebb37af21a29e0ba26810,Obama Marks Fourth With New U.S. Citizens,0,0,,
+2012-07-06,0,0,,,103,0.8354980211744581,547ec309af21a29ba2ebd408,"Another Dismal Jobs Report, Another Misguided Attack from the Right"
+2012-07-07,0,0,,,0,0,,
+2012-07-08,0,0,,,0,0,,
+2012-07-09,0,0,,,14,0.6178842963458221,547ebbe9af21a29e0ba26840,A National ID Card?
+2012-07-10,0,0,,,4,0.493842483333929,547ec2d6af21a29ba2ebd3fb,Romney Criticizes Obama's Tax Plan 
+2012-07-11,0,0,,,72,0.3430692247612115,547ebf07af21a29e0ba2690a,Caring About Politics
+2012-07-12,0,0,,,30,0.7875758374020612,547ec255af21a29ba2ebd3d9,Explaining Why Wall Street and the Wealthy Hate Obama
+2012-07-13,0,0,,,0,0,,
+2012-07-14,0,0,,,0,0,,
+2012-07-15,0,0,,,0,0,,
+2012-07-16,0,0,,,435,0.6529924155543972,547ec157af21a29ba2ebd3a2,"For Political Closure, We Need Disclosure"
+2012-07-17,0,0,,,168,1.0976776064285048,547ec389af21a29ba2ebd425,Mitt Romney's Long Hot Summer
+2012-07-18,0,0,,,0,0,,
+2012-07-19,0,0,,,131,1.3707648713582004,547ebddfaf21a29e0ba268bf,Tips for Living on a College Student Budget
+2012-07-20,0,0,,,0,0,,
+2012-07-21,0,0,,,0,0,,
+2012-07-22,0,0,,,0,0,,
+2012-07-23,0,0,,,452,0.2607724699516437,547ebe0faf21a29e0ba268d0,The Politics of Anything Goes
+2012-07-24,0,0,,,0,0,,
+2012-07-25,66,0.18861506385493132,547eb75daf21a29def825416,Answers to Your Questions on Skilled Immigration,0,0,,
+2012-07-26,0,0,,,192,1.0943533872948712,547ebeb5af21a29e0ba268f3,"Once a Rebel, McCain Now Walks the Party Line"
+2012-07-27,297,0.5792725648667714,547ebe6aaf21a29e0ba268e0,"Once a Rebel, McCain Now Walks the Party Line",1283,0.8619202334678692,547ebaf1af21a29e0ba26800,Hospitals Fear Cuts in Aid for Care to Illegal Immigrants
+2012-07-28,0,0,,,147,0.1415246194374848,547eb804af21a29def825442,A Bus Ride to Show the Cracks in Immigration
+2012-07-29,488504,1.0569301579528774,547ebe69af21a29e0ba268de,Inside the Times,1481,0.10186146987602773,547ebe6faf21a29e0ba268e6,Nuns Weigh Response to Scathing Vatican Rebuke
+2012-07-30,0,0,,,0,0,,
+2012-07-31,0,0,,,0,0,,
+2012-08-01,0,0,,,0,0,,
+2012-08-02,0,0,,,0,0,,
+2012-08-03,0,0,,,0,0,,
+2012-08-04,0,0,,,0,0,,
+2012-08-05,0,0,,,1123,1.5097817470444972,547ec132af21a29ba2ebd39c,Record Spending by Obama s Camp Shrinks Coffers
+2012-08-06,0,0,,,0,0,,
+2012-08-07,0,0,,,425,1.4100655385474363,547ec204af21a29ba2ebd3cd,Take Part in Live Op-Ed Video Discussions
+2012-08-08,0,0,,,12015,0.5269010623672014,547ebd29af21a29e0ba26895,Philanthropist Wants to Be Rid of His Last $1.5 Billion
+2012-08-09,0,0,,,562,0.809223790011841,547ebe94af21a29e0ba268ef,Charlotte Girds for Party And Array of Protesters
+2012-08-10,202,0.12203823596901475,547eb75faf21a29def825417,Down Payment on a Dream,0,0,,
+2012-08-11,0,0,,,1871,1.0872139750702734,547ec330af21a29ba2ebd410,Risky Ryan
+2012-08-12,0,0,,,7242,0.6901717158840213,547ec287af21a29ba2ebd3ea,The Veil of Opulence
+2012-08-13,0,0,,,0,0,,
+2012-08-14,0,0,,,33,0.5389748066492581,547eb7b2af21a29def82542a,Bloomberg Urges Campaigns to Discuss Immigration Reform
+2012-08-15,149,0.09504843233182525,547eb72caf21a29def825409,Mr. Bloomberg s Immigration Road Trip,0,0,,
+2012-08-16,0,0,,,746,0.22795707761690642,547ebd48af21a29e0ba26897,Let&rsquo;s Make Him Do It
+2012-08-17,487666,0.7321166782639885,547ec17faf21a29ba2ebd3ac,Making Art Out of Presidential Politics,0,0,,
+2012-08-18,0,0,,,653,0.9388781886458771,547ec2adaf21a29ba2ebd3f2,Obama s (Perceived) Transformation
+2012-08-19,297,0.6479152727312556,547ec289af21a29ba2ebd3ec,Obama's (Perceived) Transformation,0,0,,
+2012-08-20,0,0,,,8,0.18456107441507452,547ec2afaf21a29ba2ebd3f4,On the Trail With The Caucus
+2012-08-21,0,0,,,42,0.23059457910928366,547ebc8eaf21a29e0ba2686d,Obama and Romney Discuss Role of Faith in Their Lives
+2012-08-22,0,0,,,3770,0.5875700474430078,547ebaecaf21a29e0ba267fa,We Need a  Conservative  Party
+2012-08-23,0,0,,,842,0.6951237680753248,547eb732af21a29def82540d,Republican Immigration Platform Backs 'Self-Deportation'
+2012-08-24,0,0,,,838,0.5086135745019251,547ebd95af21a29e0ba268ac,Dump It on the States
+2012-08-25,0,0,,,110,0.9548990620434042,547ec363af21a29ba2ebd41d,"Romney, in His Home State, Raises Birth Certificate Issue"
+2012-08-26,297,0.22754345365632744,547ebd94af21a29e0ba268ab,A New Guide To The Republican Herd,1298,1.3809223404073085,547ec288af21a29ba2ebd3eb,The Top Three Myths About Myths
+2012-08-27,0,0,,,0,0,,
+2012-08-28,0,0,,,0,0,,
+2012-08-29,0,0,,,8691,0.918729534455561,547ec1a3af21a29ba2ebd3b3,The Secret Weapon: All of Us
+2012-08-30,0,0,,,319,0.9461333476664162,547ec1fcaf21a29ba2ebd3c6,"Defeat, Introspection, Reinvention, Nomination"
+2012-08-31,648,0.28812292081946966,547eb6ddaf21a29def8253f4,Deportation Nation,3,0.3002288847704014,547ec22baf21a29ba2ebd3d1,Humanize This!
+2012-09-01,0,0,,,0,0,,
+2012-09-02,0,0,,,2550,0.006514858277442692,547ebacaaf21a29e0ba267f4,It s Still Halftime in America
+2012-09-03,0,0,,,0,0,,
+2012-09-04,343,0.1356835597586804,547ebeb9af21a29e0ba268f8,Party Platforms Are Poles Apart In Their View of the Nation,2216,1.3050458636526763,547ebeb4af21a29e0ba268f2,First Lady Tops Opening Night For Democrats
+2012-09-05,29,0.1754686359813018,547ebbebaf21a29e0ba26845,The UndocuBus,550,1.2001308526810088,547ec12baf21a29ba2ebd394,"Carving a Legacy of Giving (to His Party, Too)"
+2012-09-06,0,0,,,1852,0.4849027747562662,547ec15caf21a29ba2ebd3a5,"Bill, Barack and Us"
+2012-09-07,487578,1.1137512518319497,547ebc0eaf21a29e0ba2684b,Out Of the Shadows: A Speech Makes History,0,0,,
+2012-09-08,0,0,,,14,0.050813635736228324,547ebd26af21a29e0ba26891,Reviews of the President s Big Night
+2012-09-09,23,0.19624259246647846,547ebf57af21a29e0ba26922,September Release Schedule,1749,1.4881579998724723,547ec17daf21a29ba2ebd3a9,Playing Now: Hail to Us Chiefs
+2012-09-10,0,0,,,0,0,,
+2012-09-11,0,0,,,0,0,,
+2012-09-12,0,0,,,80,0.6946395092065524,547ec359af21a29ba2ebd416,"Embracing Role as Surrogate, Clinton Hits Campaign Trail"
+2012-09-13,0,0,,,1273,1.204739092232262,547ec180af21a29ba2ebd3ae,Embassy Attacks Fuel Escalation in U.S. Presidential Race
+2012-09-14,0,0,,,9,0.65747230880231,547ec25caf21a29ba2ebd3de,Romney Calls for Moment of Silence During Ohio Rally 
+2012-09-15,0,0,,,0,0,,
+2012-09-16,0,0,,,1402,0.18065991532378012,547ec1f5af21a29ba2ebd3c5,The Power of Political Communion
+2012-09-17,0,0,,,0,0,,
+2012-09-18,140,0.29959638658870547,547ebcd7af21a29e0ba2687b,"What Bush Knew, and Romney Doesn't",0,0,,
+2012-09-19,170,0.30086765593866427,547ebaeeaf21a29e0ba267fc,Republicans Push Bill to Help Foreign Science Graduates Stay,35,1.0367251624933225,547ec32aaf21a29ba2ebd40b,Middle East Comments Could Vex a Romney Administration
+2012-09-20,0,0,,,437,0.48894676819282884,547ebc36af21a29e0ba26854,Mitt Romney's Secret Plan
+2012-09-21,47,0.7319472335118387,547ebb14af21a29e0ba26807,The Candidates Face Hispanic Voters,22,0.6569128797483925,547ebc8daf21a29e0ba2686c,"Obama Seizes on Romney Comments, Suggesting He Is Out of Touch"
+2012-09-22,0,0,,,0,0,,
+2012-09-23,0,0,,,1053,0.4210646328327474,547ec32faf21a29ba2ebd40f,"Hard Lines, Red Lines and Green Lines"
+2012-09-24,0,0,,,2724,1.1001556355854278,547ec181af21a29ba2ebd3af,The Statistical State of the Presidential Race
+2012-09-25,0,0,,,124,0.1325616814738353,547eb7d9af21a29def825435,The Count and the Gymnasts
+2012-09-26,0,0,,,0,0,,
+2012-09-27,0,0,,,0,0,,
+2012-09-28,0,0,,,0,0,,
+2012-09-29,0,0,,,0,0,,
+2012-09-30,0,0,,,0,0,,
+2012-10-01,0,0,,,82,0.42656486488959783,547ec17eaf21a29ba2ebd3ab,Johnson: Presidential Politics Trumps Jets' Fate
+2012-10-02,63,0.0030314485018558823,547eb789af21a29def825421,Romney Says He Would Honor Immigration Reprieves Granted by Obama,2730,2.701471652259218,547ec1d0af21a29ba2ebd3c3,From the Magazine: The Mitt Romney Who Might Have Been
+2012-10-03,0,0,,,2403,0.694678883933681,547ec159af21a29ba2ebd3a4,Transcript of the First Presidential Debate
+2012-10-04,0,0,,,243,0.7450700392586546,547ec361af21a29ba2ebd41c,Scoring Obama's Debacle
+2012-10-05,77,0.1601069519965902,547eb764af21a29def82541a,The Documented Life,0,0,,
+2012-10-06,0,0,,,0,0,,
+2012-10-07,0,0,,,0,0,,
+2012-10-08,0,0,,,0,0,,
+2012-10-09,0,0,,,881,0.9917160133647316,547ebc8aaf21a29e0ba26868,Liberalism's Glass Jaw
+2012-10-10,0,0,,,1493,0.45448944714822825,547ec1c8af21a29ba2ebd3bb,It s Not Just About Us
+2012-10-11,0,0,,,245,0.6869523687536915,547ec15caf21a29ba2ebd3a6,Full Transcript of the Vice-Presidential Debate
+2012-10-12,0,0,,,461,0.5323541334811336,547ebcffaf21a29e0ba26885,"With Tea Party Support, an East Texas Republican Takes on House Speaker"
+2012-10-13,0,0,,,70,0.7662310241541573,547ec307af21a29ba2ebd407,Ryan Criticizes Obama Administration's China Policy
+2012-10-14,0,0,,,1185,1.4173829490363312,547ebf52af21a29e0ba2691d,A Messenger Who Does the Shooting
+2012-10-15,0,0,,,0,0,,
+2012-10-16,0,0,,,4042,1.1664948997243891,547ebd9baf21a29e0ba268b4,Rules for Craftsmen
+2012-10-17,0,0,,,830,0.7220935249277451,547ebde3af21a29e0ba268c7,"Easing Path Out of Country, Cuba Is Dropping Exit Visas"
+2012-10-18,0,0,,,616,0.6642733994965723,547ec205af21a29ba2ebd3ce,Springsteen Makes It Official: He's for Obama
+2012-10-19,0,0,,,0,0,,
+2012-10-20,0,0,,,2715,0.45320226195623037,547ec1ceaf21a29ba2ebd3c1,Google's Crystal Ball
+2012-10-21,0,0,,,2577,1.6575197772300738,547eb764af21a29def82541b,A Romney Stance Causes Turmoil for Young Immigrants
+2012-10-22,0,0,,,3673,1.4156039266006186,547ebc37af21a29e0ba26855,For Congress From New York and Connecticut
+2012-10-23,0,0,,,1345,0.7085664910659726,547ec385af21a29ba2ebd421,Campaign Moods Shift as Contest Tightens
+2012-10-24,0,0,,,291,1.3998885015660472,547eb785af21a29def82541f,What Obama Said About Immigration in His Off-the-Record Interview
+2012-10-25,0,0,,,6259,1.1331162096897713,547ec230af21a29ba2ebd3d4,Powell Gives Obama His Endorsement for a Second Time
+2012-10-26,0,0,,,424,0.0971606953096863,547ebd02af21a29e0ba2688a,The Sprint to Election Day
+2012-10-27,0,0,,,0,0,,
+2012-10-28,0,0,,,0,0,,
+2012-10-29,0,0,,,3360,0.3153213539845396,547ebd73af21a29e0ba268a7,The No Agenda Myth
+2012-10-30,0,0,,,10955,0.5817852952452275,547ebd24af21a29e0ba2688f, 11 Excellent Reasons Not to Vote? 
+2012-10-31,0,0,,,276,1.3485610990382473,547ec257af21a29ba2ebd3da,Hurricane Sandy and the Politics of Everything
+2012-11-01,0,0,,,2791,1.0895142250347323,547ec35faf21a29ba2ebd41a,Guess Who It s All Up To?
+2012-11-02,10343,0.2602478905427499,547eb7dcaf21a29def825437,Innovative Immigrants,11930,1.0574585928050024,547ebd71af21a29e0ba268a4,"Bloomberg Backs Obama, Citing Fallout From Storm"
+2012-11-03,0,0,,,2490,0.7718254688501625,547ebe47af21a29e0ba268dc,America's Leftward Tilt?
+2012-11-04,0,0,,,6372,1.3758108799212123,547ebe41af21a29e0ba268d5,The Morning After the Morning After
+2012-11-05,0,0,,,1457,0.5006579060600578,547ec306af21a29ba2ebd406,Ryan Says Obama Policies Threaten 'Judeo-Christian' Values
+2012-11-06,0,0,,,0,0,,
+2012-11-07,356,0.041033170391631124,547ebd02af21a29e0ba2688b,Mo'bama,53201,1.1421607784118326,547ebc65af21a29e0ba26861,Hope and Change: Part 2
+2012-11-08,3056,0.6838439968904126,547eb7ffaf21a29def82543d,"Republicans, Unplugged",10445,1.015658328969454,547ebd4eaf21a29e0ba2689c,Demographic Shift Brings New Worry for Republicans
+2012-11-09,0,0,,,836,0.039384222043532535,547eb705af21a29def8253ff,Speaker  Confident  of Deal With White House on Immigration
+2012-11-10,131,0.23482942708495902,547eb6e1af21a29def8253f7,Republicans Reconsider Positions on Immigration,568,0.11169598402135317,547eb7d8af21a29def825433,Migrants Are Also Neighbors
+2012-11-11,0,0,,,19258,0.7547863502486125,547ebee1af21a29e0ba26903,Boehner Tells House G.O.P. to Fall in Line
+2012-11-12,0,0,,,0,0,,
+2012-11-13,0,0,,,3323,0.9924029950195803,547ebdbbaf21a29e0ba268b7,Obama the Dealmaker
+2012-11-14,209,0.25986020522865017,547eb75aaf21a29def825413,Obama Expresses Confidence in Early Action on Immigration,789,0.28215807025397593,547ebe42af21a29e0ba268d7,Transcript of President Obama s News Conference
+2012-11-15,0,0,,,1046,1.9699892590514265,547ebc8caf21a29e0ba2686a,Standing Tougher
+2012-11-16,0,0,,,0,0,,
+2012-11-17,0,0,,,18,0.35372196338640705,547ebc32af21a29e0ba26852,"Sunday Breakfast Menu, Nov. 18"
+2012-11-18,3929,0.3756062460805456,547eb72baf21a29def825408,New Hope on Immigration,0,0,,
+2012-11-19,0,0,,,40,0.33394133149316035,547ebc10af21a29e0ba2684e,Racial Politics 
+2012-11-20,0,0,,,443,0.6069701877346827,547ebcd6af21a29e0ba2687a,Assessing How Pivotal the Hispanic Vote Was to Obama's Victory
+2012-11-21,0,0,,,268,0.500871568342675,547ebe3faf21a29e0ba268d4,Can We Be Sweden?
+2012-11-22,0,0,,,0,0,,
+2012-11-23,0,0,,,0,0,,
+2012-11-24,0,0,,,16,0.3265988733279586,547ebc8faf21a29e0ba2686e,"Sunday Breakfast Menu, Nov. 25"
+2012-11-25,0,0,,,0,0,,
+2012-11-26,0,0,,,2369,0.5605389212278429,547ebd4daf21a29e0ba2689a,Trying to Turn Obama Voters Into Tax Allies
+2012-11-27,0,0,,,167,0.26678852317446167,547eb6e2af21a29def8253fb,A Bad Start on Immigration Reform
+2012-11-28,0,0,,,0,0,,
+2012-11-29,0,0,,,0,0,,
+2012-11-30,0,0,,,0,0,,
+2012-12-01,5634,0.18764811188446584,547ebd73af21a29e0ba268a8,Young Immigrants Say It s Obama s Time to Act,4,0.5738444166891101,547ebbc5af21a29e0ba26836,"Quotation of the Day for Saturday, Dec. 1, 2012."
+2012-12-02,0,0,,,0,0,,
+2012-12-03,0,0,,,3888,0.10191480223145954,547ebacbaf21a29e0ba267f6,Young Immigrant Activists Cast a Wider Net
+2012-12-04,0,0,,,0,0,,
+2012-12-05,0,0,,,0,0,,
+2012-12-06,0,0,,,481,0.45081424279147975,547ebde2af21a29e0ba268c5,Raise the Economy s Speed Limit
+2012-12-07,0,0,,,0,0,,
+2012-12-08,0,0,,,0,0,,
+2012-12-09,4847,0.3365420128729608,547ebe95af21a29e0ba268f0,A Tepid  Welcome Back  for Spanish Jews,0,0,,
+2012-12-10,0,0,,,0,0,,
+2012-12-11,69,0.2520149112191792,547ebe92af21a29e0ba268ec,Teaching the Cold War With The New York Times,98,1.1040160626298854,547eb72eaf21a29def82540a,Kaine Says He Is Optimistic About Immigration Overhaul
+2012-12-12,0,0,,,2063,1.498158370161919,547eb730af21a29def82540c,"Latino Groups Warn Congress to Fix Immigration, or Else"
+2012-12-13,0,0,,,0,0,,
+2012-12-14,0,0,,,950,0.609844157316022,547eb736af21a29def825410,Back When Americans Were the  Illegals 
+2012-12-15,0,0,,,0,0,,
+2012-12-16,0,0,,,0,0,,
+2012-12-17,0,0,,,0,0,,
+2012-12-18,489,0.2100939440654479,547eb802af21a29def825440,"The Opportunity, or Not, to Be American",0,0,,
+2012-12-19,0,0,,,0,0,,
+2012-12-20,0,0,,,0,0,,
+2012-12-21,0,0,,,399,0.5485468344849641,547ebc5baf21a29e0ba2685c,Strangers in the Night
+2012-12-22,0,0,,,0,0,,
+2012-12-23,15291,0.46399599659433854,547ebd4caf21a29e0ba26898,Send in the Clowns,0,0,,
+2012-12-24,49,0.16437742474155947,547ebedbaf21a29e0ba268fe,Out in Africa,0,0,,
+2012-12-25,0,0,,,0,0,,
+2012-12-26,0,0,,,3416,0.39900842837600425,547ebde1af21a29e0ba268c4,Israel to Review Curbs on Women s Prayer at Western Wall
+2012-12-27,0,0,,,0,0,,
+2012-12-28,0,0,,,0,0,,
+2012-12-29,0,0,,,0,0,,
+2012-12-30,269,0.34832095267325347,547eb7d6af21a29def825430,Where Ethnicity Was Fluid,0,0,,
+2012-12-31,0,0,,,0,0,,
+2013-01-01,0,0,,,0,0,,
+2013-01-02,0,0,,,0,0,,
+2013-01-03,0,0,,,0,0,,
+2013-01-04,0,0,,,0,0,,
+2013-01-05,0,0,,,0,0,,
+2013-01-06,0,0,,,0,0,,
+2013-01-07,0,0,,,0,0,,
+2013-01-08,0,0,,,0,0,,
+2013-01-09,0,0,,,0,0,,
+2013-01-10,0,0,,,0,0,,
+2013-01-11,0,0,,,0,0,,
+2013-01-12,0,0,,,0,0,,
+2013-01-13,0,0,,,0,0,,
+2013-01-14,0,0,,,0,0,,
+2013-01-15,0,0,,,0,0,,
+2013-01-16,0,0,,,0,0,,
+2013-01-17,0,0,,,0,0,,
+2013-01-18,0,0,,,0,0,,
+2013-01-19,0,0,,,0,0,,
+2013-01-20,0,0,,,0,0,,
+2013-01-21,0,0,,,0,0,,
+2013-01-22,0,0,,,0,0,,
+2013-01-23,0,0,,,0,0,,
+2013-01-24,0,0,,,0,0,,
+2013-01-25,0,0,,,0,0,,
+2013-01-26,0,0,,,0,0,,
+2013-01-27,0,0,,,0,0,,
+2013-01-28,0,0,,,0,0,,
+2013-01-29,0,0,,,0,0,,
+2013-01-30,0,0,,,0,0,,
+2013-01-31,0,0,,,0,0,,
+2013-02-01,0,0,,,0,0,,
+2013-02-02,0,0,,,0,0,,
+2013-02-03,0,0,,,0,0,,
+2013-02-04,0,0,,,0,0,,
+2013-02-05,0,0,,,0,0,,
+2013-02-06,0,0,,,0,0,,
+2013-02-07,0,0,,,0,0,,
+2013-02-08,0,0,,,0,0,,
+2013-02-09,0,0,,,0,0,,
+2013-02-10,0,0,,,0,0,,
+2013-02-11,0,0,,,0,0,,
+2013-02-12,0,0,,,0,0,,
+2013-02-13,0,0,,,0,0,,
+2013-02-14,0,0,,,0,0,,
+2013-02-15,0,0,,,0,0,,
+2013-02-16,0,0,,,0,0,,
+2013-02-17,0,0,,,0,0,,
+2013-02-18,0,0,,,0,0,,
+2013-02-19,0,0,,,0,0,,
+2013-02-20,0,0,,,0,0,,
+2013-02-21,0,0,,,0,0,,
+2013-02-22,0,0,,,0,0,,
+2013-02-23,0,0,,,0,0,,
+2013-02-24,0,0,,,0,0,,
+2013-02-25,0,0,,,0,0,,
+2013-02-26,0,0,,,0,0,,
+2013-02-27,0,0,,,0,0,,
+2013-02-28,0,0,,,0,0,,
+2013-03-01,0,0,,,0,0,,
+2013-03-02,0,0,,,0,0,,
+2013-03-03,0,0,,,0,0,,
+2013-03-04,0,0,,,0,0,,
+2013-03-05,0,0,,,0,0,,
+2013-03-06,0,0,,,0,0,,
+2013-03-07,0,0,,,0,0,,
+2013-03-08,0,0,,,0,0,,
+2013-03-09,0,0,,,0,0,,
+2013-03-10,0,0,,,0,0,,
+2013-03-11,0,0,,,0,0,,
+2013-03-12,0,0,,,0,0,,
+2013-03-13,0,0,,,0,0,,
+2013-03-14,0,0,,,0,0,,
+2013-03-15,0,0,,,0,0,,
+2013-03-16,0,0,,,0,0,,
+2013-03-17,0,0,,,0,0,,
+2013-03-18,0,0,,,0,0,,
+2013-03-19,0,0,,,0,0,,
+2013-03-20,0,0,,,0,0,,
+2013-03-21,0,0,,,0,0,,
+2013-03-22,0,0,,,0,0,,
+2013-03-23,0,0,,,0,0,,
+2013-03-24,0,0,,,0,0,,
+2013-03-25,0,0,,,0,0,,
+2013-03-26,0,0,,,0,0,,
+2013-03-27,0,0,,,0,0,,
+2013-03-28,0,0,,,0,0,,
+2013-03-29,0,0,,,0,0,,
+2013-03-30,0,0,,,0,0,,
+2013-03-31,0,0,,,0,0,,
+2013-04-01,0,0,,,0,0,,
+2013-04-02,0,0,,,0,0,,
+2013-04-03,0,0,,,0,0,,
+2013-04-04,0,0,,,0,0,,
+2013-04-05,0,0,,,0,0,,
+2013-04-06,0,0,,,0,0,,
+2013-04-07,0,0,,,0,0,,
+2013-04-08,0,0,,,0,0,,
+2013-04-09,0,0,,,0,0,,
+2013-04-10,0,0,,,0,0,,
+2013-04-11,0,0,,,0,0,,
+2013-04-12,0,0,,,0,0,,
+2013-04-13,0,0,,,0,0,,
+2013-04-14,0,0,,,0,0,,
+2013-04-15,0,0,,,0,0,,
+2013-04-16,0,0,,,0,0,,
+2013-04-17,0,0,,,0,0,,
+2013-04-18,0,0,,,0,0,,
+2013-04-19,0,0,,,0,0,,
+2013-04-20,0,0,,,0,0,,
+2013-04-21,0,0,,,0,0,,
+2013-04-22,0,0,,,0,0,,
+2013-04-23,0,0,,,0,0,,
+2013-04-24,0,0,,,0,0,,
+2013-04-25,0,0,,,0,0,,
+2013-04-26,0,0,,,0,0,,
+2013-04-27,0,0,,,0,0,,
+2013-04-28,0,0,,,0,0,,
+2013-04-29,0,0,,,0,0,,
+2013-04-30,0,0,,,0,0,,
+2013-05-01,0,0,,,0,0,,
+2013-05-02,0,0,,,0,0,,
+2013-05-03,0,0,,,0,0,,
+2013-05-04,0,0,,,0,0,,
+2013-05-05,0,0,,,0,0,,
+2013-05-06,0,0,,,0,0,,
+2013-05-07,0,0,,,0,0,,
+2013-05-08,0,0,,,0,0,,
+2013-05-09,0,0,,,0,0,,
+2013-05-10,0,0,,,0,0,,
+2013-05-11,0,0,,,0,0,,
+2013-05-12,0,0,,,0,0,,
+2013-05-13,0,0,,,0,0,,
+2013-05-14,0,0,,,0,0,,
+2013-05-15,0,0,,,0,0,,
+2013-05-16,0,0,,,0,0,,
+2013-05-17,0,0,,,0,0,,
+2013-05-18,0,0,,,0,0,,
+2013-05-19,0,0,,,0,0,,
+2013-05-20,0,0,,,0,0,,
+2013-05-21,0,0,,,0,0,,
+2013-05-22,0,0,,,0,0,,
+2013-05-23,0,0,,,0,0,,
+2013-05-24,0,0,,,0,0,,
+2013-05-25,0,0,,,0,0,,
+2013-05-26,0,0,,,0,0,,
+2013-05-27,0,0,,,0,0,,
+2013-05-28,0,0,,,0,0,,
+2013-05-29,0,0,,,0,0,,
+2013-05-30,0,0,,,0,0,,
