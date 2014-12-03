@@ -41,42 +41,71 @@
 
 	.single-line{
 		clear: both;
-    	display: inline-block;
-    	overflow: hidden;
-    	white-space: nowrap;
-    	max-width: 320px; 
-    	text-overflow: ellipsis;
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		max-width: 320px; 
+		text-overflow: ellipsis;
 	}
 
 	.min-height{
 		min-height: 41px;
 	}
 
+	.modal {
+		display:    none;
+		position:   fixed;
+		z-index:    1000;
+		top:        0;
+		left:       0;
+		height:     100%;
+		width:      100%;
+		background: rgba( 255, 255, 255, .8 ) 
+		url('/static/images/loading.gif') 
+		50% 50% 
+		no-repeat;
+	}
+
+
 
 </style>
 {% endblock %}
 
 {% block content %}
+<div class="modal"></div>
 <div class="row">
 	<div class="col-md-8">
 		<div class="row">
-			<div class="col-md-2"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<select id="topic-selector" class="form-control">
+						<option value="presidential_elections">Presidential Elections</option>
+						<option value="gun_control">Gun Control</option>
+						<option value="immigration_reform">Immigration Reform</option>
+					</select>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="row">
+					<select id="source-selector" class="form-control">
+						<!-- Change current_filter_mode if this order is changed.. -->
+						<option value="All Sources">All Sources</option>
+						<option value="Liberals">All Liberal Blogs</option>
+						<option value="Conservatives">All Conservative Blogs</option>
+						<option value="The New York Times">The New York Times</option>
+						<option value="USA Today">USA Today</option>
+						<option value="Time Magazine">Time Magazine</option>
+					</select>
+				</div>
+			</div>
 			<div class="col-md-5">
 				<div class="btn-group" role="group" aria-label="...">
 					<button type="button" data-mode="social-shares" class="js-btn-mode btn btn-default active">Social Activity</button>
 					<button type="button" data-mode="strength" class="js-btn-mode btn btn-default">Content Relation</button>
-				</div>
-			</div>
-			<div class="col-md-5">
-				<div class="row">
-					<select id="source-selector" class="form-control">
-						<option value="All Sources">All Sources</option>
-						<option value="Liberals">All Liberal Blogs</option>
-						<option value="Conservatives">All Conservative Blogs</option>
-					  	<option value="The New York Times">The New York Times</option>
-					  	<option value="USA Today">USA Today</option>
-					  	<option value="Time Magazine">Time Magazine</option>
-					</select>
 				</div>
 			</div>
 		</div>
@@ -156,15 +185,21 @@
 	var wall_street_journal = undefined;
 	var restrictedFocus;
 	var x_axis_svg, y_axis_svg, by_axis_svg, cx_axis_svg, cbrush;
+	var current_filter_mode = "All Sources";
 
-	queue()
-		.defer(d3.csv, "/static/data/presidential_elections/output.csv", type)
-		.defer(d3.csv, "/static/data/presidential_elections/new_york_times.csv", type)
-		.defer(d3.csv, "/static/data/presidential_elections/time.csv", type)
-		.defer(d3.csv, "/static/data/presidential_elections/usa_today.csv", type)
-		.defer(d3.csv, "/static/data/presidential_elections/conservative.csv", type)
-		.defer(d3.csv, "/static/data/presidential_elections/liberal.csv", type)
-		.await(dataLoaded);
+	function loadDataSource(folder_name){
+		$(".modal").show();
+		queue()
+			.defer(d3.csv, "/static/data/"+folder_name+"/output.csv", type)
+			.defer(d3.csv, "/static/data/"+folder_name+"/new_york_times.csv", type)
+			.defer(d3.csv, "/static/data/"+folder_name+"/time.csv", type)
+			.defer(d3.csv, "/static/data/"+folder_name+"/usa_today.csv", type)
+			.defer(d3.csv, "/static/data/"+folder_name+"/conservative.csv", type)
+			.defer(d3.csv, "/static/data/"+folder_name+"/liberal.csv", type)
+			.await(dataLoaded);
+	}
+
+	loadDataSource("presidential_elections");
 
 	function dataLoaded(error, _main_data, _new_york_times, _time, _usa_today, _conservative, _liberal){
 		main_data = _main_data;
@@ -173,31 +208,31 @@
 		usa_today = _usa_today;
 		conservative = _conservative;
 		liberal = _liberal;
-		loadMainViz(main_data, true);
+
+		var current_data = undefined;
+		switch(current_filter_mode){
+			case "All Sources":
+				current_data = main_data;
+			break;
+			case "The New York Times":
+				current_data = new_york_times;
+			break;
+			case "USA Today":
+				current_data = usa_today;
+			break;
+			case "Time Magazine":
+				current_data = time;
+			break;
+			case "Liberals":
+				current_data = liberal;
+			break;
+			case "Conservatives":
+				current_data = conservative;
+			break;
+		}
+		loadMainViz(current_data, true);
+		$(".modal").hide();
 	}
-
-	// function onDataChange(data){
-	// 	console.log(d3.max(data.map(function(d){ return d.liberal })));
-	// 	max_liberal_share = d3.max(data.map(function(d){ return d.liberal }));
-	// 	console.log(d3.max(data.map(function(d){ return d.liberal })));
-	// 	max_conservative_share = d3.max(data.map(function(d){ return d.conservative }));
-	// 	max_share_value = d3.max([ max_liberal_share, max_conservative_share ]);
-
-	// 	max_strength_value = d3.max([
-	// 		d3.max(data.map(function(d) { return d.liberal_strength; })), 
-	// 		d3.max(data.map(function(d) { return d.conservative_strength; }))
-	// 	]);
-
-	// 	x.domain(d3.extent(data.map(function(d) { return d.date; }))).nice(d3.time.month);
-	// 	// loadCurrentMode(current_mode);
-
-	// 	y.domain([0.1, max_share_value]).nice().clamp(true);
-	// 	by.domain(y.domain()).nice().clamp(true);
-	// 	x2.domain(x.domain()).nice(d3.time.month);
-	// 	y2.domain(y.domain()).nice().clamp(true);
-	// 	by2.domain(y.domain()).nice().clamp(true);
-
-	// }
 
 	function loadMainViz(data, isFirstLoad){
 		max_share_value = d3.max([
@@ -439,6 +474,12 @@
 			}
 		});
 
+		$('#topic-selector').change(function(){
+			focus.selectAll('*').remove();
+			context.selectAll('*').remove();
+			loadDataSource($(this).val());
+		});
+
 		$(".js-btn-mode").click(function(){
 			var required_mode = $(this).data('mode');
 			if(current_mode !== required_mode){
@@ -472,24 +513,10 @@
 
 		switch(required_mode){
 			case 'social-shares':
-				// focus.selectAll(".bar").transition().duration(300)
-				// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal) + ")"; });
-				// focus.selectAll('.brect').transition().duration(300)
-				// 	.attr("height", function(d) { return (height/2) - y(d.liberal); })
-				// focus.selectAll('.bbrect').transition().duration(300)
-				// 	.attr("height", function(d) { return by(d.conservative) - (height/2);  })
-
 				animateBars(focus, height, x, y, by, "date", "liberal", "conservative");
 				animateBars(context, height2, x2, y2, by2, "date", "liberal", "conservative");
 			break;
 			case 'strength':
-				// focus.selectAll(".bar").transition().duration(300)
-				// 	.attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.liberal_strength) + ")"; });
-				// focus.selectAll('.brect').transition().duration(300)
-				// 	.attr("height", function(d) { return (height/2) - y(d.liberal_strength); })
-
-				// focus.selectAll('.bbrect').transition().duration(300)
-				// 	.attr("height", function(d) { return by(d.conservative_strength) - (height/2);  })
 				animateBars(focus, height, x, y, by, "date", "liberal_strength", "conservative_strength");
 				animateBars(context, height2, x2, y2, by2, "date", "liberal_strength", "conservative_strength");
 			break;

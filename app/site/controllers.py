@@ -25,6 +25,10 @@ def daterange(start_date, end_date):
 def index():
 	return render_template('/site/index.html')
 
+@mod_site.route('/treemap')
+def treemap():
+	return render_template('/site/treemap.html')
+
 @mod_site.route('/get-article-content/<post_id>')
 def get_article_content(post_id):
 	article = JNYTDocument.objects(id=post_id)
@@ -38,9 +42,6 @@ def get_article_content(post_id):
 
 @mod_site.route('/get-treemap-data')
 def get_treemap_data():
-	start_date = date( year = 2011, month = 1, day = 1 )
-	end_date = date( year = 2013, month = 5, day = 31 )
-
 	dict_main_data = {"name":"Presidential Elections"}
 	dict_children = {}
 
@@ -64,7 +65,25 @@ def get_treemap_data():
 		dict_children[article.source][article.computed_political_leaning]["count"] += 1
 		dict_children[article.source][article.computed_political_leaning]["shares"] += get_agg_share_count(article)
 
-	print json.dumps(dict_children)
+	list_children = []
+	for key, value in dict_children.iteritems():
+		if key == None:
+			continue
+
+		are_counts_zero = True
+		item = {"name": key}
+		item_children = []
+		for item_key, item_value in value.iteritems():
+			if item_key == "Conservative" or item_key == "Liberal":
+				if(item_value["count"] > 0):
+					are_counts_zero = False
+				item_children.append({"name":item_key, "count":item_value["count"], "shares":item_value["shares"]})
+
+		if not are_counts_zero:
+			item["children"] = item_children
+			list_children.append(item)
+
+	return json.dumps(list_children)
 
 
 @mod_site.route('/get-data')

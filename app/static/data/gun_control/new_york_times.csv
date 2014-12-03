@@ -1,0 +1,882 @@
+date,liberal,liberal_strength,liberal_file,liberal_title,conservative,conservative_strength,conservative_file,conservative_title
+2011-01-01,0,0,,,0,0,,
+2011-01-02,0,0,,,0,0,,
+2011-01-03,0,0,,,0,0,,
+2011-01-04,0,0,,,0,0,,
+2011-01-05,0,0,,,0,0,,
+2011-01-06,0,0,,,0,0,,
+2011-01-07,0,0,,,0,0,,
+2011-01-08,0,0,,,0,0,,
+2011-01-09,0,0,,,0,0,,
+2011-01-10,0,0,,,0,0,,
+2011-01-11,0,0,,,0,0,,
+2011-01-12,0,0,,,0,0,,
+2011-01-13,0,0,,,0,0,,
+2011-01-14,0,0,,,0,0,,
+2011-01-15,0,0,,,0,0,,
+2011-01-16,0,0,,,0,0,,
+2011-01-17,0,0,,,0,0,,
+2011-01-18,0,0,,,0,0,,
+2011-01-19,0,0,,,0,0,,
+2011-01-20,0,0,,,0,0,,
+2011-01-21,0,0,,,0,0,,
+2011-01-22,0,0,,,0,0,,
+2011-01-23,0,0,,,0,0,,
+2011-01-24,0,0,,,0,0,,
+2011-01-25,0,0,,,0,0,,
+2011-01-26,0,0,,,0,0,,
+2011-01-27,0,0,,,0,0,,
+2011-01-28,0,0,,,0,0,,
+2011-01-29,0,0,,,0,0,,
+2011-01-30,0,0,,,0,0,,
+2011-01-31,0,0,,,0,0,,
+2011-02-01,0,0,,,0,0,,
+2011-02-02,0,0,,,0,0,,
+2011-02-03,0,0,,,0,0,,
+2011-02-04,0,0,,,0,0,,
+2011-02-05,0,0,,,0,0,,
+2011-02-06,0,0,,,0,0,,
+2011-02-07,0,0,,,0,0,,
+2011-02-08,0,0,,,0,0,,
+2011-02-09,0,0,,,0,0,,
+2011-02-10,0,0,,,0,0,,
+2011-02-11,0,0,,,0,0,,
+2011-02-12,0,0,,,0,0,,
+2011-02-13,0,0,,,0,0,,
+2011-02-14,0,0,,,0,0,,
+2011-02-15,0,0,,,0,0,,
+2011-02-16,0,0,,,0,0,,
+2011-02-17,0,0,,,0,0,,
+2011-02-18,0,0,,,0,0,,
+2011-02-19,0,0,,,0,0,,
+2011-02-20,0,0,,,0,0,,
+2011-02-21,0,0,,,0,0,,
+2011-02-22,0,0,,,0,0,,
+2011-02-23,0,0,,,0,0,,
+2011-02-24,0,0,,,0,0,,
+2011-02-25,0,0,,,0,0,,
+2011-02-26,0,0,,,0,0,,
+2011-02-27,0,0,,,0,0,,
+2011-02-28,0,0,,,0,0,,
+2011-03-01,0,0,,,0,0,,
+2011-03-02,0,0,,,0,0,,
+2011-03-03,0,0,,,0,0,,
+2011-03-04,0,0,,,0,0,,
+2011-03-05,0,0,,,0,0,,
+2011-03-06,0,0,,,0,0,,
+2011-03-07,0,0,,,0,0,,
+2011-03-08,0,0,,,0,0,,
+2011-03-09,0,0,,,0,0,,
+2011-03-10,0,0,,,0,0,,
+2011-03-11,0,0,,,0,0,,
+2011-03-12,0,0,,,0,0,,
+2011-03-13,0,0,,,0,0,,
+2011-03-14,0,0,,,0,0,,
+2011-03-15,0,0,,,0,0,,
+2011-03-16,0,0,,,0,0,,
+2011-03-17,0,0,,,0,0,,
+2011-03-18,0,0,,,0,0,,
+2011-03-19,0,0,,,0,0,,
+2011-03-20,0,0,,,0,0,,
+2011-03-21,0,0,,,0,0,,
+2011-03-22,0,0,,,0,0,,
+2011-03-23,0,0,,,0,0,,
+2011-03-24,0,0,,,0,0,,
+2011-03-25,0,0,,,0,0,,
+2011-03-26,0,0,,,0,0,,
+2011-03-27,0,0,,,0,0,,
+2011-03-28,0,0,,,0,0,,
+2011-03-29,0,0,,,0,0,,
+2011-03-30,0,0,,,0,0,,
+2011-03-31,0,0,,,0,0,,
+2011-04-01,0,0,,,0,0,,
+2011-04-02,0,0,,,0,0,,
+2011-04-03,0,0,,,0,0,,
+2011-04-04,0,0,,,0,0,,
+2011-04-05,0,0,,,0,0,,
+2011-04-06,0,0,,,0,0,,
+2011-04-07,0,0,,,0,0,,
+2011-04-08,0,0,,,0,0,,
+2011-04-09,0,0,,,0,0,,
+2011-04-10,0,0,,,0,0,,
+2011-04-11,0,0,,,0,0,,
+2011-04-12,0,0,,,0,0,,
+2011-04-13,0,0,,,0,0,,
+2011-04-14,0,0,,,0,0,,
+2011-04-15,0,0,,,0,0,,
+2011-04-16,0,0,,,0,0,,
+2011-04-17,0,0,,,0,0,,
+2011-04-18,0,0,,,0,0,,
+2011-04-19,0,0,,,0,0,,
+2011-04-20,0,0,,,0,0,,
+2011-04-21,0,0,,,0,0,,
+2011-04-22,0,0,,,0,0,,
+2011-04-23,0,0,,,0,0,,
+2011-04-24,0,0,,,0,0,,
+2011-04-25,0,0,,,0,0,,
+2011-04-26,0,0,,,0,0,,
+2011-04-27,0,0,,,0,0,,
+2011-04-28,0,0,,,0,0,,
+2011-04-29,0,0,,,0,0,,
+2011-04-30,0,0,,,0,0,,
+2011-05-01,0,0,,,0,0,,
+2011-05-02,0,0,,,0,0,,
+2011-05-03,0,0,,,0,0,,
+2011-05-04,0,0,,,0,0,,
+2011-05-05,0,0,,,0,0,,
+2011-05-06,0,0,,,0,0,,
+2011-05-07,0,0,,,0,0,,
+2011-05-08,0,0,,,0,0,,
+2011-05-09,0,0,,,0,0,,
+2011-05-10,0,0,,,0,0,,
+2011-05-11,0,0,,,0,0,,
+2011-05-12,0,0,,,0,0,,
+2011-05-13,0,0,,,0,0,,
+2011-05-14,0,0,,,0,0,,
+2011-05-15,0,0,,,0,0,,
+2011-05-16,0,0,,,0,0,,
+2011-05-17,0,0,,,0,0,,
+2011-05-18,0,0,,,0,0,,
+2011-05-19,0,0,,,0,0,,
+2011-05-20,0,0,,,0,0,,
+2011-05-21,0,0,,,0,0,,
+2011-05-22,0,0,,,0,0,,
+2011-05-23,0,0,,,0,0,,
+2011-05-24,0,0,,,0,0,,
+2011-05-25,0,0,,,0,0,,
+2011-05-26,0,0,,,0,0,,
+2011-05-27,0,0,,,0,0,,
+2011-05-28,0,0,,,0,0,,
+2011-05-29,0,0,,,0,0,,
+2011-05-30,0,0,,,0,0,,
+2011-05-31,0,0,,,0,0,,
+2011-06-01,0,0,,,0,0,,
+2011-06-02,0,0,,,0,0,,
+2011-06-03,0,0,,,0,0,,
+2011-06-04,0,0,,,0,0,,
+2011-06-05,0,0,,,0,0,,
+2011-06-06,0,0,,,0,0,,
+2011-06-07,0,0,,,0,0,,
+2011-06-08,0,0,,,0,0,,
+2011-06-09,0,0,,,0,0,,
+2011-06-10,0,0,,,0,0,,
+2011-06-11,0,0,,,0,0,,
+2011-06-12,0,0,,,0,0,,
+2011-06-13,0,0,,,0,0,,
+2011-06-14,0,0,,,0,0,,
+2011-06-15,0,0,,,0,0,,
+2011-06-16,0,0,,,0,0,,
+2011-06-17,0,0,,,0,0,,
+2011-06-18,0,0,,,0,0,,
+2011-06-19,0,0,,,0,0,,
+2011-06-20,0,0,,,0,0,,
+2011-06-21,0,0,,,0,0,,
+2011-06-22,0,0,,,0,0,,
+2011-06-23,0,0,,,0,0,,
+2011-06-24,0,0,,,0,0,,
+2011-06-25,0,0,,,0,0,,
+2011-06-26,0,0,,,0,0,,
+2011-06-27,0,0,,,0,0,,
+2011-06-28,0,0,,,0,0,,
+2011-06-29,0,0,,,0,0,,
+2011-06-30,0,0,,,0,0,,
+2011-07-01,0,0,,,0,0,,
+2011-07-02,0,0,,,0,0,,
+2011-07-03,0,0,,,0,0,,
+2011-07-04,0,0,,,0,0,,
+2011-07-05,0,0,,,0,0,,
+2011-07-06,0,0,,,0,0,,
+2011-07-07,0,0,,,0,0,,
+2011-07-08,0,0,,,0,0,,
+2011-07-09,0,0,,,0,0,,
+2011-07-10,0,0,,,0,0,,
+2011-07-11,0,0,,,0,0,,
+2011-07-12,0,0,,,0,0,,
+2011-07-13,0,0,,,0,0,,
+2011-07-14,0,0,,,0,0,,
+2011-07-15,0,0,,,0,0,,
+2011-07-16,0,0,,,0,0,,
+2011-07-17,0,0,,,0,0,,
+2011-07-18,0,0,,,0,0,,
+2011-07-19,0,0,,,0,0,,
+2011-07-20,0,0,,,0,0,,
+2011-07-21,0,0,,,0,0,,
+2011-07-22,0,0,,,0,0,,
+2011-07-23,0,0,,,0,0,,
+2011-07-24,0,0,,,0,0,,
+2011-07-25,0,0,,,0,0,,
+2011-07-26,0,0,,,0,0,,
+2011-07-27,0,0,,,0,0,,
+2011-07-28,0,0,,,0,0,,
+2011-07-29,0,0,,,0,0,,
+2011-07-30,0,0,,,0,0,,
+2011-07-31,0,0,,,0,0,,
+2011-08-01,0,0,,,0,0,,
+2011-08-02,0,0,,,0,0,,
+2011-08-03,0,0,,,0,0,,
+2011-08-04,0,0,,,0,0,,
+2011-08-05,0,0,,,0,0,,
+2011-08-06,0,0,,,0,0,,
+2011-08-07,0,0,,,0,0,,
+2011-08-08,0,0,,,0,0,,
+2011-08-09,0,0,,,0,0,,
+2011-08-10,0,0,,,0,0,,
+2011-08-11,0,0,,,0,0,,
+2011-08-12,0,0,,,0,0,,
+2011-08-13,0,0,,,0,0,,
+2011-08-14,0,0,,,0,0,,
+2011-08-15,0,0,,,0,0,,
+2011-08-16,0,0,,,0,0,,
+2011-08-17,0,0,,,0,0,,
+2011-08-18,0,0,,,0,0,,
+2011-08-19,0,0,,,0,0,,
+2011-08-20,0,0,,,0,0,,
+2011-08-21,0,0,,,0,0,,
+2011-08-22,0,0,,,0,0,,
+2011-08-23,0,0,,,0,0,,
+2011-08-24,0,0,,,0,0,,
+2011-08-25,0,0,,,0,0,,
+2011-08-26,0,0,,,0,0,,
+2011-08-27,0,0,,,0,0,,
+2011-08-28,0,0,,,0,0,,
+2011-08-29,0,0,,,0,0,,
+2011-08-30,0,0,,,0,0,,
+2011-08-31,0,0,,,0,0,,
+2011-09-01,0,0,,,0,0,,
+2011-09-02,0,0,,,0,0,,
+2011-09-03,0,0,,,0,0,,
+2011-09-04,0,0,,,0,0,,
+2011-09-05,0,0,,,0,0,,
+2011-09-06,0,0,,,0,0,,
+2011-09-07,0,0,,,0,0,,
+2011-09-08,0,0,,,0,0,,
+2011-09-09,0,0,,,0,0,,
+2011-09-10,0,0,,,0,0,,
+2011-09-11,0,0,,,0,0,,
+2011-09-12,0,0,,,0,0,,
+2011-09-13,0,0,,,0,0,,
+2011-09-14,0,0,,,0,0,,
+2011-09-15,0,0,,,0,0,,
+2011-09-16,0,0,,,0,0,,
+2011-09-17,0,0,,,0,0,,
+2011-09-18,0,0,,,0,0,,
+2011-09-19,0,0,,,0,0,,
+2011-09-20,0,0,,,0,0,,
+2011-09-21,0,0,,,0,0,,
+2011-09-22,0,0,,,0,0,,
+2011-09-23,0,0,,,0,0,,
+2011-09-24,0,0,,,0,0,,
+2011-09-25,0,0,,,0,0,,
+2011-09-26,0,0,,,0,0,,
+2011-09-27,0,0,,,0,0,,
+2011-09-28,0,0,,,0,0,,
+2011-09-29,0,0,,,0,0,,
+2011-09-30,0,0,,,0,0,,
+2011-10-01,0,0,,,0,0,,
+2011-10-02,0,0,,,0,0,,
+2011-10-03,0,0,,,0,0,,
+2011-10-04,0,0,,,0,0,,
+2011-10-05,0,0,,,0,0,,
+2011-10-06,0,0,,,0,0,,
+2011-10-07,0,0,,,0,0,,
+2011-10-08,0,0,,,0,0,,
+2011-10-09,0,0,,,0,0,,
+2011-10-10,0,0,,,0,0,,
+2011-10-11,0,0,,,0,0,,
+2011-10-12,0,0,,,0,0,,
+2011-10-13,0,0,,,0,0,,
+2011-10-14,0,0,,,0,0,,
+2011-10-15,0,0,,,0,0,,
+2011-10-16,0,0,,,0,0,,
+2011-10-17,0,0,,,0,0,,
+2011-10-18,0,0,,,0,0,,
+2011-10-19,0,0,,,0,0,,
+2011-10-20,0,0,,,0,0,,
+2011-10-21,0,0,,,0,0,,
+2011-10-22,0,0,,,0,0,,
+2011-10-23,0,0,,,0,0,,
+2011-10-24,0,0,,,0,0,,
+2011-10-25,0,0,,,0,0,,
+2011-10-26,0,0,,,0,0,,
+2011-10-27,0,0,,,0,0,,
+2011-10-28,0,0,,,0,0,,
+2011-10-29,0,0,,,0,0,,
+2011-10-30,0,0,,,0,0,,
+2011-10-31,0,0,,,0,0,,
+2011-11-01,0,0,,,0,0,,
+2011-11-02,0,0,,,0,0,,
+2011-11-03,0,0,,,0,0,,
+2011-11-04,0,0,,,0,0,,
+2011-11-05,0,0,,,0,0,,
+2011-11-06,0,0,,,0,0,,
+2011-11-07,0,0,,,0,0,,
+2011-11-08,0,0,,,0,0,,
+2011-11-09,0,0,,,0,0,,
+2011-11-10,0,0,,,0,0,,
+2011-11-11,0,0,,,0,0,,
+2011-11-12,0,0,,,0,0,,
+2011-11-13,0,0,,,0,0,,
+2011-11-14,0,0,,,0,0,,
+2011-11-15,0,0,,,0,0,,
+2011-11-16,0,0,,,0,0,,
+2011-11-17,0,0,,,0,0,,
+2011-11-18,0,0,,,0,0,,
+2011-11-19,0,0,,,0,0,,
+2011-11-20,0,0,,,0,0,,
+2011-11-21,0,0,,,0,0,,
+2011-11-22,0,0,,,0,0,,
+2011-11-23,0,0,,,0,0,,
+2011-11-24,0,0,,,0,0,,
+2011-11-25,0,0,,,0,0,,
+2011-11-26,0,0,,,0,0,,
+2011-11-27,0,0,,,0,0,,
+2011-11-28,0,0,,,0,0,,
+2011-11-29,0,0,,,0,0,,
+2011-11-30,0,0,,,0,0,,
+2011-12-01,0,0,,,0,0,,
+2011-12-02,0,0,,,0,0,,
+2011-12-03,0,0,,,0,0,,
+2011-12-04,0,0,,,0,0,,
+2011-12-05,0,0,,,0,0,,
+2011-12-06,0,0,,,0,0,,
+2011-12-07,0,0,,,0,0,,
+2011-12-08,0,0,,,0,0,,
+2011-12-09,0,0,,,0,0,,
+2011-12-10,0,0,,,0,0,,
+2011-12-11,0,0,,,0,0,,
+2011-12-12,0,0,,,0,0,,
+2011-12-13,0,0,,,0,0,,
+2011-12-14,0,0,,,0,0,,
+2011-12-15,0,0,,,0,0,,
+2011-12-16,0,0,,,0,0,,
+2011-12-17,0,0,,,0,0,,
+2011-12-18,0,0,,,0,0,,
+2011-12-19,0,0,,,0,0,,
+2011-12-20,0,0,,,0,0,,
+2011-12-21,0,0,,,0,0,,
+2011-12-22,0,0,,,0,0,,
+2011-12-23,0,0,,,0,0,,
+2011-12-24,0,0,,,0,0,,
+2011-12-25,0,0,,,0,0,,
+2011-12-26,0,0,,,0,0,,
+2011-12-27,0,0,,,0,0,,
+2011-12-28,0,0,,,0,0,,
+2011-12-29,0,0,,,0,0,,
+2011-12-30,0,0,,,0,0,,
+2011-12-31,0,0,,,0,0,,
+2012-01-01,861,0.41969217387158164,547d7f6b306ba27fadffb095,Haiti s Tragic History,0,0,,
+2012-01-02,0,0,,,1228,0.9721597484619183,547d80e2306ba27fadffb0fa,Acting Out War s Inner Wounds
+2012-01-03,0,0,,,34,0.7144682947509853,547d77b7306ba27fadffae96,Owners Argue Merits of Firearms on Airplanes
+2012-01-04,0,0,,,511,0.26445057802378713,547d7b78306ba27fadffaf99,"Pro-Gingrich Group Posts Anti-Romney Ad, Featuring McCain"
+2012-01-05,0,0,,,87,0.7485569557987932,547d7bc4306ba27fadffafa8,"How a Retired Officer, Trying to Stop a Robber, Shot an Agent Doing the Same"
+2012-01-06,0,0,,,0,0,,
+2012-01-07,0,0,,,0,0,,
+2012-01-08,0,0,,,277,0.05268568189982181,547d7666306ba27fadffae3c,"A Year Later,  The Event  Lingers"
+2012-01-09,385,0.5296438039977167,547d7cdc306ba27fadffaff1,Inside the Times,416,0.7386095036831949,547d7748306ba27fadffae7d,Texas Death Offers Grim Reminder That Gun Replicas Can Fool Police
+2012-01-10,0,0,,,723,0.8972894933796004,547d7e34306ba27fadffb049,"In Brazil, Officers of the Law, Outside the Law"
+2012-01-11,0,0,,,437,0.26220245840602324,547d7eac306ba27fadffb066,Interactive Tools to Assess the Likelihood of Death
+2012-01-12,0,0,,,142,1.0075295795697197,547d7b4d306ba27fadffaf8f,WowWee Creates Games That Blend the Physical and Virtual Worlds
+2012-01-13,0,0,,,0,0,,
+2012-01-14,0,0,,,0,0,,
+2012-01-15,0,0,,,1495,0.1617438445654065,547d8182306ba27fadffb128,Judith Clark s Radical Transformation
+2012-01-16,8,0.2096706643253444,547d7f72306ba27fadffb09d,Live Blogging the Myrtle Beach Debate,0,0,,
+2012-01-17,297,1.2341793996868213,547d7ead306ba27fadffb069,Campaign Cleanup: Attacks? What Attacks?,264,0.5420487992782684,547d7645306ba27fadffae39,Police Working on Technology to Detect Concealed Guns
+2012-01-18,0,0,,,0,0,,
+2012-01-19,0,0,,,0,0,,
+2012-01-20,824,0.41111680862823285,547d7f20306ba27fadffb085,An Ethnic War Is Rekindled in Myanmar,114,0.25058323699509555,547d7c60306ba27fadffafcd,43 in Two Warring Gangs Are Indicted in Brooklyn
+2012-01-21,0,0,,,0,0,,
+2012-01-22,0,0,,,3388,0.23002883574295055,547d81a3306ba27fadffb12b,The Fast Life of Oscar Pistorius
+2012-01-23,0,0,,,0,0,,
+2012-01-24,0,0,,,25,0.25843763553152244,547d7d79306ba27fadffb018,Federer vs. Del Potro: Breaking It Down
+2012-01-25,0,0,,,346,0.7684792777848449,547d7aa8306ba27fadffaf62,"Somali Pirate Gun Locker: An Oddball Assault Rifle, at Sea"
+2012-01-26,0,0,,,0,0,,
+2012-01-27,51,0.3448343592212344,547d7a0d306ba27fadffaf3c,Gabby Giffords s Farewell,73,0.33894021646171735,547d7da2306ba27fadffb025,Organizations Say Torture Is Widespread in Libya Jails
+2012-01-28,0,0,,,0,0,,
+2012-01-29,0,0,,,94,0.4440343187289646,547d7ed0306ba27fadffb071,Gingrich Presses Attack as Polls Show Romney Ahead
+2012-01-30,0,0,,,0,0,,
+2012-01-31,0,0,,,214,1.0311847853076674,547d76b2306ba27fadffae51,Report by House Democrats Absolves Administration in Gun Trafficking Case
+2012-02-01,0,0,,,224,1.8026132805969062,547d7c1c306ba27fadffafc1,Officer Shot in Head in Brooklyn; Full Recovery Is Expected
+2012-02-02,0,0,,,506,0.39914258109961065,547d7f48306ba27fadffb08f,A Testament From Guatemala's War Years
+2012-02-03,9,0.21041595156447743,547d7b9a306ba27fadffaf9e,Bloomberg Big on the Small Screen,304,0.9829037523706722,547d78e2306ba27fadffaee6,"Wearing Guns, and Support for Ron Paul, on Their Hips"
+2012-02-04,11,0.1338109065218688,547d81a7306ba27fadffb133,Updates from the Nevada Caucuses,81,0.5008406619342481,547d7bf4306ba27fadffafb6,Government Is Said to Kill 200 in Attack in Syrian City
+2012-02-05,391,0.29855527420717887,547d7fdd306ba27fadffb0b7,Mitt s Muffled Soul,1371,0.6739083945334029,547d8158306ba27fadffb117,The Hard Way Out of Afghanistan
+2012-02-06,0,0,,,0,0,,
+2012-02-07,0,0,,,0,0,,
+2012-02-08,0,0,,,174,1.5647636875686786,547d7eaa306ba27fadffb065,Anger and Despair in Video Messages From Besieged Syrian City of Homs
+2012-02-09,5,0.011048131240854103,547d7c64306ba27fadffafd1,"Morning Buzz, Feb. 9",0,0,,
+2012-02-10,0,0,,,187,1.7244747295924725,547d804a306ba27fadffb0d1,Tracing the Weapons of Bashar al-Assad
+2012-02-11,297,1.2920929522382123,547d7f1c306ba27fadffb081,What's On Today,0,0,,
+2012-02-12,0,0,,,0,0,,
+2012-02-13,0,0,,,403,1.2080877109291683,547d8001306ba27fadffb0bf,"For Iraqis, Aid to Rebels in Syria Repays a Debt"
+2012-02-14,0,0,,,37,0.4082969868083476,547d7e34306ba27fadffb048,Afghan Report Blames NATO for Airstrike That Killed Children
+2012-02-15,98,0.2679014484775186,547d7c88306ba27fadffafd7,Crime and the Social Crisis,0,0,,
+2012-02-16,0,0,,,16,0.15097476645186778,547d7ded306ba27fadffb039,"With Cities Under Fire, Syria Hastens Referendum"
+2012-02-17,0,0,,,0,0,,
+2012-02-18,0,0,,,0,0,,
+2012-02-19,0,0,,,66,0.4320827516491461,547d7cfd306ba27fadffaff5,Who Made That Artificial Snow?
+2012-02-20,0,0,,,93,0.15932251889421958,547d7e83306ba27fadffb05a,"In Honduras, a Catastrophe Long Foretold"
+2012-02-21,0,0,,,0,0,,
+2012-02-22,0,0,,,0,0,,
+2012-02-23,0,0,,,0,0,,
+2012-02-24,297,0.2935144357131573,547d80b9306ba27fadffb0ee,U.N. Panel Accuses Syrian Government of Crimes Against Humanity,409,1.3307160631384143,547d809a306ba27fadffb0ed,U.N. Panel Accuses Syrian Government of Crimes Against Humanity
+2012-02-25,0,0,,,0,0,,
+2012-02-26,0,0,,,1732,1.4935438658482436,547d7d76306ba27fadffb015,Why Do Innocent People Confess?
+2012-02-27,0,0,,,229,0.8145315471391602,547d7fdc306ba27fadffb0b6,Ohio High School Shooting Leaves 1 Student Dead and 4 Wounded
+2012-02-28,0,0,,,207,0.7075954150929228,547d7f46306ba27fadffb08e,Doubtful Signs of a Criminal Case Against MF Global
+2012-02-29,975332,1.093423391765152,547d7cdb306ba27fadffafed,Inside the Times,17,0.816000109757587,547d7703306ba27fadffae6d,"Ex-Marine Arrested on Gun Charge Had Poor Record, Manhattan Prosecutor Says"
+2012-03-01,0,0,,,252,1.911245098070446,547d7640306ba27fadffae33,Virginia s Gift to Gunrunners
+2012-03-02,0,0,,,82,0.6717037706238542,547d7c1a306ba27fadffafbe,Venezuela's Gladiators
+2012-03-03,0,0,,,0,0,,
+2012-03-04,2995,0.05023236840716447,547d815d306ba27fadffb11e,Bearing Witness in Syria: A Correspondent s Last Days,0,0,,
+2012-03-05,0,0,,,0,0,,
+2012-03-06,298,1.0415053319409953,547d7f45306ba27fadffb08d,Policy Group Caught in Rift Over Direction,1262,0.6370675154756761,547d7f4a306ba27fadffb092,Cato Institute Is Caught in a Rift Over Its Direction
+2012-03-07,0,0,,,55,0.9192603313243355,547d7fff306ba27fadffb0bd,"William Heirens, the  Lipstick Killer,  Dies at 83"
+2012-03-08,50,0.094141808604808,547d7f20306ba27fadffb086,Say It Loud: Soul King Explained,0,0,,
+2012-03-09,0,0,,,0,0,,
+2012-03-10,0,0,,,0,0,,
+2012-03-11,2178,0.44065216721442724,547d7dc4306ba27fadffb02c,We ll Always Have Darth,0,0,,
+2012-03-12,0,0,,,906,0.4385678941613569,547d80e6306ba27fadffb0fd,Health Care Act Offers Roberts a Signature Case
+2012-03-13,0,0,,,84,0.5426223025406064,547d80e4306ba27fadffb0fc,A Boy Sergeant Fights at New Bern
+2012-03-14,487690,0.8945932625169283,547d7e56306ba27fadffb04e,Big Union Muscle For Obama Campaign,0,0,,
+2012-03-15,0,0,,,95,0.5123249951680363,547d7e81306ba27fadffb059,MF Global Workers Expected to Be Called to Testify Before Congress
+2012-03-16,0,0,,,93,0.5708026567042005,547d7cfd306ba27fadffaff4,"At City Council Hearing, Police Commissioner Fights Back"
+2012-03-17,202,0.38670901442595085,547d80be306ba27fadffb0f4,A Passionate Persona Forged in a Brutal Defeat,5227,0.19391532464401903,547d7ace306ba27fadffaf6e,Politicians Swinging Stethoscopes
+2012-03-18,138,0.302698432579636,547d7cdc306ba27fadffaff0,Against Interpretation,168,0.17788507187085764,547d8025306ba27fadffb0c8,"In Yemen, New Leader Faces Threats in the South"
+2012-03-19,0,0,,,53,0.8389364126502413,547d7fb8306ba27fadffb0a9,"For 2 Titans of U.S. Court in Newark, Bad Blood"
+2012-03-20,0,0,,,1491,0.9232597903223797,547d786d306ba27fadffaec8,Florida Shooting Focuses Attention on 'Stand Your Ground' Law
+2012-03-21,0,0,,,115,0.22112303239959752,547d78be306ba27fadffaee0,Ex-Marine From Indiana Takes Deal on Gun Charge
+2012-03-22,2262,0.19935504591676492,547d799f306ba27fadffaf1b,Shot to Death in Florida,5562,0.9697108059752644,547d784b306ba27fadffaebf,Pity the Poor Gun Lobby
+2012-03-23,0,0,,,926,0.9127100806439746,547d7de7306ba27fadffb033,Shooting Focuses Attention on a Program That Seeks to Avoid Guns
+2012-03-24,0,0,,,346,1.0985514291454526,547d7dc4306ba27fadffb02b,Implications Are Far-Reaching in States  Challenge of Federal Health Care Law
+2012-03-25,0,0,,,0,0,,
+2012-03-26,0,0,,,2035,0.09305169943238364,547d76d8306ba27fadffae5e,Silencing the Guns
+2012-03-27,0,0,,,222,0.3904532971967719,547d7804306ba27fadffaeb1,Reflecting on the Trayvon Martin Tragedy
+2012-03-28,0,0,,,0,0,,
+2012-03-29,0,0,,,12599,0.11019778599373084,547d7a0c306ba27fadffaf3b,"More Guns, Fewer Hoodies"
+2012-03-30,536,0.05289222717900485,547d78e8306ba27fadffaeed,The Fatal Flaw in Florida-Style Gun Laws,0,0,,
+2012-03-31,0,0,,,446,0.7599708061559783,547d7a7e306ba27fadffaf57,Keith Olbermann: Machine Gun for Hire
+2012-04-01,50,0.2502785780550685,547d7bc3306ba27fadffafa7,The Grilling Season,1903,0.472905014700726,547d80e1306ba27fadffb0f8,How the American Action Movie Went Kablooey
+2012-04-02,0,0,,,3,0.5288868365579896,547d7a7c306ba27fadffaf56,Trayvon Martin and the Smoking Gun
+2012-04-03,0,0,,,0,0,,
+2012-04-04,0,0,,,104,1.1891042781680032,547d7fbb306ba27fadffb0b0,U.S. Offers $10 Million Reward for Pakistani Militant Tied to Mumbai Attacks
+2012-04-05,36,0.04833510464229643,547d75fa306ba27fadffae25,We Need to Talk About Guns,0,0,,
+2012-04-06,1548,0.02383849489410647,547d817d306ba27fadffb122,Why Shiloh Matters,2649,0.8846300521502636,547d78e9306ba27fadffaeef,The Law of the Gun in Florida
+2012-04-07,0,0,,,0,0,,
+2012-04-08,0,0,,,0,0,,
+2012-04-09,6,0.13436156992615753,547d7727306ba27fadffae76,Talking About Gun Control,1765,1.0353801286485016,547d7f6c306ba27fadffb096,Live From the Cutting Room Floor
+2012-04-10,0,0,,,775,0.5698808146176184,547d77dc306ba27fadffaea1,Former Skeptic Now Embraces Divisive Tactic
+2012-04-11,0,0,,,112,0.6222595117647233,547d7640306ba27fadffae34,Florida Prosecutor to Release 'New Information' About Trayvon Martin Shooting
+2012-04-12,10,0.14819685067414426,547d75d3306ba27fadffae1c,"Keep, Bear and Use",502,0.26530001083542587,547d7ef6306ba27fadffb07b,"No, I'm the Narrator"
+2012-04-13,0,0,,,1971,0.9736874922539754,547d7a09306ba27fadffaf36,N.R.A. s Influence Seen in Expansion of Self-Defense Laws
+2012-04-14,116,0.2437859242042921,547d8134306ba27fadffb110,Chasing Another Gold and Honoring the Past,410,0.9983743393203498,547d7642306ba27fadffae36,Romney Assures N.R.A. of Support for Gun Rights
+2012-04-15,488354,1.509600089957713,547d8138306ba27fadffb115,30 Seconds With Christie Rampone: Chasing Another Gold and Honoring the Past,3689,0.9829642182070322,547d7f95306ba27fadffb0a2,When Is a Flip Not a Flop?
+2012-04-16,0,0,,,647,0.5420922227801407,547d7f71306ba27fadffb09b,Complex Attack by Taliban Sends Message to the West
+2012-04-17,2850,0.3651444464590927,547d786f306ba27fadffaecb,Embarrassed by Bad Laws,23,0.2446572914296603,547d7aa7306ba27fadffaf61,"Second Amendment and Beyond: Pondering Gun Rights, Laws and Culture"
+2012-04-18,0,0,,,283,0.4471749363528432,547d782c306ba27fadffaebd,Martin Death Spurs Group to Readjust Policy Focus
+2012-04-19,0,0,,,486,0.18496354460702671,547d7c63306ba27fadffafd0,"Lead by Example, Clinton Tells Sustainability Forum"
+2012-04-20,0,0,,,83,0.8330188078331272,547d75f6306ba27fadffae1f,Task Force Appointed to Look at Florida Gun Laws
+2012-04-21,0,0,,,1387,0.17959113331188684,547d79e7306ba27fadffaf2e,Concern in G.O.P. Over State Focus on Social Issues
+2012-04-22,0,0,,,0,0,,
+2012-04-23,430,0.6580403775519318,547d810a306ba27fadffb103,Shift on Executive Power Lets Obama Bypass Rivals,21809,0.46154330460681836,547d810d306ba27fadffb107,Shift on Executive Power Lets Obama Bypass Rivals
+2012-04-24,0,0,,,6092,0.7336666355546578,547d7a84306ba27fadffaf5c,New Fashion Wrinkle: Stylishly Hiding the Gun
+2012-04-25,0,0,,,7553,0.3673061159260627,547d75fa306ba27fadffae24,"I Hunt, but the N.R.A. Isn t for Me"
+2012-04-26,11,0.097618168191306,547d7bed306ba27fadffafb1,Support for Same-Sex Marriage Is Up,62,0.01941289006010899,547d76fd306ba27fadffae65,Gov. Scott Rounds Up the Usual Zealots
+2012-04-27,0,0,,,149,0.5403158239721404,547d76fa306ba27fadffae64,"At a Bronx Vigil Nearly a Year After a Killing, a Man Is Shot Dead"
+2012-04-28,0,0,,,2186,0.7766763148415882,547d77bb306ba27fadffae9e,"Police Chiefs Focus on Disparities in Gun Violence, With an Eye Toward Solutions"
+2012-04-29,0,0,,,0,0,,
+2012-04-30,0,0,,,0,0,,
+2012-05-01,228,0.2513218952214301,547d81ca306ba27fadffb139,What's in a Name? (Part 2),247,0.5377465377069198,547d7bf4306ba27fadffafb7,Romney Quietly Meets With Bloomberg
+2012-05-02,0,0,,,980,1.2025722843856395,547d7f93306ba27fadffb09e,"Armed With Data, Fighting More Than Crime"
+2012-05-03,0,0,,,124,1.0091392247695645,547d75ab306ba27fadffae0b,What's Good for Gun Manufacturers...
+2012-05-04,430,0.04611406024397355,547d76d4306ba27fadffae5a,Tampa&#8217;s Plea for a Bit of Disarmament? Rejected,499,0.9876180705157847,547d79a2306ba27fadffaf1f,Bearing Arms and Cranking Up the Controversy
+2012-05-05,0,0,,,0,0,,
+2012-05-06,297,0.24248264425509256,547d7e10306ba27fadffb03f,Mayor Bloomberg's Circles of Power,19,0.5365668021612152,547d81a4306ba27fadffb12e,"Easy China, 3 Ways"
+2012-05-07,0,0,,,0,0,,
+2012-05-08,0,0,,,0,0,,
+2012-05-09,0,0,,,0,0,,
+2012-05-10,0,0,,,0,0,,
+2012-05-11,0,0,,,18,0.29082131063319927,547d7c3d306ba27fadffafc4,Afghan Police In Spotlight After Foiling Taliban Strike
+2012-05-12,0,0,,,0,0,,
+2012-05-13,0,0,,,1663,0.8924770510170342,547d81ce306ba27fadffb13c,"In Libya, the Captors Have Become the Captive"
+2012-05-14,0,0,,,0,0,,
+2012-05-15,0,0,,,1839,0.2590151726960441,547d8138306ba27fadffb114,Deadliest Danger Isn t at the Rig but on the Road
+2012-05-16,0,0,,,25,0.5725956996525066,547d7ef4306ba27fadffb078,"Iowa, Again, Serves as Proving Ground for Romney"
+2012-05-17,0,0,,,2050,0.0097404611697689,547d817c306ba27fadffb120,Trayvon Martin Case Shadowed by Series of Police Missteps
+2012-05-18,1444,0.0518091967008,547d815b306ba27fadffb11d,Tracing Present Scars to Past Traumas,1,0.17154390584885937,547d7d53306ba27fadffb010,Troubles Without End in a Dead-End Town
+2012-05-19,0,0,,,0,0,,
+2012-05-20,28,0.07322722351829755,547d7de6306ba27fadffb031,A Half-Century-Old Road to Today,329,0.6631115898309441,547d7b6e306ba27fadffaf90,Packing All the Heat a Movie Could Want
+2012-05-21,0,0,,,24023,0.6408725576560966,547d8073306ba27fadffb0e2,A Richer Life by Seeing the Glass Half Full
+2012-05-22,487671,0.5757936281257011,547d7f6b306ba27fadffb094,Personal Health: A Richer Life by Seeing the Glass Half Full,6305,0.24298522563038313,547d817f306ba27fadffb124,Public Money Finds Back Door to Private Schools
+2012-05-23,0,0,,,939,0.31321733705504967,547d7eac306ba27fadffb068,"After Paul Falters, Backers Push Agenda in Party and Other Races"
+2012-05-24,0,0,,,171,0.9546223743408421,547d755c306ba27fadffadfb,Handguns: The New Tote Bag
+2012-05-25,297,0.3356375576657895,547d7e37306ba27fadffb04d,Renovation of Governors Island Begins,0,0,,
+2012-05-26,0,0,,,0,0,,
+2012-05-27,0,0,,,0,0,,
+2012-05-28,0,0,,,7,0.06874836024301925,547d7b98306ba27fadffaf9b,Controlling Deer
+2012-05-29,0,0,,,39652,0.7890943780058421,547d81a7306ba27fadffb132,Secret  Kill List  Proves a Test of Obama s Principles and Will
+2012-05-30,0,0,,,0,0,,
+2012-05-31,1991,0.614959368836634,547d7d9f306ba27fadffb01f,The Tale of Ticks and Other Excess,54,0.3207056458005513,547d7c89306ba27fadffafd9,"The Breakfast Meeting: Publishers Blame Amazon, and a 'Mental Mincemeat' Maker"
+2012-06-01,0,0,,,614,0.8885956397026614,547d7dec306ba27fadffb037,Bloomberg's Supersize Soda Ban
+2012-06-02,0,0,,,0,0,,
+2012-06-03,0,0,,,468,0.017360023109961847,547d7933306ba27fadffaefe,Gun Violence Wave Challenges Seattle s Notion of Security
+2012-06-04,0,0,,,563,0.21819481345440297,547d7a5a306ba27fadffaf50,The Shut-Up Gun
+2012-06-05,0,0,,,0,0,,
+2012-06-06,0,0,,,0,0,,
+2012-06-07,1735,0.09327860279000197,547d8072306ba27fadffb0e1,"Where Arranged Marriages Are Customary, Suicides Grow More Common",30,0.3475642757709726,547d7acd306ba27fadffaf6c,Boston Redefines Its Offense Through Ball Control
+2012-06-08,0,0,,,245,1.220603406283744,547d761b306ba27fadffae28,New Clash in Congress on Gun Case Gone Wrong
+2012-06-09,0,0,,,100,0.49458726664404673,547d8003306ba27fadffb0c4,Death on Virginia's 'Sacr ' Soil
+2012-06-10,297,0.47312532443112876,547d7bc3306ba27fadffafa6,'Land Of Promise',3,0.3320034929531017,547d7bc2306ba27fadffafa4, Land of Promise 
+2012-06-11,297,0.7239344800774385,547d81c9306ba27fadffb137,Relishing a Glut of Sports,17,0.8860680150726411,547d7cb8306ba27fadffafe8,House Republicans Signal Readiness to Cite Holder for Contempt
+2012-06-12,0,0,,,487666,0.0682002139610697,547d7cd9306ba27fadffafea,Operation Fast and Furious: Panel to Pursue Citing Holder with Contempt
+2012-06-13,0,0,,,6421,1.432182189018017,547d8181306ba27fadffb126,A Drug Family in the Winner s Circle
+2012-06-14,0,0,,,0,0,,
+2012-06-15,0,0,,,0,0,,
+2012-06-16,0,0,,,1246,0.8037902671222438,547d7c3e306ba27fadffafc6,Running on Empty
+2012-06-17,3818,5.81185074259288,547d81c9306ba27fadffb136,"As Escapees Stream Out, a Penal Business Thrives",23345,0.14455784051377898,547d81c8306ba27fadffb134,Cocaine Incorporated
+2012-06-18,0,0,,,1430,0.651859188658241,547d7c66306ba27fadffafd3,"At Party, Bloomberg Tips Hand on Endorsement"
+2012-06-19,297,0.5490020482775548,547d7d28306ba27fadffb005,The Mayor Tips His Hand,0,0,,
+2012-06-20,0,0,,,243,0.5415477977971473,547d7898306ba27fadffaed5,No Comment Necessary: Gun Control and Genocide
+2012-06-21,0,0,,,2923,0.9081957445113397,547d7722306ba27fadffae6e,House Panel s Vote Steps Up Partisan Fight on Gun Inquiry
+2012-06-22,0,0,,,21,0.6586511021712737,547d784e306ba27fadffaec7,Partisan Confrontation That Not All Wanted
+2012-06-23,556,0.5708576474306336,547d7ea9306ba27fadffb063,Achieving Fame Without a Legacy,0,0,,
+2012-06-24,2497,1.3822441407050063,547d7f1e306ba27fadffb083,Mexican Democracy s Lost Years,5145,0.39660644847319104,547d81c9306ba27fadffb138,When My Crazy Father Actually Lost His Mind
+2012-06-25,0,0,,,11249,0.7542407562947997,547d7acd306ba27fadffaf6b,A Weapon We Can&#8217;t Control
+2012-06-26,0,0,,,67,0.9259931471749485,547d7b21306ba27fadffaf84,Hoyer Challenges Issa to Show E-Mails
+2012-06-27,0,0,,,270,1.2195639525316597,547d768e306ba27fadffae46,Democrats Feel Pressure From Gun Lobby on Contempt Vote
+2012-06-28,0,0,,,0,0,,
+2012-06-29,18,0.14746301134019893,547d7acc306ba27fadffaf68,Mali: Islamist Militants Claim Control in North,1689,0.5978460676806094,547d7727306ba27fadffae77,House Finds Holder in Contempt Over Inquiry on Guns
+2012-06-30,0,0,,,192,0.4340152914570243,547d776f306ba27fadffae8a,Score One for the Gun Lobby
+2012-07-01,0,0,,,0,0,,
+2012-07-02,0,0,,,0,0,,
+2012-07-03,0,0,,,592,0.971221359033718,547d75d4306ba27fadffae1d,"Guns, Bullets, Human Rights on Agenda at Arms Treaty Talks"
+2012-07-04,0,0,,,0,0,,
+2012-07-05,0,0,,,0,0,,
+2012-07-06,0,0,,,0,0,,
+2012-07-07,0,0,,,0,0,,
+2012-07-08,73,0.14948723594960842,547d7efc306ba27fadffb07f,Mike Huckabee Likes Romney. Really.,0,0,,
+2012-07-09,0,0,,,940,0.1353555170695194,547d7d24306ba27fadffafff,A Treaty on Conventional Arms
+2012-07-10,148,0.5220284155058346,547d7790306ba27fadffae8d,Florida s Gun Law Morass,0,0,,
+2012-07-11,0,0,,,37,0.40109466047948805,547d7c87306ba27fadffafd6,Mr. Romney's Neighborhood
+2012-07-12,0,0,,,41,0.32445506684351,547d8024306ba27fadffb0c7,"After Its Founder's Death, Speculation About Cubic Corp."
+2012-07-13,297,0.6982756507217509,547d7fdc306ba27fadffb0b5,"After Its Founder's Death, Speculation About Cubic Corp.",0,0,,
+2012-07-14,0,0,,,0,0,,
+2012-07-15,297,1.7306632971692733,547d7e37306ba27fadffb04c,READER COMMENTS,0,0,,
+2012-07-16,0,0,,,169,0.6307804128504915,547d7f1c306ba27fadffb082,The Birth of a State
+2012-07-17,0,0,,,41,0.24260416981905975,547d7ffe306ba27fadffb0bc,"At Chicago Festival, Rain, Women and Song"
+2012-07-18,0,0,,,0,0,,
+2012-07-19,0,0,,,178,0.6131228565925325,547d80c0306ba27fadffb0f7,The Federal Reserve and the Libor Scandal
+2012-07-20,913,1.3321403996616543,547d758b306ba27fadffae09,The Shooting in Aurora,51185,0.43041294656530704,547d7897306ba27fadffaed4,We've Seen This Movie Before
+2012-07-21,1155,0.48446535767446686,547d79c4306ba27fadffaf27,The Shootings in Colorado,17699,1.8307229066114683,547d7af3306ba27fadffaf74,"Gunman Kills 12 in Colorado, Reviving Gun Debate"
+2012-07-22,487666,0.7452236228816423,547d7c63306ba27fadffafcf,What's On Sunday,27830,1.5385655808304566,547d7c40306ba27fadffafca,Syria Presses to Regain Cities From Rebel Forces
+2012-07-23,5514,0.21199318971628703,547d7a36306ba27fadffaf49,Suspect Bought Large Stockpile of Rounds Online,647,2.0049329980651294,547d7cdd306ba27fadffaff2,4-Year-Old Boy Fatally Shot in Bronx Playground
+2012-07-24,1444,0.6500725109560327,547d7a57306ba27fadffaf4c,More Treatment Programs,2367,1.0809255457305054,547d7a7c306ba27fadffaf54,"6,000 Bullets"
+2012-07-25,645,0.3495655860550545,547d7fdf306ba27fadffb0bb,Mogul s Latest Foray Courts Jews for the G.O.P.,5336,2.7060191552307504,547d77db306ba27fadffaea0,An Arms Race We Can't Win
+2012-07-26,359,0.08734199397039824,547d7f49306ba27fadffb091,Narendra Modi Defends His Actions in 2002 Riots ,6338,2.25332922329713,547d7804306ba27fadffaeb0,"I Carried a Gun, and It Was Heavy"
+2012-07-27,297,0.3392550503660132,547d786e306ba27fadffaeca,Call to Both Campaigns For Plan on Gun Violence,930,1.109605532899263,547d776f306ba27fadffae89,Candidates Cower on Gun Control
+2012-07-28,0,0,,,1250,1.0187139326996033,547d7d51306ba27fadffb00e,Mayor Says Banning Chick-fil-A Is Wrong
+2012-07-29,0,0,,,563,0.12741346065400425,547d7f98306ba27fadffb0a7,"Best Sellers: Paperback Mass-Market Fiction: Sunday, July 29th 2012"
+2012-07-30,0,0,,,0,0,,
+2012-07-31,0,0,,,45,0.5849231478575121,547d7e33306ba27fadffb046,Looking to Japan for Solid and Affordable Players
+2012-08-01,2588,0.3227888939821242,547d7fb8306ba27fadffb0ab,"To Get the Shot, Nerve, Luck and Scuba Gear",1360,1.5421917492155979,547d761f306ba27fadffae30,"New York s Used Police Shells, Reloaded for Sale"
+2012-08-02,0,0,,,97,0.9025853576874486,547d7ace306ba27fadffaf6d,Syrian Fighting Intensifies in Battle for Control of Aleppo
+2012-08-03,322,0.16359141023644744,547d81cb306ba27fadffb13b,Coverage of Friday's Events,110,1.1515248519200125,547d7fde306ba27fadffb0b9,Syrian Fighting Intensifies in Battle for Aleppo
+2012-08-04,0,0,,,304,0.7982583748625041,547d804d306ba27fadffb0d5,"They Win Gold, but a Pot of It Rarely Follows"
+2012-08-05,487963,0.963499818161527,547d7af4306ba27fadffaf77,READER COMMENTS,30,0.9484220713894586,547d7a35306ba27fadffaf48,Student Contest Winner | Aurora and the Gun Control Debate
+2012-08-06,1284,0.3501953178400661,547d7f49306ba27fadffb090,"In Kansas, Conservatives Vilify Fellow Republicans",210,0.49542137242694906,547d7e0f306ba27fadffb03e,"For Many Sikhs, Wisconsin Attack Has Troubling Echoes   "
+2012-08-07,86,0.13300478915674183,547d795b306ba27fadffaf0d,The Shooting at the Sikh Temple,6697,1.8424457822323708,547d8099306ba27fadffb0ec,Sprinter Gives Grenada Its First Medal
+2012-08-08,683,0.011000608732045808,547d7e58306ba27fadffb051,Party Bristles at Military s Push for More Sway in China,81,0.3127164641147405,547d7647306ba27fadffae3b,Mixed Views Are Found on Stricter Laws for Guns
+2012-08-09,488,0.40648394679285715,547d7d27306ba27fadffb003,Stop-and-Frisk in New York City,3346,0.7232186776541116,547d7a57306ba27fadffaf4e,"Guns, Butter and Then Some"
+2012-08-10,298,1.1568083223145946,547d78bc306ba27fadffaede,"Guns, Butter And Then Some",14108,1.8397990447128132,547d79c5306ba27fadffaf29,"If Guns Do Not Kill, Tax the Bullets"
+2012-08-11,487666,0.2492142952127445,547d7c62306ba27fadffafce,CNN and Time Suspend Journalist After Admission of Plagiarism,808,0.24143981081076157,547d7b1e306ba27fadffaf81,Fareed Zakaria Is Suspended After Admitting Plagiarism
+2012-08-12,297,0.7010598981536894,547d810f306ba27fadffb10b,A Dot-Com Bust,992,0.7961376864226666,547d817d306ba27fadffb121,"For Jennifer Sultan, a Dot-Com Bust"
+2012-08-13,3988,0.5482342876000539,547d7e0f306ba27fadffb03d,The Romney-Ryan Plan for America,1926,1.0706043946468118,547d790b306ba27fadffaef2,"As Ryan Looks to Focus on Economy, Spotlight Shines on His Other Views"
+2012-08-14,0,0,,,82,1.1350787155583157,547d8002306ba27fadffb0c3,"Syrian Rebels Claim First Jet Downing, in Possible Shift for War"
+2012-08-15,0,0,,,3806,0.2896402427076029,547d7e7e306ba27fadffb058,Romney the Unknowable
+2012-08-16,297,0.177011797301055,547d7b98306ba27fadffaf9a,The Enemy Combatant Is Close. Hear That Twig Snap?,316,0.5067969144066709,547d7caf306ba27fadffafe0,Time and CNN Reinstate Journalist After Review
+2012-08-17,453,0.6027992504760938,547d7c67306ba27fadffafd4,Time and CNN Reinstate Journalist After Review,4,0.291200020654212,547d7b17306ba27fadffaf7c,Opinion Report: Sheldon Adelson
+2012-08-18,0,0,,,3235,0.9964435666539533,547d8049306ba27fadffb0d0,Panic Seizes India as a Region s Strife Radiates
+2012-08-19,594,1.4217610508569574,547d7d7a306ba27fadffb019,Act Like a Writer,2769,0.9297635369739571,547d81a3306ba27fadffb12c,What Does Obama Really Believe In?
+2012-08-20,0,0,,,847,1.3847182642865783,547d8099306ba27fadffb0eb,A Day for Canada s Fallen in a Lesser-Known Battle
+2012-08-21,0,0,,,0,0,,
+2012-08-22,0,0,,,0,0,,
+2012-08-23,0,0,,,211,0.6549835296650272,547d7d26306ba27fadffb001,No Charges for Officer Accused by Judge
+2012-08-24,0,0,,,998,0.972484369072741,547d7f97306ba27fadffb0a5,"Attacks on Afghan Troops by Colleagues Are Rising, Allies Say"
+2012-08-25,2907,0.11672816215328694,547d79ea306ba27fadffaf35,Arms and the Duck,0,0,,
+2012-08-26,0,0,,,224,0.11503773673139578,547d7e5a306ba27fadffb054,Dozens of Bodies Are Found in Town Outside Damascus
+2012-08-27,3230,0.5440582583722997,547d7bc8306ba27fadffafac,Paul Ryan s Social Extremism,171,0.6405512691736929,547d7f71306ba27fadffb09c,Washington in Disarray
+2012-08-28,15,0.022610543373553477,547d7936306ba27fadffaf02,As the G.O.P. Convention Begins,439,1.0697065803429027,547d8072306ba27fadffb0df,How Video Games Could Improve Our Vision
+2012-08-29,388,0.09163670290886403,547d7958306ba27fadffaf08,"New Man on Campus, Armed",0,0,,
+2012-08-30,45,0.07623371967293921,547d7582306ba27fadffae01,Contempt for the Mainstream,0,0,,
+2012-08-31,0,0,,,1071,0.5045492820486687,547d8070306ba27fadffb0dc,Deportation Nation
+2012-09-01,0,0,,,3225,0.7827349246400397,547d797b306ba27fadffaf11,Only the Good Get Rich
+2012-09-02,297,0.8470972233587687,547d7c60306ba27fadffafcc,Now Trotting In: The Democratic Herd,0,0,,
+2012-09-03,0,0,,,11,0.220626416215187,547d7797306ba27fadffae94,The Arms Trade Treaty
+2012-09-04,0,0,,,390,1.1964015486630828,547d80ba306ba27fadffb0f1,Vince Gilligan on 'Breaking Bad' and 'the Plumbing of It All'
+2012-09-05,29,0.03449590623989504,547d7d77306ba27fadffb017,Searching for Answers After Violence Mars Parade,0,0,,
+2012-09-06,463,1.5949409585390426,547d7dc5306ba27fadffb02d,'Breaking Bad': Countdown to a Long-Awaited Showdown,860,1.5678280748611884,547d815d306ba27fadffb11f,"4 Years Later, Scarred but Still Confident"
+2012-09-07,0,0,,,185,1.2075112040236318,547d7f96306ba27fadffb0a4,"Soldiers' Friendship, Shared Across Generations, Ends With More Gained Than Lost"
+2012-09-08,0,0,,,0,0,,
+2012-09-09,225,0.2493712154378844,547d8098306ba27fadffb0ea,Haunted by Hillary,1944,0.9311811697192601,547d80bc306ba27fadffb0f2,Game Maker Without a Rule Book
+2012-09-10,359,0.0886352572049264,547d80e3306ba27fadffb0fb,The Unexpected Impact of Coded Appeals,90,0.8462247623780815,547d7e11306ba27fadffb041,"Scourge of the Lionfish, Part 3: The Newest Fish in the Kitchen"
+2012-09-11,0,0,,,47,0.09357423191692449,547d7d4f306ba27fadffb00d,Republican Turf
+2012-09-12,178,0.43261266100018125,547d7793306ba27fadffae90,Aurora s Aftermath,184,1.2341966641756876,547d7b6e306ba27fadffaf91,Laying Bare the Roots of a Shooting Outside a Bodega
+2012-09-13,487666,0.008434930679549452,547d766f306ba27fadffae45,"Stiffer Gun Laws Popular in State, A Survey Finds",0,0,,
+2012-09-14,0,0,,,0,0,,
+2012-09-15,0,0,,,0,0,,
+2012-09-16,0,0,,,0,0,,
+2012-09-17,8125,0.07467099768378685,547d802a306ba27fadffb0cf,Time Travel With Einstein: Glass s Opera Returns to the Stage,4,0.05782056903553065,547d804b306ba27fadffb0d3,"Answers About Hostage Negotiation, Part 3"
+2012-09-18,0,0,,,0,0,,
+2012-09-19,0,0,,,246,0.5559763119135787,547d7b9f306ba27fadffafa2,"Syria's Dark Horses, With Lathes: Makeshift Arms Production in Aleppo Governorate, Part I"
+2012-09-20,0,0,,,648,0.6019062270091485,547d7c1b306ba27fadffafc0,Guns Inquiry Urges Action Against 14 in Justice Dept.
+2012-09-21,0,0,,,0,0,,
+2012-09-22,0,0,,,37,0.9789080520160693,547d7f44306ba27fadffb08c,"Israeli Soldier Killed as Border Is Breached, Reviving Worries on Sinai Lawlessness"
+2012-09-23,0,0,,,19,0.2999599986974866,547d815a306ba27fadffb11a,The Man Who Would Be Redstone
+2012-09-24,0,0,,,7,0.5568033011247496,547d7d03306ba27fadffaffb,Sinai Group Claims Role in Attack on Israel
+2012-09-25,0,0,,,127,0.15274388075168907,547d7dea306ba27fadffb036,Mitt s Mortification
+2012-09-26,0,0,,,8032,0.15654665064058831,547d7872306ba27fadffaece,The Human Cost of the Second Amendment
+2012-09-27,0,0,,,65,0.7280066337892921,547d7dc2306ba27fadffb029,Rebels Make Gains in Blunting Syrian Air Attacks
+2012-09-28,0,0,,,1670,1.1316777171523853,547d804b306ba27fadffb0d2,"Obama Fills in Blanks of Romney s Plans, and G.O.P. Sees Falsehoods"
+2012-09-29,0,0,,,0,0,,
+2012-09-30,0,0,,,446,0.6151140246379266,547d7931306ba27fadffaefb,Aurora Victim Pushes Gun Issue With New Ad
+2012-10-01,0,0,,,7,0.3934705323549021,547d7b4a306ba27fadffaf8c,The Early Word: Inevitable
+2012-10-02,0,0,,,325,0.6181929365892999,547d7c19306ba27fadffafbd,"In Search for Drugs, Something Unexpected"
+2012-10-03,0,0,,,216,0.23252903727948177,547d8131306ba27fadffb10e,What Will Asia's Ascendance Bring?
+2012-10-04,0,0,,,856,0.9999248194719759,547d7641306ba27fadffae35,"Understanding Kids, Gangs and Guns"
+2012-10-05,0,0,,,2258,0.6858752951433112,547d7d9c306ba27fadffb01c,"After a New-Look Debate, a Harsh Light Falls on the Moderator"
+2012-10-06,0,0,,,0,0,,
+2012-10-07,0,0,,,4670,0.5403240827938919,547d8001306ba27fadffb0c0,The Children s Author Who Actually Listens to Children
+2012-10-08,0,0,,,2879,0.64229073446426,547d797b306ba27fadffaf10,"As Military Suicides Rise, Focus Is on Private Weapons"
+2012-10-09,0,0,,,0,0,,
+2012-10-10,0,0,,,9789,0.5000820210246107,547d7aac306ba27fadffaf67,Taliban Gun Down Girl Who Spoke Up for Rights
+2012-10-11,0,0,,,12405,0.7913296564341481,547d7acc306ba27fadffaf6a,Girl Shot by Taliban in Critical Condition After Surgery
+2012-10-12,0,0,,,1917,0.807208887098238,547d7fdb306ba27fadffb0b2,Gay Rights May Get Its Brown v. Board of Education
+2012-10-13,0,0,,,235,0.4880612249820042,547d7c66306ba27fadffafd2,Flashing Lights and Thrashing Music in a Search for Order and Chaos
+2012-10-14,0,0,,,10596,0.5833120137330524,547d81c8306ba27fadffb135," Cooking Isn t Creative, and It Isn t Easy "
+2012-10-15,1678,0.043439219237760424,547d804f306ba27fadffb0d9,The Arizonification of America,0,0,,
+2012-10-16,44,0.31222182732737613,547d7bc9306ba27fadffafad,Left Unsaid,1750,0.605587201771225,547d8183306ba27fadffb129,Full Transcript of the Second Presidential Debate
+2012-10-17,115,0.07417171002472003,547d7dc1306ba27fadffb026,"Attack Ads, by Outside Groups With Murky Ties, Shape 3 New York Senate Races",1117,0.8879653786735944,547d7c8f306ba27fadffafdf,Last Night's Best Romneyism
+2012-10-18,0,0,,,5151,1.8506205848421682,547d7a84306ba27fadffaf5d,"Bloomberg Starts  Super PAC,  Seeking National Influence"
+2012-10-19,1770,0.1558642928526471,547d78bb306ba27fadffaedc,The Issue That Goes Ignored,3,0.1234597897600829,547d7af7306ba27fadffaf7b,Opinion Report: The HPV Vaccine
+2012-10-20,0,0,,,1294,0.31968050467807196,547d76da306ba27fadffae61,The Least Popular Subject
+2012-10-21,219,0.10006102266311698,547d7fdd306ba27fadffb0b8,Taking Bin Laden,2954,0.5715816535569093,547d81a6306ba27fadffb130,The Scariest Little Corner of the World
+2012-10-22,0,0,,,0,0,,
+2012-10-23,0,0,,,11,0.03313861686442507,547d80e6306ba27fadffb0ff,Bright Passages
+2012-10-24,13780,0.009673895130838855,547d7d9e306ba27fadffb01e,Who Threw Israel Under the Bus?,16387,0.6876277979339402,547d7f43306ba27fadffb08b,Why Are States So Red and Blue?
+2012-10-25,0,0,,,0,0,,
+2012-10-26,501,0.8743839143382804,547d8097306ba27fadffb0e9,Auto Rescue and Low Home-State Bonus Keep Michigan Out of Play,0,0,,
+2012-10-27,0,0,,,0,0,,
+2012-10-28,270260,0.4685001174491771,547d76dc306ba27fadffae63,Why I Am Pro-Life,323,0.6777655321587202,547d7da1306ba27fadffb023,A Collector s Legacy of War Machines in Repose
+2012-10-29,0,0,,,278,0.5896254146185337,547d7e58306ba27fadffb052,"On 'Frankenstorms,' Climate Science and 'Reverse Tribalism'"
+2012-10-30,1648,0.08225655052803696,547d80c0306ba27fadffb0f6,"Libya Warnings Were Plentiful, but Unspecific",104,0.34274264807654176,547d7a59306ba27fadffaf4f,"Spiders and Scarabs, at Your Command"
+2012-10-31,0,0,,,10981,1.5066185780764503,547d7747306ba27fadffae7b,Oklahomans Prepare for New Law That Will Make Guns a Common Sight
+2012-11-01,0,0,,,32,0.06089805392875752,547d7691306ba27fadffae4d,Illinois: County s Plan to Tax Bullets Is Rescinded
+2012-11-02,11744,0.2369773770309245,547d8002306ba27fadffb0c2,"Bloomberg Backs Obama, Citing Fallout From Storm",3424,0.7102996299618789,547d8028306ba27fadffb0ce,"In Shift, Romney Campaign Approaches Pennsylvania With a New Urgency"
+2012-11-03,0,0,,,1084,0.32155583304774643,547d75d1306ba27fadffae17,Oklahomans Packing Heat
+2012-11-04,0,0,,,3852,1.0510403483492712,547d80ba306ba27fadffb0ef,The Loin King
+2012-11-05,26030,0.1977067652792939,547d7f96306ba27fadffb0a3,The Permanent Militarization of America,0,0,,
+2012-11-06,0,0,,,0,0,,
+2012-11-07,368,0.3103903030259433,547d7af3306ba27fadffaf75,G.O.P. in Surprise Fight to Hold New York Senate,379,0.2986060589779402,547d7aab306ba27fadffaf66,Dirty Tricks of Government Forces: Where Deception and Deadliness Meet Inside a Gun
+2012-11-08,0,0,,,7086,0.8134659858584016,547d7fbb306ba27fadffb0b1,How to Devise Passwords That Drive Hackers Away
+2012-11-09,2431,0.9286269781084552,547d7be9306ba27fadffafae,Gunman in Giffords Shooting Sentenced to 7 Life Terms,0,0,,
+2012-11-10,0,0,,,0,0,,
+2012-11-11,98,0.3126785746185189,547d7ead306ba27fadffb06a,Tech Trouble,0,0,,
+2012-11-12,0,0,,,0,0,,
+2012-11-13,0,0,,,2682,0.3027142453614905,547d7cba306ba27fadffafe9,In Defense of Offense: Why We Gamers Shoot
+2012-11-14,0,0,,,0,0,,
+2012-11-15,0,0,,,0,0,,
+2012-11-16,0,0,,,0,0,,
+2012-11-17,0,0,,,0,0,,
+2012-11-18,0,0,,,10685,0.9267456009650777,547d7f6e306ba27fadffb098,How to Survive Societal Collapse in Suburbia
+2012-11-19,0,0,,,0,0,,
+2012-11-20,0,0,,,0,0,,
+2012-11-21,212,0.06667293531848464,547d81a3306ba27fadffb12d,"Ask an Expert About Alzheimer s, Part 3",0,0,,
+2012-11-22,0,0,,,0,0,,
+2012-11-23,0,0,,,0,0,,
+2012-11-24,1746,0.46424004321034584,547d76b4306ba27fadffae56,Promises on Gun Control,0,0,,
+2012-11-25,0,0,,,0,0,,
+2012-11-26,335,0.053861923075124024,547d806f306ba27fadffb0da,Building Start-Ups via Stars  Ties to Fans,0,0,,
+2012-11-27,0,0,,,0,0,,
+2012-11-28,0,0,,,0,0,,
+2012-11-29,0,0,,,1029,0.3224652224624045,547d7790306ba27fadffae8c,The Gun Frenzy
+2012-11-30,0,0,,,0,0,,
+2012-12-01,0,0,,,0,0,,
+2012-12-02,0,0,,,4251,0.13528575941167612,547d815b306ba27fadffb11c,John McAfee Plays Hide-and-Seek in Belize
+2012-12-03,0,0,,,1196,1.3600203730334455,547d7583306ba27fadffae02,"At Halftime, Costas Put Spotlight on Guns. By Morning, the Spotlight Was on Him. "
+2012-12-04,0,0,,,482,0.7973353620660392,547d7dc1306ba27fadffb027,"For Iraq, Year Ends the Way It Began, With Guns Drawn"
+2012-12-05,0,0,,,161,1.005426807672718,547d7559306ba27fadffadf7,Bob Costas Keeps His Focus on Guns and Violence
+2012-12-06,0,0,,,2817,0.2533050507664522,547d758a306ba27fadffae08,The Great Gun Gag
+2012-12-07,0,0,,,860,0.9690713195463058,547d7dc6306ba27fadffb02f,Wider Chaos Feared as Syrian Rebels Clash With Kurds
+2012-12-08,0,0,,,809,0.34982347615459103,547d8095306ba27fadffb0e8,A Killer Ends Half-Told Tale of His Crimes With Suicide
+2012-12-09,471,0.16784446288084895,547d7acc306ba27fadffaf69,"Ready, Aim, Ready?",117,0.3557294143712867,547d80e6306ba27fadffb0fe,Land of Light Taxes and Heavy Shopping
+2012-12-10,0,0,,,0,0,,
+2012-12-11,0,0,,,9750,0.2841795094990198,547d80ba306ba27fadffb0f0,A Rising Tide of Noise Is Now Easy to See
+2012-12-12,0,0,,,53,0.2144718670776983,547d761c306ba27fadffae29,Illinois: Appeals Court Overturns State Ban on Concealed Weapons
+2012-12-13,0,0,,,134,1.0843890168768913,547d766e306ba27fadffae44,Prison Term in Guns Case Tied to Agent s Killing
+2012-12-14,3566,0.7818179283822835,547d78c2306ba27fadffaee5,"In Public 'Conversation' on Guns, a Rhetorical Shift",50872,1.2718568417436122,547d7690306ba27fadffae4a,Why America Lets the Killings Continue
+2012-12-15,11727,0.23676522160177124,547d7a55306ba27fadffaf4a,A Tragedy of Silence,104975,2.373635793624694,547d78c1306ba27fadffaee4,Looking for America
+2012-12-16,2969,0.1995647751925422,547d7d00306ba27fadffaff9,Dec. 16 Updates on Connecticut Shooting Aftermath,375300,0.8404866184853693,547d79e8306ba27fadffaf32,Do We Have the Courage to Stop This?
+2012-12-17,10050,1.375109308042689,547d7935306ba27fadffaf01,Guns and the Decline of the Young Man,19879,2.570857088378351,547d784c306ba27fadffaec3,"In Town at Ease With Its Firearms, Tightening Gun Rules Was Resisted"
+2012-12-18,44239,1.1660195405142593,547d7803306ba27fadffaeaf,"In Gun Debate, a Misguided Focus on Mental Illness",40093,2.8219572248426488,547d7795306ba27fadffae93,"In Other Countries, Laws Are Strict and Work"
+2012-12-19,2151,0.48274698135064453,547d7ed1306ba27fadffb073,Obama Chosen as Time Magazine's Person of the Year,17436,2.7908272152375018,547d776d306ba27fadffae87,Why Gun 'Control' Is Not Enough 
+2012-12-20,0,0,,,47171,1.5936101285543716,547d7958306ba27fadffaf07,Looking for Lessons in Newtown
+2012-12-21,7,0.14042739628473452,547d76fd306ba27fadffae66,"After Newtown Massacre, N.R.A. Proposes 'Absolute Protection'",23591,2.5503549484547983,547d75f6306ba27fadffae20,Cuomo Says He ll Outline Gun Proposal Next Month
+2012-12-22,7840,0.8598898075592328,547d79e7306ba27fadffaf30,Wish You a Gun-Free Christmas,37912,1.522971604142585,547d7795306ba27fadffae92,The N.R.A. Crawls From Its Hidey Hole
+2012-12-23,20198,1.2836468103057457,547d784c306ba27fadffaec2,Send in the Clowns,13015,0.9996307880365795,547d7da0306ba27fadffb021,Anatomy of a Murder-Suicide
+2012-12-24,0,0,,,2475,1.173908821789577,547d7931306ba27fadffaefa,Gun Makers Use Home Leverage in Connecticut
+2012-12-25,190,0.054487431716634144,547d7803306ba27fadffaead,Violence and Mental Illness (2 Letters),7820,0.7847649996688235,547d7956306ba27fadffaf04,Real and Virtual Firearms Nurture a Marketing Link
+2012-12-26,209,0.4468291594074735,547d7805306ba27fadffaeb3,Voice of Calm in Debate on Guns,23679,0.24783285699483676,547d7de9306ba27fadffb034,Our Failed Approach to Schizophrenia
+2012-12-27,4782,0.40167282792013537,547d78e9306ba27fadffaeee,The Gun-Game Complex,2196,0.5049219334131716,547d75fa306ba27fadffae23,NBC s Display of a 30-Shot Gun Magazine Prompts a Police Inquiry
+2012-12-28,0,0,,,1515,0.3123237719931814,547d77bb306ba27fadffae9f,A Tougher Assault Weapons Ban
+2012-12-29,18,0.0039295661201210474,547d7bef306ba27fadffafb3,"Sunday Breakfast Menu, Dec. 30",9633,0.401951878479047,547d784b306ba27fadffaec1,Guns and Mental Illness
+2012-12-30,0,0,,,2813,1.7294449388518336,547d786e306ba27fadffaec9,Biden Is Back for a 2nd Run at Gun Limits
+2012-12-31,0,0,,,5353,1.9131278553674123,547d76b3306ba27fadffae53,Babes in Arms
+2013-01-01,0,0,,,0,0,,
+2013-01-02,0,0,,,0,0,,
+2013-01-03,0,0,,,0,0,,
+2013-01-04,0,0,,,0,0,,
+2013-01-05,0,0,,,0,0,,
+2013-01-06,0,0,,,0,0,,
+2013-01-07,0,0,,,0,0,,
+2013-01-08,0,0,,,0,0,,
+2013-01-09,0,0,,,0,0,,
+2013-01-10,0,0,,,0,0,,
+2013-01-11,0,0,,,0,0,,
+2013-01-12,0,0,,,0,0,,
+2013-01-13,0,0,,,0,0,,
+2013-01-14,0,0,,,0,0,,
+2013-01-15,0,0,,,0,0,,
+2013-01-16,0,0,,,0,0,,
+2013-01-17,0,0,,,0,0,,
+2013-01-18,0,0,,,0,0,,
+2013-01-19,0,0,,,0,0,,
+2013-01-20,0,0,,,0,0,,
+2013-01-21,0,0,,,0,0,,
+2013-01-22,0,0,,,0,0,,
+2013-01-23,0,0,,,0,0,,
+2013-01-24,0,0,,,0,0,,
+2013-01-25,0,0,,,0,0,,
+2013-01-26,0,0,,,0,0,,
+2013-01-27,0,0,,,0,0,,
+2013-01-28,0,0,,,0,0,,
+2013-01-29,0,0,,,0,0,,
+2013-01-30,0,0,,,0,0,,
+2013-01-31,0,0,,,0,0,,
+2013-02-01,0,0,,,0,0,,
+2013-02-02,0,0,,,0,0,,
+2013-02-03,0,0,,,0,0,,
+2013-02-04,0,0,,,0,0,,
+2013-02-05,0,0,,,0,0,,
+2013-02-06,0,0,,,0,0,,
+2013-02-07,0,0,,,0,0,,
+2013-02-08,0,0,,,0,0,,
+2013-02-09,0,0,,,0,0,,
+2013-02-10,0,0,,,0,0,,
+2013-02-11,0,0,,,0,0,,
+2013-02-12,0,0,,,0,0,,
+2013-02-13,0,0,,,0,0,,
+2013-02-14,0,0,,,0,0,,
+2013-02-15,0,0,,,0,0,,
+2013-02-16,0,0,,,0,0,,
+2013-02-17,0,0,,,0,0,,
+2013-02-18,0,0,,,0,0,,
+2013-02-19,0,0,,,0,0,,
+2013-02-20,0,0,,,0,0,,
+2013-02-21,0,0,,,0,0,,
+2013-02-22,0,0,,,0,0,,
+2013-02-23,0,0,,,0,0,,
+2013-02-24,0,0,,,0,0,,
+2013-02-25,0,0,,,0,0,,
+2013-02-26,0,0,,,0,0,,
+2013-02-27,0,0,,,0,0,,
+2013-02-28,0,0,,,0,0,,
+2013-03-01,0,0,,,0,0,,
+2013-03-02,0,0,,,0,0,,
+2013-03-03,0,0,,,0,0,,
+2013-03-04,0,0,,,0,0,,
+2013-03-05,0,0,,,0,0,,
+2013-03-06,0,0,,,0,0,,
+2013-03-07,0,0,,,0,0,,
+2013-03-08,0,0,,,0,0,,
+2013-03-09,0,0,,,0,0,,
+2013-03-10,0,0,,,0,0,,
+2013-03-11,0,0,,,0,0,,
+2013-03-12,0,0,,,0,0,,
+2013-03-13,0,0,,,0,0,,
+2013-03-14,0,0,,,0,0,,
+2013-03-15,0,0,,,0,0,,
+2013-03-16,0,0,,,0,0,,
+2013-03-17,0,0,,,0,0,,
+2013-03-18,0,0,,,0,0,,
+2013-03-19,0,0,,,0,0,,
+2013-03-20,0,0,,,0,0,,
+2013-03-21,0,0,,,0,0,,
+2013-03-22,0,0,,,0,0,,
+2013-03-23,0,0,,,0,0,,
+2013-03-24,0,0,,,0,0,,
+2013-03-25,0,0,,,0,0,,
+2013-03-26,0,0,,,0,0,,
+2013-03-27,0,0,,,0,0,,
+2013-03-28,0,0,,,0,0,,
+2013-03-29,0,0,,,0,0,,
+2013-03-30,0,0,,,0,0,,
+2013-03-31,0,0,,,0,0,,
+2013-04-01,0,0,,,0,0,,
+2013-04-02,0,0,,,0,0,,
+2013-04-03,0,0,,,0,0,,
+2013-04-04,0,0,,,0,0,,
+2013-04-05,0,0,,,0,0,,
+2013-04-06,0,0,,,0,0,,
+2013-04-07,0,0,,,0,0,,
+2013-04-08,0,0,,,0,0,,
+2013-04-09,0,0,,,0,0,,
+2013-04-10,0,0,,,0,0,,
+2013-04-11,0,0,,,0,0,,
+2013-04-12,0,0,,,0,0,,
+2013-04-13,0,0,,,0,0,,
+2013-04-14,0,0,,,0,0,,
+2013-04-15,0,0,,,0,0,,
+2013-04-16,0,0,,,0,0,,
+2013-04-17,0,0,,,0,0,,
+2013-04-18,0,0,,,0,0,,
+2013-04-19,0,0,,,0,0,,
+2013-04-20,0,0,,,0,0,,
+2013-04-21,0,0,,,0,0,,
+2013-04-22,0,0,,,0,0,,
+2013-04-23,0,0,,,0,0,,
+2013-04-24,0,0,,,0,0,,
+2013-04-25,0,0,,,0,0,,
+2013-04-26,0,0,,,0,0,,
+2013-04-27,0,0,,,0,0,,
+2013-04-28,0,0,,,0,0,,
+2013-04-29,0,0,,,0,0,,
+2013-04-30,0,0,,,0,0,,
+2013-05-01,0,0,,,0,0,,
+2013-05-02,0,0,,,0,0,,
+2013-05-03,0,0,,,0,0,,
+2013-05-04,0,0,,,0,0,,
+2013-05-05,0,0,,,0,0,,
+2013-05-06,0,0,,,0,0,,
+2013-05-07,0,0,,,0,0,,
+2013-05-08,0,0,,,0,0,,
+2013-05-09,0,0,,,0,0,,
+2013-05-10,0,0,,,0,0,,
+2013-05-11,0,0,,,0,0,,
+2013-05-12,0,0,,,0,0,,
+2013-05-13,0,0,,,0,0,,
+2013-05-14,0,0,,,0,0,,
+2013-05-15,0,0,,,0,0,,
+2013-05-16,0,0,,,0,0,,
+2013-05-17,0,0,,,0,0,,
+2013-05-18,0,0,,,0,0,,
+2013-05-19,0,0,,,0,0,,
+2013-05-20,0,0,,,0,0,,
+2013-05-21,0,0,,,0,0,,
+2013-05-22,0,0,,,0,0,,
+2013-05-23,0,0,,,0,0,,
+2013-05-24,0,0,,,0,0,,
+2013-05-25,0,0,,,0,0,,
+2013-05-26,0,0,,,0,0,,
+2013-05-27,0,0,,,0,0,,
+2013-05-28,0,0,,,0,0,,
+2013-05-29,0,0,,,0,0,,
+2013-05-30,0,0,,,0,0,,

@@ -590,20 +590,16 @@ def parse_nyt():
 
 @mod_data.route('/parse-social-shares')
 def parse_social_shares():
-	articles = JNYTDocument.objects(source="Wall Street Journal")
+	articles = JNYTDocument.objects
 	index = 0
-	temp = ""
 	for article in articles:
-		temp = json.dumps(shares.get_social_counts(article.web_url))
 		if not article.social_shares:
 			print index
-			# article.social_shares = shares.get_social_counts(article.web_url)
-			# article.save()
-			temp = json.dumps(shares.get_social_counts(article.web_url))
-			print temp
+			article.social_shares = shares.get_social_counts(article.web_url)
+			article.save()
 			index += 1
-		break
-	return temp
+		# break
+	return `index`
 
 @mod_data.route('/compute-leniency')
 def compute_liniency():
@@ -630,9 +626,10 @@ def compute_liniency():
 	# 	print article.computed_political_leaning
 	# 	index += 1
 
-	for article in JNYTDocument.objects(source="Wall Street Journal"):
+	# for article in JNYTDocument.objects(source="Wall Street Journal"):
+	for article in JNYTDocument.objects(political_leaning="Liberal"):
 		if article.computed_political_leaning != "Unknown":
-			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+			print index,article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 			continue
 
 		if article.content != None and len(article.content.strip()) != 0:
@@ -640,10 +637,11 @@ def compute_liniency():
 			article.computed_political_leaning = label[0]
 			article.political_leaning_strength = label[1]
 			article.save()
-			print article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
+			print index, article.source, article.headline, article.computed_political_leaning, article.political_leaning_strength
 		index += 1
 		# break
 	return "Anand"
+
 
 @mod_data.route("/clean-data")
 def clean_data():
